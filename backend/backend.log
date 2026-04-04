@@ -377,3 +377,15 @@ Node.js v25.9.0
 ⏳ Renew Scheduler started
 ⚠️  ML service unreachable at http://localhost:5000 — using local formulas
    To activate: cd ml-service && uvicorn main:app --port 5000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000

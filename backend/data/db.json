@@ -66,7 +66,7 @@
       "zoneId": "z1",
       "weeklyPremium": 56,
       "maxWeeklyPayout": 1200,
-      "status": "active",
+      "status": "expired",
       "startDate": "2026-04-04T09:51:23.123Z",
       "endDate": "2026-04-04T09:53:56.139Z",
       "totalPaidIn": 56,
@@ -121,6 +121,14 @@
     }
   ],
   "workerNotifications": [
+    {
+      "id": "63cf903e-52cf-4638-b3aa-808e41bb4f40",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "error",
+      "message": "Auto-renewal failed for Pro Shield due to insufficient wallet balance.",
+      "read": false,
+      "createdAt": "2026-04-04T09:54:00.507Z"
+    },
     {
       "id": "5a188f26-7925-40b0-9049-1a9b7ee53c43",
       "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
