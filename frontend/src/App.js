@@ -148,7 +148,7 @@ function SystemInfo() {
     <div className="info-section">
       <div className="info-title"><Icon name="shield" size={16}/> Why Parametric?</div>
       <div className="info-text">
-        Traditional insurance takes weeks. GigShield is <strong>Parametric</strong>.
+        Traditional insurance takes weeks. ArthRaksh is <strong>Parametric</strong>.
         It means we don't need you to prove your loss. If our satellite and weather APIs
         detect a disruption in your zone, we pay you <strong>automatically</strong>.
         No forms, no wait.
@@ -359,7 +359,7 @@ function Wallet() {
     const amt = Number(addAmt);
     if (!amt || amt < 10) { toast('Minimum ₹10 to add', 'error'); return; }
     if (amt > 50000) { toast('Maximum ₹50,000 per transaction', 'error'); return; }
-    setGwConfig({ amount: amt, purpose: 'Add to GigShield Wallet' });
+    setGwConfig({ amount: amt, purpose: 'Add to ArthRaksh Wallet' });
     setGwOpen(true);
   };
 
@@ -425,7 +425,7 @@ function Wallet() {
 
       {/* Balance Hero */}
       <div className="wallet-hero">
-        <div className="wallet-hero-label">GigShield Wallet</div>
+        <div className="wallet-hero-label">ArthRaksh Wallet</div>
         <div className="wallet-hero-balance">{fmt(balance)}</div>
         <div className="wallet-hero-sub">Available balance</div>
         <div className="wallet-hero-actions">
@@ -571,7 +571,7 @@ function AuthScreen({ onAdmin }) {
       <div className="auth-card">
         <div className="auth-logo">
           <div className="logo-icon"><Icon name="shield" size={26} /></div>
-          <div><div className="logo-name">GigShield</div><div className="logo-tagline">Income protection for delivery partners</div></div>
+          <div><div className="logo-name">ArthRaksh</div><div className="logo-tagline">Income protection for delivery partners</div></div>
         </div>
         <div className="tabs">
           <button className={`tab-btn ${tab==='login'?'active':''}`}    onClick={() => setTab('login')}>Sign in</button>
@@ -811,7 +811,7 @@ function InsufficientBalanceModal({ isOpen, onClose, required, balance, onAdded 
           onClose={() => setGwOpen(false)}
           onSuccess={handleGwSuccess}
           amount={Number(addAmt)}
-          purpose="Add to GigShield Wallet"
+          purpose="Add to ArthRaksh Wallet"
         />
         <div className="modal-icon" style={{ color: '#f59e0b' }}><Icon name="wallet" size={28}/></div>
         <div className="modal-title">Insufficient Balance</div>
@@ -1676,7 +1676,7 @@ function Profile() {
       <div style={{ marginTop: 32 }}>
         <button className="btn-danger" onClick={logout}>
           <Icon name="logout" size={16}/> 
-          <span>Sign out from GigShield</span>
+          <span>Sign out from ArthRaksh</span>
         </button>
       </div>
     </div>
@@ -1740,7 +1740,7 @@ function WorkerApp() {
           <div className="sidebar-brand">
             <Icon name="shield" size={24}/>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <span>GigShield</span>
+              <span>ArthRaksh</span>
               <span className="live-badge" style={{ marginLeft: 0, marginTop: 4 }}>LIVE</span>
             </div>
           </div>
@@ -1785,7 +1785,7 @@ function WorkerApp() {
           <div className="header-brand">
             <Icon name="shield" size={19}/>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-              <span>GigShield</span>
+              <span>ArthRaksh</span>
               <span className="live-badge" style={{ marginLeft: 0, marginTop: 2 }}>LIVE</span>
             </div>
           </div>
@@ -2091,7 +2091,7 @@ function AdminDash({ onLogout }) {
 // ADMIN LOGIN
 // ═══════════════════════════════════════════════════════════════════
 function AdminLogin({ onBack, onLoggedIn }) {
-  const [email, setEmail]   = useState('admin@gigshield.in');
+  const [email, setEmail]   = useState('admin@ArthRaksh.in');
   const [pass,  setPass]    = useState('admin123');
   const [busy,  setBusy]    = useState(false);
 
@@ -2112,7 +2112,7 @@ function AdminLogin({ onBack, onLoggedIn }) {
       <div className="auth-card">
         <div className="auth-logo">
           <div className="logo-icon admin"><Icon name="grid" size={22}/></div>
-          <div><div className="logo-name">GigShield</div><div className="logo-tagline">Insurer admin portal</div></div>
+          <div><div className="logo-name">ArthRaksh</div><div className="logo-tagline">Insurer admin portal</div></div>
         </div>
         <form onSubmit={submit} className="auth-form">
           <div className="field"><label>Email</label><input value={email} onChange={e => setEmail(e.target.value)}/></div>
@@ -2143,7 +2143,7 @@ function Root() {
   }, []);
 
   if (loading) return (
-    <div className="loading-screen"><div className="spinner"/><span>Loading GigShield…</span></div>
+    <div className="loading-screen"><div className="spinner"/><span>Loading ArthRaksh…</span></div>
   );
 
   if (adminAuthed) return (

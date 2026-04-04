@@ -2,62 +2,25 @@
 > gigshield-app@2.0.0 start
 > react-scripts start
 
-(node:69212) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:39912) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:69212) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:39912) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
-Compiled successfully!
+Failed to compile.
 
-You can now view gigshield-app in the browser.
+Attempted import error: 'notificationAPI' is not exported from './utils/api' (imported as 'notificationAPI').
+ERROR in ./src/App.js 5209:20-50
+export 'notificationAPI' (imported as 'notificationAPI') was not found in './utils/api' (possible exports: authAPI, claimsAPI, dashAPI, default, policyAPI, triggerAPI, walletAPI, workerAPI)
 
-  Local:            http://localhost:3000
-  On Your Network:  http://192.168.29.114:3000
+ERROR in ./src/App.js 5276:22-40
+export 'notificationAPI' (imported as 'notificationAPI') was not found in './utils/api' (possible exports: authAPI, claimsAPI, dashAPI, default, policyAPI, triggerAPI, walletAPI, workerAPI)
 
-Note that the development build is not optimized.
-To create a production build, use npm run build.
+ERROR in ./src/App.js 5292:12-35
+export 'notificationAPI' (imported as 'notificationAPI') was not found in './utils/api' (possible exports: authAPI, claimsAPI, dashAPI, default, policyAPI, triggerAPI, walletAPI, workerAPI)
 
-webpack compiled successfully
-(node:69212) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Proxy error: Could not proxy request /api/wallet/balance from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-Proxy error: Could not proxy request /api/wallet/balance from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-Proxy error: Could not proxy request /api/policies/plans from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-Proxy error: Could not proxy request /api/policies/active from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-Proxy error: Could not proxy request /api/wallet/balance from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-Proxy error: Could not proxy request /api/policies/plans from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
-Proxy error: Could not proxy request /api/policies/active from localhost:3000 to http://localhost:4000.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
+webpack compiled with 3 errors
+(node:39912) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 Compiling...
 Compiled successfully!
 webpack compiled successfully
