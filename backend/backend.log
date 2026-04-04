@@ -1,0 +1,379 @@
+
+> gigshield-api@2.0.0 dev
+> nodemon server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000
+[0mGET /api/workers/zones [36m304[0m 4.345 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.287 ms - -[0m
+[0mPOST /api/auth/login [33m401[0m 0.382 ms - 37[0m
+[0mGET /api/workers/zones [36m304[0m 0.177 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.117 ms - -[0m
+[0mGET /main.67e943c6cdd73b602f5c.hot-update.json [33m404[0m 0.862 ms - 180[0m
+[0mGET /main.67e943c6cdd73b602f5c.hot-update.json [33m404[0m 0.248 ms - 180[0m
+[0mGET /api/workers/zones [36m304[0m 0.430 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.847 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.504 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.185 ms - -[0m
+[0mGET /main.67e943c6cdd73b602f5c.hot-update.json [33m404[0m 0.218 ms - 180[0m
+[0mGET /api/workers/zones [36m304[0m 0.192 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.123 ms - -[0m
+[0mPOST /api/auth/login [33m401[0m 0.321 ms - 37[0m
+[0mGET /api/workers/zones [36m304[0m 0.272 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.135 ms - -[0m
+[0mPOST /api/auth/register [32m201[0m 101.960 ms - 493[0m
+⚠️  No OPENWEATHER_API_KEY — using mock weather data
+[0mGET /api/dashboard/worker [32m200[0m 1.571 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.508 ms - 1110[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000
+⚠️  No OPENWEATHER_API_KEY — using mock weather data
+[0mGET /api/dashboard/worker [32m200[0m 3.940 ms - 1110[0m
+[0mGET /api/policies/plans [32m200[0m 0.800 ms - 1594[0m
+[0mGET /api/policies/active [32m200[0m 0.427 ms - 15[0m
+[0mGET /api/wallet/balance [32m200[0m 0.620 ms - 31[0m
+[0mGET /api/policies/plans [36m304[0m 0.484 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.296 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.679 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.261 ms - -[0m
+[0mGET /api/claims/my [32m200[0m 0.240 ms - 13[0m
+[0mGET /api/wallet/balance [36m304[0m 1.419 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.333 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.112 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.242 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.258 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.095 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.224 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.292 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.134 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.711 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.546 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.480 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.464 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 1.380 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.272 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.128 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.465 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.221 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.228 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.547 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.354 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.379 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.459 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.405 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.472 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.607 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.291 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.166 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.428 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.188 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.584 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.275 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.577 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.135 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.570 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.216 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.343 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.485 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.288 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.117 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.444 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.487 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.143 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.267 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.104 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.098 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.618 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.174 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.317 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.387 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.896 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.331 ms - 1108[0m
+[0mGET /api/workers/zones [36m304[0m 0.191 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.377 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 4.436 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.311 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.317 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.417 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.680 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.690 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.621 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.560 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.367 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.540 ms - 1108[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.372 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.957 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.584 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.678 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.601 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.662 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.730 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.303 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.681 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.490 ms - 1110[0m
+[0mGET /api/workers/zones [36m304[0m 0.347 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.678 ms - 1110[0m
+[0mGET /api/workers/zones [36m304[0m 0.160 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.905 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.339 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.305 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.297 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.733 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.730 ms - 1110[0m
+[0mGET /api/workers/zones [36m304[0m 0.167 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.270 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.750 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.848 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.585 ms - 1110[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.753 ms - 1105[0m
+🔄 Trigger check: 3:20:00 PM
+[0mGET /api/dashboard/worker [32m200[0m 0.328 ms - 1105[0m
+[0mGET /api/workers/zones [36m304[0m 0.151 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.371 ms - 1105[0m
+[0mGET /api/workers/zones [36m304[0m 0.229 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.257 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.668 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.312 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.590 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.458 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.543 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.105 ms - 1105[0m
+[0mGET /api/workers/zones [36m304[0m 0.296 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.102 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.578 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.289 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.312 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.738 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.759 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.923 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.150 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.403 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.445 ms - 1105[0m
+[0mGET /api/claims/my [36m304[0m 0.222 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.107 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.371 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.236 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.285 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.241 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.680 ms - 1105[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.294 ms - 1105[0m
+[0mGET /api/claims/my [36m304[0m 0.830 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.138 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.453 ms - -[0m
+[0mGET /api/claims/my [36m304[0m 0.185 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.249 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.110 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.221 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 1.074 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.273 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.240 ms - -[0m
+[0mGET /api/policies/plans [36m304[0m 6.103 ms - -[0m
+[0mGET /api/policies/plans [36m304[0m 0.251 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.230 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.313 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.480 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.528 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.440 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.681 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.631 ms - -[0m
+[0mPOST /api/wallet/add [32m200[0m 803.577 ms - 104[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/shubam/Desktop/GuideWire/GuidewireHackathon/gigshield-v2/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/shubam/Desktop/GuideWire/GuidewireHackathon/gigshield-v2/backend/server.js:41:5)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2044:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v25.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000
+⚠️  No OPENWEATHER_API_KEY — using mock weather data
+[0mGET /api/dashboard/worker [32m200[0m 3.047 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.802 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.430 ms - 1992[0m
+[0mGET /api/claims/my [36m304[0m 0.406 ms - -[0m
+[0mGET /api/policies/active [32m200[0m 0.342 ms - 898[0m
+[0mGET /api/wallet/balance [32m200[0m 1.212 ms - 594[0m
+[0mGET /api/claims/my [36m304[0m 0.731 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.514 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.474 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.692 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.209 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.104 ms - -[0m
+[0mGET /api/policies/plans [36m304[0m 7.361 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.812 ms - -[0m
+[0mGET /api/policies/plans [36m304[0m 0.320 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.928 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.331 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.539 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.859 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.433 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.558 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.946 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.068 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.585 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.682 ms - 1992[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.575 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.716 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.457 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.392 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.852 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.319 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.652 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.250 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.638 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.172 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.609 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.621 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.559 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.446 ms - 1993[0m
+[0mGET /api/auth/me [32m200[0m 0.824 ms - 395[0m
+[0mGET /api/auth/me [36m304[0m 0.345 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.345 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.432 ms - 1993[0m
+[0mGET /api/auth/me [36m304[0m 0.376 ms - -[0m
+[0mGET /api/auth/me [36m304[0m 0.520 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.279 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.368 ms - 1993[0m
+[0mGET /api/auth/me [36m304[0m 0.482 ms - -[0m
+[0mGET /api/auth/me [36m304[0m 0.506 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.369 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.469 ms - 1993[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.348 ms - 1993[0m
+[0mGET /api/policies/active [36m304[0m 0.232 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.122 ms - -[0m
+[0mGET /api/policies/plans [36m304[0m 6.422 ms - -[0m
+[0mGET /api/policies/active [36m304[0m 0.192 ms - -[0m
+[0mGET /api/wallet/balance [36m304[0m 0.643 ms - -[0m
+[0mGET /api/policies/plans [36m304[0m 0.361 ms - -[0m
+[0mPATCH /api/policies/active/autorenew [32m200[0m 1.521 ms - 49[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000
+[0mPOST /api/policies/simulate/expire [32m200[0m 4.885 ms - 117[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4000
+    at Server.setupListenHandle [as _listen2] (node:net:2008:16)
+    at listenInCluster (node:net:2065:12)
+    at Server.listen (node:net:2170:7)
+    at app.listen (/Users/shubam/Desktop/GuideWire/GuidewireHackathon/gigshield-v2/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/shubam/Desktop/GuideWire/GuidewireHackathon/gigshield-v2/backend/server.js:41:5)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2044:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 4000
+}
+
+Node.js v25.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000
+⚠️  No OPENWEATHER_API_KEY — using mock weather data
+[0mGET /api/dashboard/worker [32m200[0m 3.165 ms - 2014[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.977 ms - 2014[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.448 ms - 2014[0m
+[0mGET /api/dashboard/worker [32m200[0m 0.866 ms - 2014[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.106 ms - 2014[0m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node server.js`[39m
+✅ DB Loaded from file
+
+🛡️  GigShield API   →  http://localhost:4000
+   Status          →  http://localhost:4000/api/status
+   Demo login      →  9876543210 / password123
+
+🔍 [Real-Life Monitor] Active — Source: Mock (Demo Only)
+⏳ Renew Scheduler started
+⚠️  ML service unreachable at http://localhost:5000 — using local formulas
+   To activate: cd ml-service && uvicorn main:app --port 5000
