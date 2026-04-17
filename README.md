@@ -1,5 +1,7 @@
 # ArthRaksh
 
+## Pitch Detck: [Click Here](https://docs.google.com/presentation/d/1uckh3OmYGfzxEO_Ob2ZdAtxnG4pphqU2Ba4I3MadR1o/edit?usp=sharing)
+
 ArthRaksh is a full-stack platform for gig worker risk protection. Workers can buy weekly protection plans, track wallet activity, view claims, and download proof packs. Admin users can monitor claims across the network, review fraud signals, simulate disruption events, and manage insurance plans.
 
 The application is split into three services:
