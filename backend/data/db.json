@@ -44,7 +44,7 @@
       "avgHoursPerWeek": 45,
       "role": "worker",
       "kycVerified": true,
-      "walletBalance": 1172,
+      "walletBalance": 1116,
       "createdAt": "2026-04-04T09:46:50.764Z"
     },
     {
@@ -370,9 +370,9 @@
       "weeklyPremium": 33,
       "hourlyPremium": 1.83,
       "maxWeeklyPayout": 600,
-      "status": "active",
+      "status": "cancelled",
       "startDate": "2026-04-17T10:40:52.759Z",
-      "endDate": "2026-04-24T10:40:52.759Z",
+      "endDate": "2026-04-17T12:38:23.795Z",
       "totalPaidIn": 33,
       "totalPaidOut": 0,
       "claimCount": 0,
@@ -435,6 +435,102 @@
       "activationMode": "manual",
       "shiftIntent": null,
       "createdAt": "2026-04-17T10:40:52.759Z"
+    },
+    {
+      "id": "4da96c9e-80ee-41e7-aba8-f6085f7fb1b4",
+      "autoRenew": false,
+      "coveredActiveHours": 36,
+      "remainingActiveHours": 36,
+      "consumedActiveHours": 0,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "planId": "pro",
+      "zoneId": "z1",
+      "weeklyPremium": 56,
+      "hourlyPremium": 1.56,
+      "maxWeeklyPayout": 1200,
+      "status": "active",
+      "startDate": "2026-04-17T12:38:44.398Z",
+      "endDate": "2026-04-24T12:38:44.398Z",
+      "totalPaidIn": 56,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 49,
+        "dynamicWeeklyPremium": 56,
+        "multiplier": 1.14,
+        "riskLabel": "Moderate Risk",
+        "source": "local_fallback",
+        "zone": "Andheri West",
+        "breakdown": {
+          "zoneRisk": 0.287,
+          "seasonal": 0.275,
+          "hours": 0.18,
+          "platform": 0.102,
+          "history": 0.1,
+          "planBreadth": 0.057,
+          "claimsCount": 2
+        },
+        "explanation": {
+          "summary": "Weekly price moved from ₹49 to ₹56 because Andheri West, seasonal conditions, and your work pattern increase expected disruption exposure.",
+          "factors": [
+            {
+              "key": "zoneRisk",
+              "label": "Zone volatility",
+              "impact": 0.287,
+              "description": "Andheri West has a static risk score of 0.82."
+            },
+            {
+              "key": "seasonal",
+              "label": "Seasonal pressure",
+              "impact": 0.275,
+              "description": "Weekly pricing adjusts for rain, heat, and AQI seasonality in your city."
+            },
+            {
+              "key": "hours",
+              "label": "Work intensity",
+              "impact": 0.18,
+              "description": "Your profile shows 45 hours per week, which affects weekly exposure."
+            },
+            {
+              "key": "history",
+              "label": "Claims history",
+              "impact": 0.1,
+              "description": "2 historical claims are factored into the price stability model."
+            },
+            {
+              "key": "planBreadth",
+              "label": "Coverage breadth",
+              "impact": 0.057,
+              "description": "Pro Shield covers 4 trigger types and up to ₹1200."
+            }
+          ],
+          "weeklyLabel": "Moderate Risk"
+        },
+        "includedActiveHours": 36,
+        "dynamicBundlePremium": 56,
+        "dynamicHourlyPremium": 1.56
+      },
+      "activationMode": "shift_shield",
+      "shiftIntent": {
+        "createdAt": "2026-04-17T12:38:44.394Z",
+        "hours": 6,
+        "earningsAtRisk": 343,
+        "dominantTriggers": [
+          {
+            "type": "rain",
+            "score": 0.82
+          },
+          {
+            "type": "aqi",
+            "score": 0.58
+          },
+          {
+            "type": "heat",
+            "score": 0.45
+          }
+        ]
+      },
+      "createdAt": "2026-04-17T12:38:44.398Z"
     }
   ],
   "claims": [
@@ -2426,6 +2522,18 @@
   ],
   "walletTransactions": [
     {
+      "id": "692fc024-6c71-4e53-9092-13da7abcdf5a",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 56,
+      "description": "Premium for Pro Shield",
+      "balanceAfter": 1116,
+      "createdAt": "2026-04-17T12:38:44.397Z",
+      "method": "wallet",
+      "planId": "pro",
+      "ref": "POLMO2W9TIL"
+    },
+    {
       "id": "74e92d92-9292-48f8-b512-61a29ef34936",
       "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
       "type": "debit",
@@ -2862,6 +2970,22 @@
   ],
   "workerNotifications": [
     {
+      "id": "60e7f5c0-57d1-437b-9b65-7c95a22cb023",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "ShiftShield activated Pro Shield for your next 6-hour shift.",
+      "read": false,
+      "createdAt": "2026-04-17T12:38:44.399Z"
+    },
+    {
+      "id": "edaf57be-e363-43a5-9561-ecd28351da90",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "warning",
+      "message": "Your active policy has been cancelled.",
+      "read": false,
+      "createdAt": "2026-04-17T12:38:23.796Z"
+    },
+    {
       "id": "e35e1d05-0b82-4cbc-9150-4900286f581b",
       "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
       "type": "success",
@@ -3231,6 +3355,56 @@
     }
   ],
   "emailEvents": [
+    {
+      "id": "accd359a-9cb6-4be6-87a4-8923f89e9d40",
+      "createdAt": "2026-04-17T12:38:44.400Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "ShiftShield activated coverage",
+      "type": "success",
+      "meta": {
+        "action": "shift_shield_activate",
+        "policyId": "4da96c9e-80ee-41e7-aba8-f6085f7fb1b4",
+        "planId": "pro"
+      },
+      "title": "ShiftShield ready",
+      "intro": "Pro Shield has been activated for your upcoming shift.",
+      "emailLines": [
+        "Estimated earnings at risk: ₹343",
+        "Dominant risks: rain, aqi, heat",
+        "Wallet balance after activation: ₹1116"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">ShiftShield ready</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Pro Shield has been activated for your upcoming shift.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Estimated earnings at risk: ₹343</li><li style=\"margin:0 0 8px;\">Dominant risks: rain, aqi, heat</li><li style=\"margin:0 0 8px;\">Wallet balance after activation: ₹1116</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Pro Shield has been activated for your upcoming shift.\nEstimated earnings at risk: ₹343\nDominant risks: rain, aqi, heat\nWallet balance after activation: ₹1116"
+    },
+    {
+      "id": "ac6eaa26-b6b7-43e9-8788-e9b8c08e6c3f",
+      "createdAt": "2026-04-17T12:38:23.798Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your policy was cancelled",
+      "type": "warning",
+      "meta": {
+        "action": "policy_cancel"
+      },
+      "title": "Coverage cancelled",
+      "intro": "Your active protection has been cancelled.",
+      "emailLines": [],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage cancelled</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Your active protection has been cancelled.</p>\n        \n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Your active protection has been cancelled."
+    },
     {
       "id": "4fb09ba4-4671-4d09-823a-814ae8aa1569",
       "createdAt": "2026-04-17T10:40:52.766Z",

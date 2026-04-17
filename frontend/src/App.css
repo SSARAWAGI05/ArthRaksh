@@ -5173,6 +5173,19 @@ html,
   background: rgba(255,255,255,.82);
 }
 
+.admin-surface .claims-table th {
+  color: var(--text3);
+  background: rgba(248,251,255,.96);
+}
+
+.admin-surface .claims-table td {
+  color: var(--text);
+}
+
+.admin-surface .claims-table tr:hover td {
+  background: rgba(248,250,252,.92);
+}
+
 .zone-card {
   background: rgba(255,255,255,.82);
   border: 1px solid rgba(148,163,184,.14);
