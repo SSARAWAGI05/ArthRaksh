@@ -10,6 +10,17 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const token = localStorage.getItem('gs_token');
     if (!token) { setLoading(false); return; }
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      if (payload?.role === 'admin') {
+        setLoading(false);
+        return;
+      }
+    } catch {
+      localStorage.removeItem('gs_token');
+      setLoading(false);
+      return;
+    }
     authAPI.me()
       .then(r => setUser(r.data.worker))
       .catch(() => localStorage.removeItem('gs_token'))

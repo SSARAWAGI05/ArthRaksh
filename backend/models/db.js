@@ -46,24 +46,28 @@ const PLANS = [
   {
     id: 'basic', name: 'Basic Shield',
     baseWeeklyPremium: 29, maxWeeklyPayout: 600,
+    includedActiveHours: 18,
     triggers: ['rain', 'aqi'],
     popular: false,
   },
   {
     id: 'pro', name: 'Pro Shield',
     baseWeeklyPremium: 49, maxWeeklyPayout: 1200,
+    includedActiveHours: 36,
     triggers: ['rain', 'aqi', 'heat', 'curfew'],
     popular: true,
   },
   {
     id: 'max', name: 'Max Shield',
     baseWeeklyPremium: 79, maxWeeklyPayout: 2000,
+    includedActiveHours: 60,
     triggers: ['rain', 'aqi', 'heat', 'curfew', 'flood', 'cyclone'],
     popular: false,
   },
   {
     id: 'ultimate', name: 'Ultimate Shield',
     baseWeeklyPremium: 99, maxWeeklyPayout: 3000,
+    includedActiveHours: 84,
     triggers: ['rain', 'aqi', 'heat', 'curfew', 'flood', 'cyclone', 'fog'],
     popular: false,
   },
@@ -80,10 +84,24 @@ let claims = [];
 let triggerEvents = [];
 let walletTransactions = []; // NEW
 let workerNotifications = []; // NEW
+let emailEvents = [];
+let paymentSessions = [];
+let gatewayPayouts = [];
 
 function save() {
   try {
-    const data = { workers, admins, policies, claims, triggerEvents, walletTransactions, workerNotifications };
+    const data = {
+      workers,
+      admins,
+      policies,
+      claims,
+      triggerEvents,
+      walletTransactions,
+      workerNotifications,
+      emailEvents,
+      paymentSessions,
+      gatewayPayouts,
+    };
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
   } catch (err) {
     console.error('❌ DB Save failed:', err.message);
@@ -101,12 +119,33 @@ function load() {
       triggerEvents = data.triggerEvents || [];
       walletTransactions = data.walletTransactions || [];
       workerNotifications = data.workerNotifications || [];
+      emailEvents = data.emailEvents || [];
+      paymentSessions = data.paymentSessions || [];
+      gatewayPayouts = data.gatewayPayouts || [];
+
+      let migrated = false;
+
+      policies.forEach(policy => {
+        const plan = PLANS.find(p => p.id === policy.planId);
+        const coveredHours = policy.coveredActiveHours || plan?.includedActiveHours || 24;
+        if (policy.coveredActiveHours == null) {
+          policy.coveredActiveHours = coveredHours;
+          migrated = true;
+        }
+        if (policy.remainingActiveHours == null) {
+          policy.remainingActiveHours = policy.status === 'active' ? coveredHours : Math.max(0, coveredHours - (policy.consumedActiveHours || 0));
+          migrated = true;
+        }
+        if (policy.consumedActiveHours == null) {
+          policy.consumedActiveHours = Math.max(0, coveredHours - (policy.remainingActiveHours || 0));
+          migrated = true;
+        }
+      });
 
       // Migrate / repair walletBalance for all workers.
       // walletBalance = (sum of paid claim payouts) + (sum of manual top-up credits) - (sum of withdrawals)
       // We recompute this correctly so it matches totalProtected for fresh users
       // and still preserves any manual top-ups that were added.
-      let migrated = false;
       workers.forEach(w => {
         const paidClaims = claims.filter(c => c.workerId === w.id && c.status === 'paid');
         const totalPaid  = paidClaims.reduce((s, c) => s + (c.payoutAmount || 0), 0);
@@ -185,7 +224,12 @@ const db = {
   getPlans:  () => PLANS,
   getPlan:   id => PLANS.find(p => p.id === id),
   addPlan:   data => {
-    const p = { id: uuid(), popular: false, ...data };
+    const p = {
+      id: uuid(),
+      popular: false,
+      includedActiveHours: Number(data.includedActiveHours) || 24,
+      ...data,
+    };
     PLANS.push(p);
     return p;
   },
@@ -254,15 +298,81 @@ const db = {
       .slice(0, limit);
   },
 
+  createPaymentSession: data => {
+    const session = {
+      id: uuid(),
+      status: 'created',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      ...data,
+    };
+    paymentSessions.unshift(session);
+    if (paymentSessions.length > 500) paymentSessions.pop();
+    save();
+    return session;
+  },
+
+  getPaymentSessionById: id => paymentSessions.find(session => session.id === id),
+
+  updatePaymentSession: (id, updates) => {
+    const idx = paymentSessions.findIndex(session => session.id === id);
+    if (idx !== -1) {
+      Object.assign(paymentSessions[idx], updates, { updatedAt: new Date().toISOString() });
+      save();
+    }
+    return paymentSessions[idx] || null;
+  },
+
+  getPaymentSessionsByWorker: (workerId, limit = 20) => paymentSessions
+    .filter(session => session.workerId === workerId)
+    .slice(0, limit),
+
+  createGatewayPayout: data => {
+    const payout = {
+      id: uuid(),
+      status: 'paid',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      ...data,
+    };
+    gatewayPayouts.unshift(payout);
+    if (gatewayPayouts.length > 500) gatewayPayouts.pop();
+    save();
+    return payout;
+  },
+
+  getGatewayPayoutById: id => gatewayPayouts.find(payout => payout.id === id),
+
+  updateGatewayPayout: (id, updates) => {
+    const idx = gatewayPayouts.findIndex(payout => payout.id === id);
+    if (idx !== -1) {
+      Object.assign(gatewayPayouts[idx], updates, { updatedAt: new Date().toISOString() });
+      save();
+    }
+    return gatewayPayouts[idx] || null;
+  },
+
   // admins
-  findAdminByEmail: email => admins.find(a => a.email === email),
+  findAdminByEmail: email => admins.find(a => a.email.toLowerCase() === String(email).toLowerCase()),
 
   // policies
   getPoliciesByWorker: wid => policies.filter(p => p.workerId === wid),
   getActivePolicy:     wid => policies.find(p => p.workerId === wid && p.status === 'active'),
   getPolicyById:       id  => policies.find(p => p.id === id),
   createPolicy: data => {
-    const p = { id: uuid(), autoRenew: false, ...data, createdAt: new Date().toISOString() };
+    const coveredActiveHours = Number(data.coveredActiveHours) || 0;
+    const remainingActiveHours = data.remainingActiveHours == null
+      ? coveredActiveHours
+      : Number(data.remainingActiveHours);
+    const p = {
+      id: uuid(),
+      autoRenew: false,
+      coveredActiveHours,
+      remainingActiveHours,
+      consumedActiveHours: Math.max(0, coveredActiveHours - remainingActiveHours),
+      ...data,
+      createdAt: new Date().toISOString(),
+    };
     policies.push(p); save(); return p;
   },
   updatePolicy: (id, updates) => {
@@ -283,10 +393,30 @@ const db = {
     }
     return false;
   },
+  adjustPolicyHours: (policyId, deltaHours) => {
+    const policy = policies.find(p => p.id === policyId);
+    if (!policy) return null;
+
+    const covered = Number(policy.coveredActiveHours || 0);
+    const current = Number(policy.remainingActiveHours ?? covered);
+    const next = Math.max(0, Math.min(covered, current + Number(deltaHours || 0)));
+
+    policy.remainingActiveHours = next;
+    policy.consumedActiveHours = Math.max(0, covered - next);
+
+    if (policy.status === 'active' && next <= 0) {
+      policy.status = 'expired';
+      policy.endDate = new Date().toISOString();
+    }
+
+    save();
+    return policy;
+  },
 
   // claims
   getClaimsByWorker: wid => claims.filter(c => c.workerId === wid),
   getAllClaims:       ()  => claims,
+  getClaimById:       id  => claims.find(c => c.id === id),
   createClaim: data => {
     const c = { id: uuid(), ...data, createdAt: new Date().toISOString() };
     claims.push(c); save(); return c;
@@ -317,6 +447,33 @@ const db = {
     workerNotifications.unshift(n);
     save();
     return n;
+  },
+  getEmailEvents: workerId => emailEvents.filter(e => !workerId || e.workerId === workerId),
+  getEmailEventById: id => emailEvents.find(e => e.id === id),
+  addEmailEvent: data => {
+    const event = {
+      id: uuid(),
+      createdAt: new Date().toISOString(),
+      status: 'queued',
+      attempts: 0,
+      lastAttemptAt: null,
+      deliveredAt: null,
+      reason: null,
+      messageId: null,
+      ...data,
+    };
+    emailEvents.unshift(event);
+    if (emailEvents.length > 500) emailEvents.pop();
+    save();
+    return event;
+  },
+  updateEmailEvent: (id, updates) => {
+    const idx = emailEvents.findIndex(e => e.id === id);
+    if (idx !== -1) {
+      Object.assign(emailEvents[idx], updates);
+      save();
+    }
+    return emailEvents[idx] || null;
   },
   markNotificationsRead: (workerId) => {
     workerNotifications.forEach(n => {

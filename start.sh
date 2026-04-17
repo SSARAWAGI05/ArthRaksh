@@ -22,16 +22,16 @@ echo "🚀  ========== Starting GigShield Services =========="
 echo "🧹  Cleaning up previous sessions..."
 kill_port 3000 # Frontend
 kill_port 4000 # Backend
-kill_port 5000 # ML Service
+kill_port 5001 # ML Service
 
-# 1. Start Machine Learning Service (Port 5000)
+# 1. Start Machine Learning Service (Port 5001)
 echo "→ 🔋 Starting ML Service (Python/FastAPI)..."
 cd ml-service
 if [ ! -d "__pycache__" ] && [ ! -d "models" ]; then
   echo "   (Installing ML dependencies first...)"
   pip3 install -r requirements.txt
 fi
-uvicorn main:app --port 5000 --host 0.0.0.0 > ml.log 2>&1 &
+uvicorn main:app --port 5001 --host 0.0.0.0 > ml.log 2>&1 &
 cd ..
 
 # 2. Start Backend API (Port 4000)
@@ -58,7 +58,7 @@ echo "✨  ==============================================="
 echo "✅  GigShield is initializing."
 echo "🌍  Frontend:  http://localhost:3000"
 echo "🛠️  Backend:   http://localhost:4000"
-echo "🧠  ML Service: http://localhost:5000"
+echo "🧠  ML Service: http://localhost:5001"
 echo ""
 echo "📝  Logs are being written to *.log files."
 echo "🛑  Press Ctrl+C to stop all services."

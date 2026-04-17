@@ -15,6 +15,7 @@ app.use('/api/triggers',  require('./routes/triggers'));
 app.use('/api/dashboard', require('./routes/dashboard'));
 app.use('/api/workers',   require('./routes/workers'));
 app.use('/api/wallet',    require('./routes/wallet'));   // ← NEW
+app.use('/api/chatbot',   require('./routes/chatbot'));
 
 // Health & status
 app.get('/api/health', (_, res) => res.json({ status: 'ok', ts: new Date().toISOString() }));
@@ -22,11 +23,14 @@ app.get('/api/health', (_, res) => res.json({ status: 'ok', ts: new Date().toISO
 app.get('/api/status', async (_, res) => {
   const { isMlUp }  = require('./services/ml');
   const { LIVE }    = require('./services/weather');
+  const { getMailSystemStatus } = require('./services/mailQueue');
   const mlUp        = await isMlUp();
+  const mail        = await getMailSystemStatus();
   res.json({
     api: 'ok',
     openweathermap: LIVE ? 'live' : 'mock (no key)',
     ml_service:     mlUp ? 'connected' : 'offline (local formulas)',
+    email:          mail,
     ts: new Date().toISOString(),
   });
 });
@@ -42,6 +46,7 @@ app.listen(PORT, () => {
   console.log(`\n🛡️  GigShield API   →  http://localhost:${PORT}`);
   console.log(`   Status          →  http://localhost:${PORT}/api/status`);
   console.log(`   Demo login      →  9876543210 / password123\n`);
+  require('./services/mailQueue').start();
   require('./services/triggers').start();
   require('./services/renewScheduler').start();
 });

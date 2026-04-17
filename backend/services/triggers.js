@@ -6,7 +6,9 @@
 const cron      = require('node-cron');
 const db        = require('../models/db');
 const { getWeather } = require('./weather');
-const { scoreFraud, calculatePayout } = require('./ml');
+const { scoreFraud, calculatePayoutDetails } = require('./ml');
+const { notifyWorkerAction } = require('./notifier');
+const { createInstantClaimPayout } = require('./payments');
 
 const THRESHOLDS = {
   rain:    { field: 'rainfall_mm_hr',   check: (v) => v >= 15,  label: 'Heavy Rain',    unit: 'mm/hr' },
@@ -26,15 +28,61 @@ function estimateHours(type, value) {
 
 async function processPayout(claimId) {
   try {
-    const ref = 'UPI' + Math.random().toString(36).substr(2, 12).toUpperCase();
-    const claim = db.updateClaim(claimId, { status: 'paid', paidAt: new Date().toISOString(), upiRef: ref });
+    const current = db.getAllClaims().find(claim => claim.id === claimId);
+    if (!current) {
+      console.error(`❌ [PAYOUT FAILED] Claim not found: ${claimId}`);
+      return;
+    }
+    if (current.status === 'paid') return;
+    const worker = db.findWorkerById(current.workerId);
+    if (!worker) {
+      console.error(`❌ [PAYOUT FAILED] Worker not found for claim: ${claimId}`);
+      return;
+    }
+
+    const payoutResult = createInstantClaimPayout({
+      claim: current,
+      worker,
+      amount: current.payoutAmount,
+    });
+
+    const claim = db.updateClaim(claimId, {
+      status: 'paid',
+      paidAt: new Date().toISOString(),
+      upiRef: payoutResult.payout.reference,
+      payoutGatewayId: payoutResult.gateway.id,
+      payoutGatewayLabel: payoutResult.gateway.label,
+      payoutTransferId: payoutResult.payout.providerTransferId,
+      payoutRail: payoutResult.payout.rail,
+    });
+
     if (claim) {
       db.creditWallet(claim.workerId, claim.payoutAmount, `Auto-payout: ${claim.triggerType} disruption`, {
-        method:  'claim_payout',
+        method: 'claim_payout',
         claimId: claim.id,
-        ref,
+        gatewayId: payoutResult.gateway.id,
+        gatewayLabel: payoutResult.gateway.label,
+        gatewayProvider: payoutResult.gateway.provider,
+        payoutId: payoutResult.payout.id,
+        payoutTransferId: payoutResult.payout.providerTransferId,
+        ref: payoutResult.payout.reference,
       });
-      console.log(`✅ [PAYOUT SUCCESS] claim=${claimId.split('-')[0]} ref=${ref} amount=₹${claim.payoutAmount}`);
+      await notifyWorkerAction({
+        workerId: claim.workerId,
+        type: 'success',
+        inAppMessage: `Automatic payout sent instantly: ₹${claim.payoutAmount} for ${claim.triggerType} via ${payoutResult.gateway.label}.`,
+        emailSubject: 'Automatic payout credited',
+        emailTitle: 'Payout credited',
+        emailIntro: 'A trigger event matched your policy and we paid you automatically.',
+        emailLines: [
+          `Trigger: ${claim.triggerType}`,
+          `Amount: ₹${claim.payoutAmount}`,
+          `Gateway: ${payoutResult.gateway.label}`,
+          `Reference: ${payoutResult.payout.reference}`,
+        ],
+        meta: { action: 'auto_payout', claimId: claim.id, ref: payoutResult.payout.reference, gatewayId: payoutResult.gateway.id },
+      });
+      console.log(`✅ [PAYOUT SUCCESS] claim=${claimId.split('-')[0]} ref=${payoutResult.payout.reference} amount=₹${claim.payoutAmount} gateway=${payoutResult.gateway.id}`);
     } else {
       console.error(`❌ [PAYOUT FAILED] Claim not found: ${claimId}`);
     }
@@ -70,7 +118,10 @@ async function checkZone(zone) {
       if (!plan.triggers.includes(trig.type)) continue;
 
       const hours   = estimateHours(trig.type, trig.value);
-      const payout  = await calculatePayout(worker, policy, trig.type, hours);
+      const coveredHours = Math.min(hours, Number(policy.remainingActiveHours ?? policy.coveredActiveHours ?? hours));
+      if (coveredHours <= 0) continue;
+      const payoutResult = await calculatePayoutDetails(worker, policy, trig.type, coveredHours);
+      const payout  = payoutResult.amount;
       if (payout <= 0) continue;
 
       const gpsMatch     = Math.random() > 0.05;
@@ -93,13 +144,40 @@ async function checkZone(zone) {
         triggerEventId: event.id,
         triggerType:    trig.type,
         triggerValue:   `${Number(trig.value).toFixed(1)}${trig.unit}`,
-        disruptionHours: hours,
+        disruptionHours: coveredHours,
+        reservedActiveHours: coveredHours,
         payoutAmount:   payout,
         fraudScore,
         status:         fraudScore > 75 ? 'fraud_review' : 'processing',
         statusReason:   fraudScore > 75 ? 'Anomalous activity detected — flagged for audit' : null,
         triggeredAt:    new Date().toISOString(),
         weatherSource:  weather.source,
+        weatherSnapshot: weather,
+        payoutBreakdown: payoutResult.breakdown,
+        gpsZoneMatch: gpsMatch,
+        wasActive: activeStatus,
+      });
+      db.adjustPolicyHours(policy.id, -coveredHours);
+
+      const claimStatus = fraudScore > 75 ? 'fraud review' : 'processing';
+      await notifyWorkerAction({
+        workerId: worker.id,
+        type: fraudScore > 75 ? 'warning' : 'info',
+        inAppMessage: fraudScore > 75
+          ? `A ${trig.type} disruption matched your policy. Your claim is under fraud review.`
+          : `A ${trig.type} disruption matched your policy. Your claim is being processed.`,
+        emailSubject: fraudScore > 75 ? 'Claim flagged for review' : 'Automatic claim created',
+        emailTitle: fraudScore > 75 ? 'Claim flagged for review' : 'Automatic claim created',
+        emailIntro: fraudScore > 75
+          ? 'A disruption matched your policy, but the claim needs manual review before payout.'
+          : 'A disruption matched your policy and your claim has been created automatically.',
+        emailLines: [
+          `Trigger: ${trig.label}`,
+          `Estimated payout: ₹${payout}`,
+          `Protected hours reserved: ${coveredHours}h`,
+          `Current claim status: ${claimStatus}`,
+        ],
+        meta: { action: 'auto_claim_created', claimId: claim.id, policyId: policy.id, triggerType: trig.type },
       });
 
       // Simulation - Instant Payout

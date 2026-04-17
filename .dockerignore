@@ -1,0 +1,12 @@
+.git
+.gitignore
+**/node_modules
+**/build
+**/.DS_Store
+**/*.log
+**/__pycache__
+**/.pytest_cache
+**/.env
+**/.cache
+**/coverage
+frontend/build

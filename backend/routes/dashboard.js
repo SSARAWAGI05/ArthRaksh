@@ -1,10 +1,12 @@
 const router = require('express').Router();
 const db     = require('../models/db');
 const { auth, adminOnly } = require('../middleware/auth');
+const { getRiskCalendar, getShiftForecast, getZonePulse } = require('../services/riskIntel');
 
 const safe = w => { if (!w) return null; const { password: _, ...s } = w; return s; };
 
 const { getWeather } = require('../services/weather');
+const { calculatePremium } = require('../services/ml');
 
 // GET /api/dashboard/worker
 router.get('/worker', auth, async (req, res) => {
@@ -26,9 +28,15 @@ router.get('/worker', auth, async (req, res) => {
     if (zone) {
       try { liveWeather = await getWeather(zone); } catch (e) { /* ignore */ }
     }
+    const riskCalendar = getRiskCalendar(zone);
+    const shiftShield = getShiftForecast(worker, zone, db.getPlans(), riskCalendar);
+    const zonePulse = getZonePulse(db.getZones(), db.getAllClaims(), db.getPolicies());
+    const activePlan = policy ? db.getPlan(policy.planId) : null;
+    const activePremiumExplanation = activePlan ? await calculatePremium(worker, activePlan) : null;
 
     res.json({
       worker: { ...safe(worker), zone },
+      zones: db.getZones(),
       policy: policy ? { ...policy, plan: db.getPlan(policy.planId), zone } : null,
       liveWeather,
       alerts: db.getZoneAlerts(zone),
@@ -41,8 +49,16 @@ router.get('/worker', auth, async (req, res) => {
         paidClaims:              paid.length,
         estimatedWeeklyEarnings: weekEarnings,
       },
+      riskCalendar,
+      shiftShield,
+      zonePulse: {
+        city: zone?.city,
+        ranked: zonePulse.byCity[zone?.city] || [],
+        updatedAt: zonePulse.updatedAt,
+      },
+      activePremiumExplanation,
       walletBalance: worker.walletBalance || 0,
-      recentClaims: claims.slice(0, 5),
+      recentClaims: [...claims].sort((a, b) => new Date(b.triggeredAt) - new Date(a.triggeredAt)).slice(0, 5),
     });
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -83,6 +99,7 @@ router.get('/admin', auth, adminOnly, (req, res) => {
     activePolicies: allPolicies.filter(p => p.zoneId === z.id && p.status === 'active').length,
     totalClaims:    allClaims.filter(c => db.getPolicyById(c.policyId)?.zoneId === z.id).length,
   }));
+  const zonePulse = getZonePulse(db.getZones(), allClaims, allPolicies);
 
   res.json({
     summary: {
@@ -92,9 +109,9 @@ router.get('/admin', auth, adminOnly, (req, res) => {
       fraudQueueCount: fraudQueue.length,
       totalClaims:     allClaims.length,
     },
-    byTrigger, weeklyTrend, zoneStats,
+    byTrigger, weeklyTrend, zoneStats, zonePulse,
     plans: db.getPlans(),
-    recentClaims: allClaims.slice(0, 15).map(c => ({
+    recentClaims: [...allClaims].sort((a, b) => new Date(b.triggeredAt) - new Date(a.triggeredAt)).slice(0, 15).map(c => ({
       ...c, worker: safe(db.findWorkerById(c.workerId)),
     })),
     fraudQueue: fraudQueue.map(c => ({

@@ -7,7 +7,7 @@
 const axios = require('axios');
 const db    = require('../models/db');
 
-const ML_URL     = process.env.ML_SERVICE_URL || 'http://localhost:5000';
+const ML_URL     = process.env.ML_SERVICE_URL || 'http://localhost:5001';
 const TIMEOUT_MS = 5000;
 
 // Health-check state — probe once at startup, retry after failures
@@ -28,7 +28,7 @@ async function isMlUp() {
     nextProbeAt = now + Math.min(60000, 5000 * failCount);
     if (!warnedOnce) {
       console.warn(`⚠️  ML service unreachable at ${ML_URL} — using local formulas`);
-      console.warn('   To activate: cd ml-service && uvicorn main:app --port 5000');
+      console.warn('   To activate: cd ml-service && uvicorn main:app --port 5001');
       warnedOnce = true;
     }
     mlUp = false;
@@ -49,12 +49,112 @@ async function mlPost(path, body) {
 
 const SEASONAL = [1.0,1.0,1.05,1.1,1.15,1.3,1.45,1.45,1.3,1.15,1.1,1.0];
 const PLATFORM = { zomato: 1.0, swiggy: 1.02 };
+const TRIGGER_PAYOUT_MULTIPLIER = {
+  rain: 0.92,
+  aqi: 0.88,
+  heat: 0.86,
+  curfew: 1.02,
+  flood: 1.08,
+  cyclone: 1.15,
+  fog: 0.82,
+  manual: 0.9,
+};
 
 function historyMultiplier(workerId) {
   const cs = db.getClaimsByWorker(workerId);
   if (cs.some(c => c.status === 'fraud_review')) return 1.3;
   if (cs.length === 0) return 0.95;
   return 1.0;
+}
+
+function round(value, digits = 2) {
+  return Number(Number(value || 0).toFixed(digits));
+}
+
+function premiumFactorBreakdown(worker, zone, plan) {
+  const month = new Date().getMonth();
+  const hoursRatio = Math.min((worker.avgHoursPerWeek || 45) / 50, 1.2);
+  const claims = db.getClaimsByWorker(worker.id);
+  const zoneRisk = round((zone?.riskScore ?? 0.7) * 0.35, 3);
+  const seasonal = round((SEASONAL[month] || 1.0) * 0.25, 3);
+  const hours = round(hoursRatio * 0.2, 3);
+  const platform = round((PLATFORM[worker.platform] || 1.0) * 0.1, 3);
+  const history = round(historyMultiplier(worker.id) * 0.1, 3);
+  const planBreadth = round(Math.min((plan.triggers?.length || 2) / 7, 1) * 0.1, 3);
+
+  return {
+    zoneRisk,
+    seasonal,
+    hours,
+    platform,
+    history,
+    planBreadth,
+    claimsCount: claims.length,
+  };
+}
+
+function premiumExplanation(worker, zone, plan, pricing, breakdown = premiumFactorBreakdown(worker, zone, plan)) {
+  const factors = [
+    {
+      key: 'zoneRisk',
+      label: 'Zone volatility',
+      impact: breakdown.zoneRisk,
+      description: `${zone?.name || 'Your zone'} has a static risk score of ${round(zone?.riskScore ?? 0.7, 2)}.`,
+    },
+    {
+      key: 'seasonal',
+      label: 'Seasonal pressure',
+      impact: breakdown.seasonal,
+      description: 'Weekly pricing adjusts for rain, heat, and AQI seasonality in your city.',
+    },
+    {
+      key: 'hours',
+      label: 'Work intensity',
+      impact: breakdown.hours,
+      description: `Your profile shows ${worker.avgHoursPerWeek || 45} hours per week, which affects weekly exposure.`,
+    },
+    {
+      key: 'history',
+      label: 'Claims history',
+      impact: breakdown.history,
+      description: `${breakdown.claimsCount} historical claims are factored into the price stability model.`,
+    },
+    {
+      key: 'planBreadth',
+      label: 'Coverage breadth',
+      impact: breakdown.planBreadth,
+      description: `${plan.name} covers ${plan.triggers?.length || 0} trigger types and up to ₹${plan.maxWeeklyPayout}.`,
+    },
+  ].sort((a, b) => b.impact - a.impact);
+
+  return {
+    summary: `Weekly price moved from ₹${plan.baseWeeklyPremium} to ₹${pricing.dynamicWeeklyPremium} because ${zone?.name || 'your zone'}, seasonal conditions, and your work pattern increase expected disruption exposure.`,
+    factors,
+    weeklyLabel: pricing.riskLabel,
+  };
+}
+
+function payoutBreakdown(worker, policy, triggerType, disruptionHours, amount) {
+  const plan = db.getPlan(policy.planId);
+  const baseHourly = Number(worker.baseHourlyEarning || 80);
+  const grossEarnings = round(baseHourly * disruptionHours, 2);
+  const triggerMultiplier = TRIGGER_PAYOUT_MULTIPLIER[triggerType] || 0.9;
+  const modeledImpact = round(grossEarnings * triggerMultiplier, 2);
+  const finalAmount = round(amount, 2);
+  const capAmount = Number(policy.maxWeeklyPayout || plan?.maxWeeklyPayout || 0);
+
+  return {
+    formula: `min(base hourly earning × disruption hours × trigger multiplier, weekly payout cap)`,
+    baseHourlyEarning: baseHourly,
+    disruptionHours: round(disruptionHours, 2),
+    grossEarnings,
+    triggerMultiplier: round(triggerMultiplier, 2),
+    modeledImpact,
+    weeklyPayoutCap: capAmount,
+    finalAmount,
+    triggerType,
+    explanation: `We started with ₹${grossEarnings} of estimated lost earnings, applied a ${round(triggerMultiplier, 2)} severity multiplier for ${triggerType}, then respected the weekly payout cap of ₹${capAmount}.`,
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -66,6 +166,7 @@ async function calculatePremium(worker, plan) {
   const month  = new Date().getMonth();
   const hoursR = Math.min((worker.avgHoursPerWeek || 45) / 50, 1.2);
   const claims = db.getClaimsByWorker(worker.id);
+  const breakdown = premiumFactorBreakdown(worker, zone, plan);
 
   if (await isMlUp()) {
     try {
@@ -98,6 +199,11 @@ async function calculatePremium(worker, plan) {
         riskLabel:            r.risk_label,
         source:               'ml_service',
         zone:                 zone?.name,
+        breakdown,
+        explanation:          premiumExplanation(worker, zone, plan, {
+          dynamicWeeklyPremium: r.dynamic_premium,
+          riskLabel: r.risk_label,
+        }, breakdown),
       };
     } catch (e) {
       console.error('ML premium failed:', e.message, '— using fallback');
@@ -120,13 +226,11 @@ async function calculatePremium(worker, plan) {
     riskLabel:            rs > 1.1 ? 'High Risk Zone' : rs > 0.9 ? 'Moderate Risk' : 'Low Risk',
     source:               'local_fallback',
     zone:                 zone?.name,
-    breakdown: {
-      zoneRisk:    parseFloat((zr*0.35).toFixed(3)),
-      seasonal:    parseFloat((sf*0.25).toFixed(3)),
-      hours:       parseFloat((hoursR*0.20).toFixed(3)),
-      platform:    parseFloat((pf*0.10).toFixed(3)),
-      history:     parseFloat((hf*0.10).toFixed(3)),
-    },
+    breakdown,
+    explanation: premiumExplanation(worker, zone, plan, {
+      dynamicWeeklyPremium: Math.round(plan.baseWeeklyPremium * mul),
+      riskLabel: rs > 1.1 ? 'High Risk Zone' : rs > 0.9 ? 'Moderate Risk' : 'Low Risk',
+    }, breakdown),
   };
 }
 
@@ -192,9 +296,16 @@ async function scoreFraud(claim, worker) {
 // calculatePayout
 // ---------------------------------------------------------------------------
 
-async function calculatePayout(worker, policy, triggerType, disruptionHours) {
+async function calculatePayoutDetails(worker, policy, triggerType, disruptionHours) {
   const plan = db.getPlan(policy.planId);
-  if (!plan) return 0;
+  if (!plan) {
+    return {
+      amount: 0,
+      breakdown: payoutBreakdown(worker, policy, triggerType, disruptionHours, 0),
+    };
+  }
+
+  let amount = 0;
 
   if (await isMlUp()) {
     try {
@@ -207,17 +318,30 @@ async function calculatePayout(worker, policy, triggerType, disruptionHours) {
         real_rain_mm_hr:     0,
         real_aqi:            100,
       });
-      return r.payout_amount;
+      amount = r.payout_amount;
     } catch (e) {
       console.error('ML payout failed:', e.message, '— using fallback');
       mlUp = false;
     }
   }
 
-  // Local fallback
-  if (triggerType === 'heat') return Math.min(200, policy.maxWeeklyPayout);
-  const raw = (worker.baseHourlyEarning || 80) * disruptionHours;
-  return Math.round(Math.min(raw, policy.maxWeeklyPayout * 0.6));
+  if (!amount) {
+    if (triggerType === 'heat') amount = Math.min(200, policy.maxWeeklyPayout);
+    else {
+      const raw = (worker.baseHourlyEarning || 80) * disruptionHours;
+      amount = Math.round(Math.min(raw, policy.maxWeeklyPayout * 0.6));
+    }
+  }
+
+  return {
+    amount,
+    breakdown: payoutBreakdown(worker, policy, triggerType, disruptionHours, amount),
+  };
 }
 
-module.exports = { calculatePremium, scoreFraud, calculatePayout, isMlUp };
+async function calculatePayout(worker, policy, triggerType, disruptionHours) {
+  const result = await calculatePayoutDetails(worker, policy, triggerType, disruptionHours);
+  return result.amount;
+}
+
+module.exports = { calculatePremium, scoreFraud, calculatePayout, calculatePayoutDetails, isMlUp };

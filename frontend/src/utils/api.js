@@ -31,7 +31,9 @@ export const policyAPI = {
   addPlan: data => api.post('/policies/plans', data),
   active:  () => api.get('/policies/active'),
   my:      () => api.get('/policies/my'),
-  buy:     planId => api.post('/policies', { planId }),
+  buy:     (planId, extra = {}) => api.post('/policies', { planId, ...extra }),
+  topUpHours: hours => api.post('/policies/active/topup-hours', { hours }),
+  startShift: data => api.post('/policies/shift/start', data || {}),
   cancel:  () => api.delete('/policies/active'),
   toggleAutoRenew: autoRenew => api.patch('/policies/active/autorenew', { autoRenew }),
   simulateExpire: () => api.post('/policies/simulate/expire'),
@@ -40,7 +42,8 @@ export const policyAPI = {
 export const claimsAPI = {
   my:      () => api.get('/claims/my'),
   all:     () => api.get('/claims'),
-  approve: id => api.post(`/claims/${id}/approve`),
+  proofPack: id => api.get(`/claims/${id}/proof-pack`),
+  approve: (id, gatewayId) => api.post(`/claims/${id}/approve`, gatewayId ? { gatewayId } : {}),
   reject:  (id, reason) => api.post(`/claims/${id}/reject`, { reason }),
   manual:  data => api.post(`/claims/manual`, data),
 };
@@ -65,8 +68,15 @@ export const workerAPI = {
 export const walletAPI = {
   balance:      ()        => api.get('/wallet/balance'),
   transactions: (limit=50)=> api.get(`/wallet/transactions?limit=${limit}`),
+  gateways:     (flow)    => api.get(`/wallet/gateways${flow ? `?flow=${flow}` : ''}`),
+  createTopupSession: data => api.post('/wallet/topup/session', data),
+  confirmTopupSession: (id, data) => api.post(`/wallet/topup/session/${id}/confirm`, data),
   add:          d         => api.post('/wallet/add', d),
   withdraw:     d         => api.post('/wallet/withdraw', d),
+};
+
+export const chatbotAPI = {
+  message: d => api.post('/chatbot/message', d),
 };
 
 export default api;

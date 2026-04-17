@@ -1,6 +1,7 @@
 const cron = require('node-cron');
 const db = require('../models/db');
-const { calculatePremium } = require('./ml');
+const { purchasePolicy } = require('./policyOps');
+const { notifyWorkerAction } = require('./notifier');
 
 function start() {
   console.log('⏳ Renew Scheduler started');
@@ -14,86 +15,71 @@ function start() {
       for (const policy of allPolicies) {
         if (policy.status !== 'active') continue;
 
-        const endDate = new Date(policy.endDate);
-        const msLeft = endDate.getTime() - now.getTime();
-        const hoursLeft = msLeft / (1000 * 60 * 60);
+        const remainingHours = Number(policy.remainingActiveHours ?? policy.coveredActiveHours ?? 0);
 
-        // Less than 24 hours left: check if we should notify
-        if (hoursLeft > 0 && hoursLeft <= 24) {
+        if (remainingHours > 0 && remainingHours <= 6) {
           if (!policy.notifiedExpiring) {
-            db.addWorkerNotification(
-              policy.workerId,
-              'alert',
-              `Your ${db.getPlan(policy.planId)?.name || 'policy'} expires in less than 24 hours!`
-            );
+            await notifyWorkerAction({
+              workerId: policy.workerId,
+              type: 'alert',
+              inAppMessage: `Your ${db.getPlan(policy.planId)?.name || 'policy'} has only ${remainingHours} active hours left.`,
+              emailSubject: 'Your policy is running low on protected hours',
+              emailTitle: 'Protected hours running low',
+              emailIntro: 'Your active coverage is nearing exhaustion.',
+              emailLines: [`Remaining protected hours: ${remainingHours}h`],
+              meta: { action: 'policy_low_hours', policyId: policy.id },
+            });
             db.updatePolicy(policy.id, { notifiedExpiring: true });
           }
         }
         
-        // Expired
-        if (hoursLeft <= 0) {
+        if (remainingHours <= 0) {
           if (policy.autoRenew) {
-            const worker = db.findWorkerById(policy.workerId);
-            const plan = db.getPlan(policy.planId);
-            
-            if (worker && plan) {
-              const pricing = await calculatePremium(worker, plan);
-              const premium = pricing.dynamicWeeklyPremium;
+            const result = await purchasePolicy({
+              workerId: policy.workerId,
+              planId: policy.planId,
+              autoRenew: true,
+              source: 'auto_renew',
+            });
 
-              if ((worker.walletBalance || 0) >= premium) {
-                // Debit and renew
-                db.debitWallet(worker.id, premium, `Auto-renewal for ${plan.name}`, {
-                  method: 'wallet',
-                  planId: plan.id,
-                  ref: 'REN' + Date.now().toString(36).toUpperCase()
-                });
-
-                db.updatePolicy(policy.id, { status: 'expired' });
-                
-                const newStart = new Date(now);
-                const newEnd = new Date(now.getTime() + 7 * 86400000);
-
-                db.createPolicy({
-                  workerId: worker.id,
-                  planId: plan.id,
-                  zoneId: worker.zoneId,
-                  weeklyPremium: premium,
-                  maxWeeklyPayout: plan.maxWeeklyPayout,
-                  status: 'active',
-                  startDate: newStart.toISOString(),
-                  endDate: newEnd.toISOString(),
-                  totalPaidIn: premium,
-                  totalPaidOut: 0,
-                  claimCount: 0,
-                  pricingBreakdown: pricing,
-                  autoRenew: true
-                });
-
-                db.addWorkerNotification(
-                  worker.id,
-                  'success',
-                  `Your ${plan.name} has been successfully auto-renewed for ₹${premium}.`
-                );
-              } else {
-                // Insufficient funds
-                db.updatePolicy(policy.id, { status: 'expired' });
-                db.addWorkerNotification(
-                  worker.id,
-                  'error',
-                  `Auto-renewal failed for ${plan.name} due to insufficient wallet balance.`
-                );
-              }
+            if (!result.error) {
+              await notifyWorkerAction({
+                workerId: policy.workerId,
+                type: 'success',
+                inAppMessage: `Your ${result.plan.name} has been auto-renewed for ₹${result.premium}.`,
+                emailSubject: 'Policy auto-renewed successfully',
+                emailTitle: 'Auto-renew complete',
+                emailIntro: 'Your protection bundle has been renewed automatically.',
+                emailLines: [
+                  `Bundle premium: ₹${result.premium}`,
+                  `Protected active hours: ${result.policy.coveredActiveHours}h`,
+                ],
+                meta: { action: 'auto_renew_success', policyId: result.policy.id, planId: result.plan.id },
+              });
             } else {
               db.updatePolicy(policy.id, { status: 'expired' });
+              await notifyWorkerAction({
+                workerId: policy.workerId,
+                type: 'error',
+                inAppMessage: `Auto-renewal failed for ${db.getPlan(policy.planId)?.name || 'your plan'} due to insufficient wallet balance.`,
+                emailSubject: 'Policy auto-renew failed',
+                emailTitle: 'Auto-renew failed',
+                emailIntro: 'We could not renew your policy automatically.',
+                emailLines: [result.error],
+                meta: { action: 'auto_renew_failed', policyId: policy.id },
+              });
             }
           } else {
-            // No auto-renew, just expire
             db.updatePolicy(policy.id, { status: 'expired' });
-            db.addWorkerNotification(
-              policy.workerId,
-              'warning',
-              `Your coverage has expired. Renew to stay protected from disruptions.`
-            );
+            await notifyWorkerAction({
+              workerId: policy.workerId,
+              type: 'warning',
+              inAppMessage: 'Your protected active hours are exhausted. Renew to stay covered.',
+              emailSubject: 'Your policy has ended',
+              emailTitle: 'Coverage ended',
+              emailIntro: 'Your protected active hours have been fully used.',
+              meta: { action: 'policy_expired', policyId: policy.id },
+            });
           }
         }
       }

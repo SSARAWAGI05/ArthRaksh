@@ -3,6 +3,7 @@ const bcrypt  = require('bcryptjs');
 const jwt     = require('jsonwebtoken');
 const db      = require('../models/db');
 const { auth, SECRET } = require('../middleware/auth');
+const { notifyWorkerAction } = require('../services/notifier');
 
 const sign = (id, role) => jwt.sign({ id, role }, SECRET, { expiresIn: '7d' });
 const safe = w => { const { password: _, ...s } = w; return s; };
@@ -11,20 +12,35 @@ const safe = w => { const { password: _, ...s } = w; return s; };
 router.post('/register', async (req, res) => {
   try {
     const { name, phone, email, password, platform, zoneId, avgHoursPerWeek } = req.body;
-    if (!name || !phone || !password || !platform || !zoneId)
-      return res.status(400).json({ error: 'name, phone, password, platform, zoneId are required' });
+    if (!name || !phone || !email || !password || !platform || !zoneId)
+      return res.status(400).json({ error: 'name, phone, email, password, platform, zoneId are required' });
     if (db.findWorkerByPhone(phone))
       return res.status(409).json({ error: 'Phone number already registered' });
+    if (db.findWorkerByEmail(email))
+      return res.status(409).json({ error: 'Email address already registered' });
     if (!db.getZone(zoneId))
       return res.status(400).json({ error: 'Invalid zone' });
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return res.status(400).json({ error: 'A valid email address is required' });
 
     const worker = db.createWorker({
-      name, phone, email: email || '',
+      name, phone, email,
       password: await bcrypt.hash(password, 10),
       platform, zoneId,
       baseHourlyEarning: platform === 'swiggy' ? 82 : 78,
       avgHoursPerWeek:   Number(avgHoursPerWeek) || 45,
     });
+
+    notifyWorkerAction({
+      workerId: worker.id,
+      type: 'success',
+      inAppMessage: 'Welcome to GigShield. Your account is ready.',
+      emailSubject: 'Welcome to GigShield',
+      emailTitle: 'Your account is live',
+      emailIntro: `Welcome ${worker.name}, your account has been created successfully.`,
+      emailLines: [`Platform: ${worker.platform}`, `Zone: ${db.getZone(worker.zoneId)?.name || worker.zoneId}`],
+      meta: { action: 'register' },
+    }).catch(() => {});
 
     res.status(201).json({ worker: safe(worker), token: sign(worker.id, 'worker') });
   } catch (e) { res.status(500).json({ error: e.message }); }
@@ -45,7 +61,7 @@ router.post('/login', async (req, res) => {
 router.post('/admin/login', async (req, res) => {
   try {
     const { email, password } = req.body;
-    const admin = db.findAdminByEmail(email);
+    const admin = db.findAdminByEmail(String(email || '').trim());
     if (!admin || !(await bcrypt.compare(password, admin.password)))
       return res.status(401).json({ error: 'Invalid credentials' });
     const { password: _, ...s } = admin;

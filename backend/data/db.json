@@ -7,13 +7,13 @@
       "email": "ravi@example.com",
       "password": "$2a$10$bGAlYk9Y77GRSqeoYRqYJOq6vhH2mokfllJWDm5CyB69dKZqjjz4C",
       "platform": "swiggy",
-      "zoneId": "z2",
+      "zoneId": "z3",
       "baseHourlyEarning": 80,
       "avgHoursPerWeek": 50,
       "kycVerified": true,
       "createdAt": "2024-01-15T00:00:00.000Z",
       "role": "worker",
-      "walletBalance": 0,
+      "walletBalance": 870,
       "notifications": []
     },
     {
@@ -44,8 +44,23 @@
       "avgHoursPerWeek": 45,
       "role": "worker",
       "kycVerified": true,
-      "walletBalance": 44,
+      "walletBalance": 1172,
       "createdAt": "2026-04-04T09:46:50.764Z"
+    },
+    {
+      "id": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "name": "Kashvi",
+      "phone": "9163615662",
+      "email": "sarawagishubam@gmail.com",
+      "password": "$2a$10$XjQJR48426vJvZk0VFMNLOylZ6PvtRBgftfqRAut5Qwc0RagtfbS2",
+      "platform": "swiggy",
+      "zoneId": "z1",
+      "baseHourlyEarning": 82,
+      "avgHoursPerWeek": 45,
+      "role": "worker",
+      "kycVerified": true,
+      "walletBalance": 1499,
+      "createdAt": "2026-04-16T16:08:08.950Z"
     }
   ],
   "admins": [
@@ -88,12 +103,2737 @@
         }
       },
       "createdAt": "2026-04-04T09:51:23.123Z",
+      "notifiedExpiring": true,
+      "coveredActiveHours": 36,
+      "remainingActiveHours": 36,
+      "consumedActiveHours": 0
+    },
+    {
+      "id": "df57a930-8f10-43e8-8cf5-0e2f35cfb150",
+      "autoRenew": false,
+      "coveredActiveHours": 36,
+      "remainingActiveHours": 36,
+      "consumedActiveHours": 0,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "planId": "pro",
+      "zoneId": "z1",
+      "weeklyPremium": 55,
+      "hourlyPremium": 1.53,
+      "maxWeeklyPayout": 1200,
+      "status": "expired",
+      "startDate": "2026-04-16T15:11:12.561Z",
+      "endDate": "2026-04-22T15:11:12.561Z",
+      "totalPaidIn": 55,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 49,
+        "dynamicWeeklyPremium": 55,
+        "multiplier": 1.12,
+        "riskLabel": "Moderate Risk",
+        "source": "ml_service",
+        "zone": "Andheri West",
+        "includedActiveHours": 36,
+        "dynamicBundlePremium": 55,
+        "dynamicHourlyPremium": 1.53
+      },
+      "createdAt": "2026-04-16T15:11:12.561Z"
+    },
+    {
+      "id": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+      "autoRenew": false,
+      "coveredActiveHours": 60,
+      "remainingActiveHours": 45.5,
+      "consumedActiveHours": 14.5,
+      "workerId": "w1",
+      "planId": "max",
+      "zoneId": "z2",
+      "weeklyPremium": 95,
+      "hourlyPremium": 1.58,
+      "maxWeeklyPayout": 2000,
+      "status": "active",
+      "startDate": "2026-04-16T15:45:52.941Z",
+      "endDate": "2026-04-25T15:45:52.941Z",
+      "totalPaidIn": 95,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 79,
+        "dynamicWeeklyPremium": 95,
+        "multiplier": 1.2,
+        "riskLabel": "Moderate Risk",
+        "source": "ml_service",
+        "zone": "Kurla",
+        "includedActiveHours": 60,
+        "dynamicBundlePremium": 95,
+        "dynamicHourlyPremium": 1.58
+      },
+      "createdAt": "2026-04-16T15:45:52.941Z"
+    },
+    {
+      "id": "56b942e6-a685-48e0-aeee-587749a7911a",
+      "autoRenew": false,
+      "coveredActiveHours": 18,
+      "remainingActiveHours": 0,
+      "consumedActiveHours": 18,
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "planId": "basic",
+      "zoneId": "z1",
+      "weeklyPremium": 33,
+      "hourlyPremium": 1.83,
+      "maxWeeklyPayout": 600,
+      "status": "expired",
+      "startDate": "2026-04-16T16:15:58.277Z",
+      "endDate": "2026-04-17T09:11:57.941Z",
+      "totalPaidIn": 33,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 29,
+        "dynamicWeeklyPremium": 33,
+        "multiplier": 1.14,
+        "riskLabel": "Moderate Risk",
+        "source": "ml_service",
+        "zone": "Andheri West",
+        "includedActiveHours": 18,
+        "dynamicBundlePremium": 33,
+        "dynamicHourlyPremium": 1.83
+      },
+      "createdAt": "2026-04-16T16:15:58.277Z",
       "notifiedExpiring": true
+    },
+    {
+      "id": "3183f315-b0c6-4ffa-a293-6c1ae628888d",
+      "autoRenew": false,
+      "coveredActiveHours": 18,
+      "remainingActiveHours": 18,
+      "consumedActiveHours": 0,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "planId": "basic",
+      "zoneId": "z1",
+      "weeklyPremium": 33,
+      "hourlyPremium": 1.83,
+      "maxWeeklyPayout": 600,
+      "status": "cancelled",
+      "startDate": "2026-04-17T04:34:49.725Z",
+      "endDate": "2026-04-17T05:47:09.259Z",
+      "totalPaidIn": 33,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 29,
+        "dynamicWeeklyPremium": 33,
+        "multiplier": 1.14,
+        "riskLabel": "Moderate Risk",
+        "source": "ml_service",
+        "zone": "Andheri West",
+        "breakdown": {
+          "zoneRisk": 0.287,
+          "seasonal": 0.275,
+          "hours": 0.18,
+          "platform": 0.102,
+          "history": 0.095,
+          "planBreadth": 0.029,
+          "claimsCount": 0
+        },
+        "explanation": {
+          "summary": "Weekly price moved from ₹29 to ₹33 because Andheri West, seasonal conditions, and your work pattern increase expected disruption exposure.",
+          "factors": [
+            {
+              "key": "zoneRisk",
+              "label": "Zone volatility",
+              "impact": 0.287,
+              "description": "Andheri West has a static risk score of 0.82."
+            },
+            {
+              "key": "seasonal",
+              "label": "Seasonal pressure",
+              "impact": 0.275,
+              "description": "Weekly pricing adjusts for rain, heat, and AQI seasonality in your city."
+            },
+            {
+              "key": "hours",
+              "label": "Work intensity",
+              "impact": 0.18,
+              "description": "Your profile shows 45 hours per week, which affects weekly exposure."
+            },
+            {
+              "key": "history",
+              "label": "Claims history",
+              "impact": 0.095,
+              "description": "0 historical claims are factored into the price stability model."
+            },
+            {
+              "key": "planBreadth",
+              "label": "Coverage breadth",
+              "impact": 0.029,
+              "description": "Basic Shield covers 2 trigger types and up to ₹600."
+            }
+          ],
+          "weeklyLabel": "Moderate Risk"
+        },
+        "includedActiveHours": 18,
+        "dynamicBundlePremium": 33,
+        "dynamicHourlyPremium": 1.83
+      },
+      "activationMode": "manual",
+      "shiftIntent": null,
+      "createdAt": "2026-04-17T04:34:49.725Z"
+    },
+    {
+      "id": "bf42bf8b-e365-43d3-816a-e199fe66060a",
+      "autoRenew": false,
+      "coveredActiveHours": 36,
+      "remainingActiveHours": 30.5,
+      "consumedActiveHours": 5.5,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "planId": "pro",
+      "zoneId": "z1",
+      "weeklyPremium": 56,
+      "hourlyPremium": 1.56,
+      "maxWeeklyPayout": 1200,
+      "status": "cancelled",
+      "startDate": "2026-04-17T05:47:51.118Z",
+      "endDate": "2026-04-17T10:36:48.148Z",
+      "totalPaidIn": 56,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 49,
+        "dynamicWeeklyPremium": 56,
+        "multiplier": 1.13,
+        "riskLabel": "Moderate Risk",
+        "source": "local_fallback",
+        "zone": "Andheri West",
+        "breakdown": {
+          "zoneRisk": 0.287,
+          "seasonal": 0.275,
+          "hours": 0.18,
+          "platform": 0.102,
+          "history": 0.095,
+          "planBreadth": 0.057,
+          "claimsCount": 0
+        },
+        "explanation": {
+          "summary": "Weekly price moved from ₹49 to ₹56 because Andheri West, seasonal conditions, and your work pattern increase expected disruption exposure.",
+          "factors": [
+            {
+              "key": "zoneRisk",
+              "label": "Zone volatility",
+              "impact": 0.287,
+              "description": "Andheri West has a static risk score of 0.82."
+            },
+            {
+              "key": "seasonal",
+              "label": "Seasonal pressure",
+              "impact": 0.275,
+              "description": "Weekly pricing adjusts for rain, heat, and AQI seasonality in your city."
+            },
+            {
+              "key": "hours",
+              "label": "Work intensity",
+              "impact": 0.18,
+              "description": "Your profile shows 45 hours per week, which affects weekly exposure."
+            },
+            {
+              "key": "history",
+              "label": "Claims history",
+              "impact": 0.095,
+              "description": "0 historical claims are factored into the price stability model."
+            },
+            {
+              "key": "planBreadth",
+              "label": "Coverage breadth",
+              "impact": 0.057,
+              "description": "Pro Shield covers 4 trigger types and up to ₹1200."
+            }
+          ],
+          "weeklyLabel": "Moderate Risk"
+        },
+        "includedActiveHours": 36,
+        "dynamicBundlePremium": 56,
+        "dynamicHourlyPremium": 1.56
+      },
+      "activationMode": "manual",
+      "shiftIntent": null,
+      "createdAt": "2026-04-17T05:47:51.118Z"
+    },
+    {
+      "id": "0d56f9e7-141c-4523-9d51-bbac812ad1f2",
+      "autoRenew": false,
+      "coveredActiveHours": 18,
+      "remainingActiveHours": 18,
+      "consumedActiveHours": 0,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "planId": "basic",
+      "zoneId": "z1",
+      "weeklyPremium": 33,
+      "hourlyPremium": 1.83,
+      "maxWeeklyPayout": 600,
+      "status": "active",
+      "startDate": "2026-04-17T10:40:52.759Z",
+      "endDate": "2026-04-24T10:40:52.759Z",
+      "totalPaidIn": 33,
+      "totalPaidOut": 0,
+      "claimCount": 0,
+      "pricingBreakdown": {
+        "baseWeeklyPremium": 29,
+        "dynamicWeeklyPremium": 33,
+        "multiplier": 1.14,
+        "riskLabel": "Moderate Risk",
+        "source": "local_fallback",
+        "zone": "Andheri West",
+        "breakdown": {
+          "zoneRisk": 0.287,
+          "seasonal": 0.275,
+          "hours": 0.18,
+          "platform": 0.102,
+          "history": 0.1,
+          "planBreadth": 0.029,
+          "claimsCount": 2
+        },
+        "explanation": {
+          "summary": "Weekly price moved from ₹29 to ₹33 because Andheri West, seasonal conditions, and your work pattern increase expected disruption exposure.",
+          "factors": [
+            {
+              "key": "zoneRisk",
+              "label": "Zone volatility",
+              "impact": 0.287,
+              "description": "Andheri West has a static risk score of 0.82."
+            },
+            {
+              "key": "seasonal",
+              "label": "Seasonal pressure",
+              "impact": 0.275,
+              "description": "Weekly pricing adjusts for rain, heat, and AQI seasonality in your city."
+            },
+            {
+              "key": "hours",
+              "label": "Work intensity",
+              "impact": 0.18,
+              "description": "Your profile shows 45 hours per week, which affects weekly exposure."
+            },
+            {
+              "key": "history",
+              "label": "Claims history",
+              "impact": 0.1,
+              "description": "2 historical claims are factored into the price stability model."
+            },
+            {
+              "key": "planBreadth",
+              "label": "Coverage breadth",
+              "impact": 0.029,
+              "description": "Basic Shield covers 2 trigger types and up to ₹600."
+            }
+          ],
+          "weeklyLabel": "Moderate Risk"
+        },
+        "includedActiveHours": 18,
+        "dynamicBundlePremium": 33,
+        "dynamicHourlyPremium": 1.83
+      },
+      "activationMode": "manual",
+      "shiftIntent": null,
+      "createdAt": "2026-04-17T10:40:52.759Z"
     }
   ],
-  "claims": [],
-  "triggerEvents": [],
+  "claims": [
+    {
+      "id": "13b2017b-c9e2-4d2b-a8a4-8f68aadaa3fd",
+      "workerId": "w1",
+      "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+      "triggerType": "heat",
+      "triggerValue": "N/A",
+      "disruptionHours": 3,
+      "reservedActiveHours": 3,
+      "payoutAmount": 214.28571428571428,
+      "fraudScore": 50,
+      "status": "manual_review",
+      "manualReason": "3 hours because roads were blocked yesterday",
+      "triggeredAt": "2026-04-15",
+      "weatherSource": "User Submitted",
+      "createdAt": "2026-04-16T15:47:31.812Z"
+    },
+    {
+      "id": "316bf22b-d389-4c42-af28-60edaac29de9",
+      "workerId": "w1",
+      "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+      "triggerType": "heat",
+      "triggerValue": "N/A",
+      "disruptionHours": 3,
+      "reservedActiveHours": 3,
+      "payoutAmount": 214.28571428571428,
+      "fraudScore": 50,
+      "status": "manual_review",
+      "manualReason": "3 hours because roads were blocked yesterday",
+      "triggeredAt": "2026-04-15",
+      "weatherSource": "User Submitted",
+      "createdAt": "2026-04-16T15:48:04.606Z"
+    },
+    {
+      "id": "e1b15900-f3db-4063-83a5-10faf3bef85f",
+      "workerId": "w1",
+      "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+      "triggerType": "flood",
+      "triggerValue": "N/A",
+      "disruptionHours": 3,
+      "reservedActiveHours": 3,
+      "payoutAmount": 214.28571428571428,
+      "fraudScore": 50,
+      "status": "manual_review",
+      "manualReason": "roads were blocked yesterday",
+      "triggeredAt": "2026-04-15",
+      "weatherSource": "User Submitted",
+      "createdAt": "2026-04-16T15:48:59.678Z"
+    },
+    {
+      "id": "0ed94f4f-b8ac-4ce5-b1db-bbc53a91e7cf",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "policyId": "bf42bf8b-e365-43d3-816a-e199fe66060a",
+      "triggerEventId": "ec15a247-6d53-413f-84d2-9a38fbb66c26",
+      "triggerType": "curfew",
+      "triggerValue": "1.0",
+      "disruptionHours": 3,
+      "reservedActiveHours": 3,
+      "payoutAmount": 246,
+      "fraudScore": 6,
+      "status": "paid",
+      "statusReason": null,
+      "triggeredAt": "2026-04-17T05:47:54.848Z",
+      "weatherSource": "simulation",
+      "weatherSnapshot": {
+        "zone_id": "z1",
+        "zone_name": "Andheri West",
+        "rainfall_mm_hr": 1.1,
+        "temp_celsius": 31,
+        "aqi": 84,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T05:47:54.844Z",
+        "source": "simulation"
+      },
+      "payoutBreakdown": {
+        "formula": "min(base hourly earning × disruption hours × trigger multiplier, weekly payout cap)",
+        "baseHourlyEarning": 82,
+        "disruptionHours": 3,
+        "grossEarnings": 246,
+        "triggerMultiplier": 1.02,
+        "modeledImpact": 250.92,
+        "weeklyPayoutCap": 1200,
+        "finalAmount": 246,
+        "triggerType": "curfew",
+        "explanation": "We started with ₹246 of estimated lost earnings, applied a 1.02 severity multiplier for curfew, then respected the weekly payout cap of ₹1200."
+      },
+      "gpsZoneMatch": true,
+      "wasActive": true,
+      "createdAt": "2026-04-17T05:47:54.849Z",
+      "paidAt": "2026-04-17T05:47:54.859Z",
+      "upiRef": "STRIPE-YTMG1E",
+      "payoutGatewayId": "stripe_sandbox",
+      "payoutGatewayLabel": "Stripe Sandbox",
+      "payoutTransferId": "po_mo2hlht76lnmt6",
+      "payoutRail": "Stripe Connect Sandbox"
+    },
+    {
+      "id": "02b6f0f4-ddc3-44ca-a75f-88f394747e48",
+      "workerId": "w1",
+      "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+      "triggerEventId": "5ae802a5-dacc-47fa-975e-a5f281bd66e2",
+      "triggerType": "curfew",
+      "triggerValue": "1.0",
+      "disruptionHours": 3,
+      "reservedActiveHours": 3,
+      "payoutAmount": 240,
+      "fraudScore": 1,
+      "status": "paid",
+      "statusReason": null,
+      "triggeredAt": "2026-04-17T05:47:54.863Z",
+      "weatherSource": "simulation",
+      "weatherSnapshot": {
+        "zone_id": "z2",
+        "zone_name": "Kurla",
+        "rainfall_mm_hr": 1.1,
+        "temp_celsius": 31,
+        "aqi": 84,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T05:47:54.862Z",
+        "source": "simulation"
+      },
+      "payoutBreakdown": {
+        "formula": "min(base hourly earning × disruption hours × trigger multiplier, weekly payout cap)",
+        "baseHourlyEarning": 80,
+        "disruptionHours": 3,
+        "grossEarnings": 240,
+        "triggerMultiplier": 1.02,
+        "modeledImpact": 244.8,
+        "weeklyPayoutCap": 2000,
+        "finalAmount": 240,
+        "triggerType": "curfew",
+        "explanation": "We started with ₹240 of estimated lost earnings, applied a 1.02 severity multiplier for curfew, then respected the weekly payout cap of ₹2000."
+      },
+      "gpsZoneMatch": true,
+      "wasActive": true,
+      "createdAt": "2026-04-17T05:47:54.863Z",
+      "paidAt": "2026-04-17T05:47:58.746Z",
+      "upiRef": "STRIPE-AO9GVJ",
+      "payoutGatewayId": "stripe_sandbox",
+      "payoutGatewayLabel": "Stripe Sandbox",
+      "payoutTransferId": "po_mo2hlkt3uvw5wb",
+      "payoutRail": "Stripe Connect Sandbox"
+    },
+    {
+      "id": "d05910bb-5670-4ce9-ad49-0246a3646466",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "policyId": "56b942e6-a685-48e0-aeee-587749a7911a",
+      "triggerEventId": "2f8c89f3-e96c-45bb-a983-4d3ffb796906",
+      "triggerType": "rain",
+      "triggerValue": "30.3mm/hr",
+      "disruptionHours": 1,
+      "reservedActiveHours": 1,
+      "payoutAmount": 82,
+      "fraudScore": 6,
+      "status": "paid",
+      "statusReason": null,
+      "triggeredAt": "2026-04-17T09:11:57.940Z",
+      "weatherSource": "simulation",
+      "weatherSnapshot": {
+        "zone_id": "z1",
+        "zone_name": "Andheri West",
+        "rainfall_mm_hr": 30.3,
+        "temp_celsius": 30.9,
+        "aqi": 81,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 7990,
+        "fetched_at": "2026-04-17T09:11:57.938Z",
+        "source": "simulation"
+      },
+      "payoutBreakdown": {
+        "formula": "min(base hourly earning × disruption hours × trigger multiplier, weekly payout cap)",
+        "baseHourlyEarning": 82,
+        "disruptionHours": 1,
+        "grossEarnings": 82,
+        "triggerMultiplier": 0.92,
+        "modeledImpact": 75.44,
+        "weeklyPayoutCap": 600,
+        "finalAmount": 82,
+        "triggerType": "rain",
+        "explanation": "We started with ₹82 of estimated lost earnings, applied a 0.92 severity multiplier for rain, then respected the weekly payout cap of ₹600."
+      },
+      "gpsZoneMatch": true,
+      "wasActive": true,
+      "createdAt": "2026-04-17T09:11:57.940Z",
+      "paidAt": "2026-04-17T09:12:01.768Z",
+      "upiRef": "RZP-PAYOUT-EC8PRG",
+      "payoutGatewayId": "razorpay_test",
+      "payoutGatewayLabel": "Razorpay Test Mode",
+      "payoutTransferId": "trf_mo2ovzl1bl6nhd",
+      "payoutRail": "Razorpay Route Test"
+    },
+    {
+      "id": "71ecbc18-a2eb-48c9-a122-c25cd6270aa2",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "policyId": "bf42bf8b-e365-43d3-816a-e199fe66060a",
+      "triggerEventId": "2f8c89f3-e96c-45bb-a983-4d3ffb796906",
+      "triggerType": "rain",
+      "triggerValue": "30.3mm/hr",
+      "disruptionHours": 2.5,
+      "reservedActiveHours": 2.5,
+      "payoutAmount": 205,
+      "fraudScore": 1,
+      "status": "paid",
+      "statusReason": null,
+      "triggeredAt": "2026-04-17T09:12:05.347Z",
+      "weatherSource": "simulation",
+      "weatherSnapshot": {
+        "zone_id": "z1",
+        "zone_name": "Andheri West",
+        "rainfall_mm_hr": 30.3,
+        "temp_celsius": 30.9,
+        "aqi": 81,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 7990,
+        "fetched_at": "2026-04-17T09:11:57.938Z",
+        "source": "simulation"
+      },
+      "payoutBreakdown": {
+        "formula": "min(base hourly earning × disruption hours × trigger multiplier, weekly payout cap)",
+        "baseHourlyEarning": 82,
+        "disruptionHours": 2.5,
+        "grossEarnings": 205,
+        "triggerMultiplier": 0.92,
+        "modeledImpact": 188.6,
+        "weeklyPayoutCap": 1200,
+        "finalAmount": 205,
+        "triggerType": "rain",
+        "explanation": "We started with ₹205 of estimated lost earnings, applied a 0.92 severity multiplier for rain, then respected the weekly payout cap of ₹1200."
+      },
+      "gpsZoneMatch": true,
+      "wasActive": true,
+      "createdAt": "2026-04-17T09:12:05.347Z",
+      "paidAt": "2026-04-17T09:12:05.365Z",
+      "upiRef": "RZP-PAYOUT-PP6Y3Q",
+      "payoutGatewayId": "razorpay_test",
+      "payoutGatewayLabel": "Razorpay Test Mode",
+      "payoutTransferId": "trf_mo2ow2d0n0nchl",
+      "payoutRail": "Razorpay Route Test"
+    },
+    {
+      "id": "0d35fb2e-699e-494e-a474-9dec5e46737c",
+      "workerId": "w1",
+      "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+      "triggerEventId": "2ca33826-35e6-482b-a4a5-07cf6a24f77c",
+      "triggerType": "rain",
+      "triggerValue": "32.8mm/hr",
+      "disruptionHours": 2.5,
+      "reservedActiveHours": 2.5,
+      "payoutAmount": 200,
+      "fraudScore": 5,
+      "status": "paid",
+      "statusReason": null,
+      "triggeredAt": "2026-04-17T09:12:05.371Z",
+      "weatherSource": "simulation",
+      "weatherSnapshot": {
+        "zone_id": "z2",
+        "zone_name": "Kurla",
+        "rainfall_mm_hr": 32.8,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:05.370Z",
+        "source": "simulation"
+      },
+      "payoutBreakdown": {
+        "formula": "min(base hourly earning × disruption hours × trigger multiplier, weekly payout cap)",
+        "baseHourlyEarning": 80,
+        "disruptionHours": 2.5,
+        "grossEarnings": 200,
+        "triggerMultiplier": 0.92,
+        "modeledImpact": 184,
+        "weeklyPayoutCap": 2000,
+        "finalAmount": 200,
+        "triggerType": "rain",
+        "explanation": "We started with ₹200 of estimated lost earnings, applied a 0.92 severity multiplier for rain, then respected the weekly payout cap of ₹2000."
+      },
+      "gpsZoneMatch": true,
+      "wasActive": true,
+      "createdAt": "2026-04-17T09:12:05.371Z",
+      "paidAt": "2026-04-17T09:12:08.953Z",
+      "upiRef": "RZP-PAYOUT-3YKPVB",
+      "payoutGatewayId": "razorpay_test",
+      "payoutGatewayLabel": "Razorpay Test Mode",
+      "payoutTransferId": "trf_mo2ow54kap00i4",
+      "payoutRail": "Razorpay Route Test"
+    }
+  ],
+  "triggerEvents": [
+    {
+      "id": "5ddf8f08-b1e4-40ab-a60c-ffefc86e8971",
+      "zoneId": "z30",
+      "zoneName": "Malviya Nagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 28.5,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z30",
+        "zone_name": "Malviya Nagar",
+        "rainfall_mm_hr": 28.5,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.853Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.853Z"
+    },
+    {
+      "id": "59e936f0-302a-4c70-a30b-f8d12fcbe48b",
+      "zoneId": "z29",
+      "zoneName": "Indira Nagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 26.9,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z29",
+        "zone_name": "Indira Nagar",
+        "rainfall_mm_hr": 26.9,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.852Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.852Z"
+    },
+    {
+      "id": "1704c4fc-5bcf-4f92-a9ba-59cfc10ef52c",
+      "zoneId": "z28",
+      "zoneName": "Gomti Nagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 25.4,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z28",
+        "zone_name": "Gomti Nagar",
+        "rainfall_mm_hr": 25.4,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.851Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.851Z"
+    },
+    {
+      "id": "14f75226-3f92-4833-904e-d626e23be14c",
+      "zoneId": "z27",
+      "zoneName": "Navrangpura",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 23.8,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z27",
+        "zone_name": "Navrangpura",
+        "rainfall_mm_hr": 23.8,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.850Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.850Z"
+    },
+    {
+      "id": "bdd15370-5025-425f-b9dd-7b1cfb9dc46f",
+      "zoneId": "z26",
+      "zoneName": "Satellite",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 22.2,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z26",
+        "zone_name": "Satellite",
+        "rainfall_mm_hr": 22.2,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.849Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.849Z"
+    },
+    {
+      "id": "962265b0-f419-41ac-8a7b-6cd88e38c681",
+      "zoneId": "z25",
+      "zoneName": "Park Street",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 32.7,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z25",
+        "zone_name": "Park Street",
+        "rainfall_mm_hr": 32.7,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.849Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.849Z"
+    },
+    {
+      "id": "8a5a1e74-5c3a-46c0-ac0e-00858f1941ad",
+      "zoneId": "z24",
+      "zoneName": "New Town",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 31.1,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z24",
+        "zone_name": "New Town",
+        "rainfall_mm_hr": 31.1,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.848Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.848Z"
+    },
+    {
+      "id": "d2a8486f-710d-4aea-87e8-8978378f3c7f",
+      "zoneId": "z23",
+      "zoneName": "Salt Lake",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 29.6,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z23",
+        "zone_name": "Salt Lake",
+        "rainfall_mm_hr": 29.6,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.847Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.847Z"
+    },
+    {
+      "id": "4f59d897-3c6e-489c-a7ea-94c8ef4a5c93",
+      "zoneId": "z22",
+      "zoneName": "Kothrud",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 28,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z22",
+        "zone_name": "Kothrud",
+        "rainfall_mm_hr": 28,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.846Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.846Z"
+    },
+    {
+      "id": "0f3f6a24-ec4a-42f6-9187-c551d286ad94",
+      "zoneId": "z21",
+      "zoneName": "Viman Nagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 26.4,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z21",
+        "zone_name": "Viman Nagar",
+        "rainfall_mm_hr": 26.4,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.845Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.845Z"
+    },
+    {
+      "id": "75983147-a0c9-4118-aee5-a00e2e32be55",
+      "zoneId": "z20",
+      "zoneName": "Hinjewadi",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 24.9,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z20",
+        "zone_name": "Hinjewadi",
+        "rainfall_mm_hr": 24.9,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.844Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.844Z"
+    },
+    {
+      "id": "d5b03a91-d0a6-4e8a-a010-e7e183c7e86e",
+      "zoneId": "z19",
+      "zoneName": "Banjara Hills",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 23.3,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z19",
+        "zone_name": "Banjara Hills",
+        "rainfall_mm_hr": 23.3,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.844Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.844Z"
+    },
+    {
+      "id": "efdce53c-fc3e-44a5-bc16-a480f087e6ee",
+      "zoneId": "z18",
+      "zoneName": "Gachibowli",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 33.8,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z18",
+        "zone_name": "Gachibowli",
+        "rainfall_mm_hr": 33.8,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.843Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.843Z"
+    },
+    {
+      "id": "d59d9fc3-2557-40bc-86c3-5a0409771977",
+      "zoneId": "z17",
+      "zoneName": "Hitech City",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 32.2,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z17",
+        "zone_name": "Hitech City",
+        "rainfall_mm_hr": 32.2,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.842Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.842Z"
+    },
+    {
+      "id": "4be5877d-a8b7-43a2-ad8c-5f1f84c26ebc",
+      "zoneId": "z16",
+      "zoneName": "Adyar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 30.6,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z16",
+        "zone_name": "Adyar",
+        "rainfall_mm_hr": 30.6,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.841Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.841Z"
+    },
+    {
+      "id": "5e381f6b-19fa-4bd5-b4bf-75e067840459",
+      "zoneId": "z15",
+      "zoneName": "Velachery",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 29.1,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z15",
+        "zone_name": "Velachery",
+        "rainfall_mm_hr": 29.1,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.840Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.840Z"
+    },
+    {
+      "id": "479f226d-204a-40f8-9548-74ef4b007080",
+      "zoneId": "z14",
+      "zoneName": "T Nagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 27.5,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z14",
+        "zone_name": "T Nagar",
+        "rainfall_mm_hr": 27.5,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.839Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.839Z"
+    },
+    {
+      "id": "b4d8af00-1f74-482d-9be3-fd4f3f4790a6",
+      "zoneId": "z13",
+      "zoneName": "Electronic City",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 26,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z13",
+        "zone_name": "Electronic City",
+        "rainfall_mm_hr": 26,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.838Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.838Z"
+    },
+    {
+      "id": "f8fd927f-b20f-4e96-9cb8-77c43c43a130",
+      "zoneId": "z12",
+      "zoneName": "Indiranagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 24.4,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z12",
+        "zone_name": "Indiranagar",
+        "rainfall_mm_hr": 24.4,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.838Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.838Z"
+    },
+    {
+      "id": "7a86472a-2a51-4b0c-98af-cc26e06bdf9e",
+      "zoneId": "z11",
+      "zoneName": "Whitefield",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 22.8,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z11",
+        "zone_name": "Whitefield",
+        "rainfall_mm_hr": 22.8,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.837Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.837Z"
+    },
+    {
+      "id": "20a075ab-acfa-4f70-82e7-28dacfeb9c97",
+      "zoneId": "z10",
+      "zoneName": "Koramangala",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 33.3,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z10",
+        "zone_name": "Koramangala",
+        "rainfall_mm_hr": 33.3,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.836Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.836Z"
+    },
+    {
+      "id": "0d65419c-20e8-4dc2-a8dc-82247baca55e",
+      "zoneId": "z9",
+      "zoneName": "Sector 62",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 31.7,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z9",
+        "zone_name": "Sector 62",
+        "rainfall_mm_hr": 31.7,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.833Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.833Z"
+    },
+    {
+      "id": "29fac1f7-7e56-4b9c-991c-8db3021b7374",
+      "zoneId": "z8",
+      "zoneName": "Cyber City",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 30.2,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z8",
+        "zone_name": "Cyber City",
+        "rainfall_mm_hr": 30.2,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.831Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.831Z"
+    },
+    {
+      "id": "0575f861-fa39-440e-8b19-4669a86c84f7",
+      "zoneId": "z7",
+      "zoneName": "Rohini",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 28.6,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z7",
+        "zone_name": "Rohini",
+        "rainfall_mm_hr": 28.6,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.827Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.827Z"
+    },
+    {
+      "id": "2c9ac0f4-7064-4164-9060-64938f78cb94",
+      "zoneId": "z6",
+      "zoneName": "Lajpat Nagar",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 27,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z6",
+        "zone_name": "Lajpat Nagar",
+        "rainfall_mm_hr": 27,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.822Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.822Z"
+    },
+    {
+      "id": "13bea64f-2338-4845-992d-aece0f03e382",
+      "zoneId": "z5",
+      "zoneName": "Dwarka",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 25.5,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z5",
+        "zone_name": "Dwarka",
+        "rainfall_mm_hr": 25.5,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.814Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.814Z"
+    },
+    {
+      "id": "04e209f1-26b5-4fba-a9f6-e9c16a6a8e25",
+      "zoneId": "z4",
+      "zoneName": "Powai",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 23.9,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z4",
+        "zone_name": "Powai",
+        "rainfall_mm_hr": 23.9,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.810Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.810Z"
+    },
+    {
+      "id": "8c0b2af5-178a-4c45-9278-21b86418f76e",
+      "zoneId": "z3",
+      "zoneName": "Bandra",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 22.4,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z3",
+        "zone_name": "Bandra",
+        "rainfall_mm_hr": 22.4,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:12.805Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:12.805Z"
+    },
+    {
+      "id": "2ca33826-35e6-482b-a4a5-07cf6a24f77c",
+      "zoneId": "z2",
+      "zoneName": "Kurla",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 32.8,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z2",
+        "zone_name": "Kurla",
+        "rainfall_mm_hr": 32.8,
+        "temp_celsius": 31,
+        "aqi": 82,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T09:12:05.370Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:12:05.370Z"
+    },
+    {
+      "id": "2f8c89f3-e96c-45bb-a983-4d3ffb796906",
+      "zoneId": "z1",
+      "zoneName": "Andheri West",
+      "triggers": [
+        {
+          "type": "rain",
+          "value": 30.3,
+          "label": "Heavy Rain",
+          "unit": "mm/hr"
+        }
+      ],
+      "weather": {
+        "zone_id": "z1",
+        "zone_name": "Andheri West",
+        "rainfall_mm_hr": 30.3,
+        "temp_celsius": 30.9,
+        "aqi": 81,
+        "curfew_active": 0,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 7990,
+        "fetched_at": "2026-04-17T09:11:57.938Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T09:11:57.939Z"
+    },
+    {
+      "id": "b3512bb2-c90a-4fa7-a21c-bc52aca39006",
+      "zoneId": "z30",
+      "zoneName": "Malviya Nagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z30",
+        "zone_name": "Malviya Nagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.081Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.081Z"
+    },
+    {
+      "id": "289f4ae3-e7ac-4df6-b3c5-9815ed434098",
+      "zoneId": "z29",
+      "zoneName": "Indira Nagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z29",
+        "zone_name": "Indira Nagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.080Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.080Z"
+    },
+    {
+      "id": "5c61c48a-a402-472e-8622-eb87cff6edf8",
+      "zoneId": "z28",
+      "zoneName": "Gomti Nagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z28",
+        "zone_name": "Gomti Nagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.080Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.080Z"
+    },
+    {
+      "id": "981b3010-f53c-4153-91c4-2955fc7aed48",
+      "zoneId": "z27",
+      "zoneName": "Navrangpura",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z27",
+        "zone_name": "Navrangpura",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.079Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.079Z"
+    },
+    {
+      "id": "618a8cb6-5712-45c8-8302-909e7dd0ee1f",
+      "zoneId": "z26",
+      "zoneName": "Satellite",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z26",
+        "zone_name": "Satellite",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.078Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.078Z"
+    },
+    {
+      "id": "910e2408-2ae6-4d37-9061-4695fb941bce",
+      "zoneId": "z25",
+      "zoneName": "Park Street",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z25",
+        "zone_name": "Park Street",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.077Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.077Z"
+    },
+    {
+      "id": "aa638a43-d374-4407-b77f-2041a373fd24",
+      "zoneId": "z24",
+      "zoneName": "New Town",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z24",
+        "zone_name": "New Town",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.076Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.076Z"
+    },
+    {
+      "id": "b6c598d2-f435-4ade-a268-b86be7797ba1",
+      "zoneId": "z23",
+      "zoneName": "Salt Lake",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z23",
+        "zone_name": "Salt Lake",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.075Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.075Z"
+    },
+    {
+      "id": "ae7d66b3-50d3-4d22-b5b0-253411be06f6",
+      "zoneId": "z22",
+      "zoneName": "Kothrud",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z22",
+        "zone_name": "Kothrud",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.075Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.075Z"
+    },
+    {
+      "id": "73884790-d061-419a-a55e-4fd33ccf308c",
+      "zoneId": "z21",
+      "zoneName": "Viman Nagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z21",
+        "zone_name": "Viman Nagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.074Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.074Z"
+    },
+    {
+      "id": "1b3c0e1b-7f26-4e6a-bb44-f9dc5a7c1fc6",
+      "zoneId": "z20",
+      "zoneName": "Hinjewadi",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z20",
+        "zone_name": "Hinjewadi",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.073Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.073Z"
+    },
+    {
+      "id": "50303e84-e807-4f96-9f0c-0cae65784018",
+      "zoneId": "z19",
+      "zoneName": "Banjara Hills",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z19",
+        "zone_name": "Banjara Hills",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.073Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.073Z"
+    },
+    {
+      "id": "b07c635b-8450-4712-a919-2a5e176d868a",
+      "zoneId": "z18",
+      "zoneName": "Gachibowli",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z18",
+        "zone_name": "Gachibowli",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.073Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.073Z"
+    },
+    {
+      "id": "947020d0-8d82-41ee-81b0-f4c81a35a300",
+      "zoneId": "z17",
+      "zoneName": "Hitech City",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z17",
+        "zone_name": "Hitech City",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.072Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.072Z"
+    },
+    {
+      "id": "a8b8a9e5-0a11-42e9-a6a1-42950c6cf3fd",
+      "zoneId": "z16",
+      "zoneName": "Adyar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z16",
+        "zone_name": "Adyar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.072Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.072Z"
+    },
+    {
+      "id": "6e120a90-2d06-47ed-8a23-582fd159bf2e",
+      "zoneId": "z15",
+      "zoneName": "Velachery",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z15",
+        "zone_name": "Velachery",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.071Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.071Z"
+    },
+    {
+      "id": "127af8b7-5aeb-438c-8cbc-880c3aff2701",
+      "zoneId": "z14",
+      "zoneName": "T Nagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z14",
+        "zone_name": "T Nagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.071Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.071Z"
+    },
+    {
+      "id": "6563ff0f-6fa0-4d2c-958c-70eecbdc6aba",
+      "zoneId": "z13",
+      "zoneName": "Electronic City",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z13",
+        "zone_name": "Electronic City",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.070Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.070Z"
+    },
+    {
+      "id": "44a5b039-958b-46bc-8601-d2b47633b7bc",
+      "zoneId": "z12",
+      "zoneName": "Indiranagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z12",
+        "zone_name": "Indiranagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.070Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.070Z"
+    },
+    {
+      "id": "92eddf20-de46-46e7-a340-049174daf827",
+      "zoneId": "z11",
+      "zoneName": "Whitefield",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z11",
+        "zone_name": "Whitefield",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.069Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.069Z"
+    },
+    {
+      "id": "dc0393a6-fe88-4e87-ac64-a2d0b64e7c47",
+      "zoneId": "z10",
+      "zoneName": "Koramangala",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z10",
+        "zone_name": "Koramangala",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.068Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.068Z"
+    },
+    {
+      "id": "ba1d5449-eff9-4ea7-8b6d-d8b6ff1db3f4",
+      "zoneId": "z9",
+      "zoneName": "Sector 62",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z9",
+        "zone_name": "Sector 62",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.067Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.067Z"
+    },
+    {
+      "id": "dcb758d0-ec10-4ce6-ad99-77f640203f64",
+      "zoneId": "z8",
+      "zoneName": "Cyber City",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z8",
+        "zone_name": "Cyber City",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.065Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.065Z"
+    },
+    {
+      "id": "d2849aa9-b4c5-45e8-a412-49e66c819219",
+      "zoneId": "z7",
+      "zoneName": "Rohini",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z7",
+        "zone_name": "Rohini",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.062Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.062Z"
+    },
+    {
+      "id": "45ec8cb5-019f-44c5-bd6c-322266630d34",
+      "zoneId": "z6",
+      "zoneName": "Lajpat Nagar",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z6",
+        "zone_name": "Lajpat Nagar",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.059Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.059Z"
+    },
+    {
+      "id": "572940ff-9597-4ac5-aae3-def16f63ba63",
+      "zoneId": "z5",
+      "zoneName": "Dwarka",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z5",
+        "zone_name": "Dwarka",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.053Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.054Z"
+    },
+    {
+      "id": "b996be98-6288-4419-9564-6441fb1aef98",
+      "zoneId": "z4",
+      "zoneName": "Powai",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z4",
+        "zone_name": "Powai",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.050Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.050Z"
+    },
+    {
+      "id": "05b34903-2952-4e81-88e0-04493065ab28",
+      "zoneId": "z3",
+      "zoneName": "Bandra",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z3",
+        "zone_name": "Bandra",
+        "rainfall_mm_hr": 0.9,
+        "temp_celsius": 31.1,
+        "aqi": 85,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8010,
+        "fetched_at": "2026-04-17T05:48:02.048Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:48:02.048Z"
+    },
+    {
+      "id": "5ae802a5-dacc-47fa-975e-a5f281bd66e2",
+      "zoneId": "z2",
+      "zoneName": "Kurla",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z2",
+        "zone_name": "Kurla",
+        "rainfall_mm_hr": 1.1,
+        "temp_celsius": 31,
+        "aqi": 84,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T05:47:54.862Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:47:54.862Z"
+    },
+    {
+      "id": "ec15a247-6d53-413f-84d2-9a38fbb66c26",
+      "zoneId": "z1",
+      "zoneName": "Andheri West",
+      "triggers": [
+        {
+          "type": "curfew",
+          "value": 1,
+          "label": "Curfew/Strike",
+          "unit": ""
+        }
+      ],
+      "weather": {
+        "zone_id": "z1",
+        "zone_name": "Andheri West",
+        "rainfall_mm_hr": 1.1,
+        "temp_celsius": 31,
+        "aqi": 84,
+        "curfew_active": 1,
+        "road_blocked_pct": 5,
+        "humidity_pct": 72,
+        "wind_kmh": 14,
+        "visibility_m": 8000,
+        "fetched_at": "2026-04-17T05:47:54.844Z",
+        "source": "simulation"
+      },
+      "detectedAt": "2026-04-17T05:47:54.844Z"
+    }
+  ],
   "walletTransactions": [
+    {
+      "id": "74e92d92-9292-48f8-b512-61a29ef34936",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 33,
+      "description": "Premium for Basic Shield",
+      "balanceAfter": 1172,
+      "createdAt": "2026-04-17T10:40:52.756Z",
+      "method": "wallet",
+      "planId": "basic",
+      "ref": "POLMO2S2904"
+    },
+    {
+      "id": "7816593f-2132-4d30-9c5b-fee347374da9",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 200,
+      "description": "Auto-payout: rain disruption",
+      "balanceAfter": 870,
+      "createdAt": "2026-04-17T09:12:08.963Z",
+      "method": "claim_payout",
+      "claimId": "0d35fb2e-699e-494e-a474-9dec5e46737c",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "payoutId": "2f7cd0eb-281f-45c7-9ecb-f568564256c5",
+      "payoutTransferId": "trf_mo2ow54kap00i4",
+      "ref": "RZP-PAYOUT-3YKPVB"
+    },
+    {
+      "id": "673563a2-236d-47a8-955c-ffc7c3534f4b",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "credit",
+      "amount": 205,
+      "description": "Auto-payout: rain disruption",
+      "balanceAfter": 1205,
+      "createdAt": "2026-04-17T09:12:05.365Z",
+      "method": "claim_payout",
+      "claimId": "71ecbc18-a2eb-48c9-a122-c25cd6270aa2",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "payoutId": "7977c3e0-f08f-4dfa-9329-0291b9224671",
+      "payoutTransferId": "trf_mo2ow2d0n0nchl",
+      "ref": "RZP-PAYOUT-PP6Y3Q"
+    },
+    {
+      "id": "725d0232-e0f0-4902-bbb3-c4b74ae2a8d8",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 82,
+      "description": "Auto-payout: rain disruption",
+      "balanceAfter": 1499,
+      "createdAt": "2026-04-17T09:12:01.773Z",
+      "method": "claim_payout",
+      "claimId": "d05910bb-5670-4ce9-ad49-0246a3646466",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "payoutId": "d704b85b-40a0-4801-bb0a-ec72a061e619",
+      "payoutTransferId": "trf_mo2ovzl1bl6nhd",
+      "ref": "RZP-PAYOUT-EC8PRG"
+    },
+    {
+      "id": "745be1e1-fb2d-491c-9185-fc7661dfbdf8",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 1190,
+      "description": "Withdrawn to 91@k",
+      "balanceAfter": 1000,
+      "createdAt": "2026-04-17T08:32:27.607Z",
+      "method": "upi_withdrawal",
+      "ref": "WDRMO2NH3O7A7MB",
+      "upiId": "91@k"
+    },
+    {
+      "id": "9a0a22f0-cd3e-4924-acea-7caf1110ec1e",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 240,
+      "description": "Auto-payout: curfew disruption",
+      "balanceAfter": 670,
+      "createdAt": "2026-04-17T05:47:58.749Z",
+      "method": "claim_payout",
+      "claimId": "02b6f0f4-ddc3-44ca-a75f-88f394747e48",
+      "gatewayId": "stripe_sandbox",
+      "gatewayLabel": "Stripe Sandbox",
+      "gatewayProvider": "Stripe",
+      "payoutId": "9b893c61-0ba8-4749-b4cf-1b650a04003e",
+      "payoutTransferId": "po_mo2hlkt3uvw5wb",
+      "ref": "STRIPE-AO9GVJ"
+    },
+    {
+      "id": "ead98a13-41de-42cb-9340-564a822e1f25",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "credit",
+      "amount": 246,
+      "description": "Auto-payout: curfew disruption",
+      "balanceAfter": 2190,
+      "createdAt": "2026-04-17T05:47:54.860Z",
+      "method": "claim_payout",
+      "claimId": "0ed94f4f-b8ac-4ce5-b1db-bbc53a91e7cf",
+      "gatewayId": "stripe_sandbox",
+      "gatewayLabel": "Stripe Sandbox",
+      "gatewayProvider": "Stripe",
+      "payoutId": "4aff5554-d030-4cc7-8aca-d2cf1abeee7b",
+      "payoutTransferId": "po_mo2hlht76lnmt6",
+      "ref": "STRIPE-YTMG1E"
+    },
+    {
+      "id": "d3730698-a40e-4f04-9cad-1890d1622ac2",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 56,
+      "description": "Premium for Pro Shield",
+      "balanceAfter": 1944,
+      "createdAt": "2026-04-17T05:47:51.116Z",
+      "method": "wallet",
+      "planId": "pro",
+      "ref": "POLMO2HLEX8"
+    },
+    {
+      "id": "79e2d23d-c978-4c2e-8d84-08b16d47e3ca",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "credit",
+      "amount": 2000,
+      "description": "Added via Razorpay Test Mode · UPI (user@phonepe)",
+      "balanceAfter": 2000,
+      "createdAt": "2026-04-17T05:47:42.983Z",
+      "method": "gateway_topup",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "paymentSessionId": "08cf96ce-d532-402b-b4f7-ad3a561e7200",
+      "providerOrderId": "order_mo2hl84ui4knvk",
+      "providerPaymentId": "pay_mo2hl8n7fbfjp6",
+      "ref": "RZP-4UI4KNVK",
+      "cardLast4": null,
+      "upiId": "user@phonepe",
+      "bank": null
+    },
+    {
+      "id": "43031ea5-ee11-41e1-b7e8-76afbbeaa593",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 937,
+      "description": "Withdrawn to demo@upi",
+      "balanceAfter": 0,
+      "createdAt": "2026-04-17T04:35:11.781Z",
+      "method": "upi_withdrawal",
+      "ref": "WDRMO2EZZ8L",
+      "upiId": "demo@upi"
+    },
+    {
+      "id": "e65af336-684e-4f84-a4a4-84666063c551",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 33,
+      "description": "Premium for Basic Shield",
+      "balanceAfter": 937,
+      "createdAt": "2026-04-17T04:34:49.723Z",
+      "method": "wallet",
+      "planId": "basic",
+      "ref": "POLMO2EZI7U"
+    },
+    {
+      "id": "772b6f0e-442d-4c3f-9f6c-7c8513afb63e",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 19,
+      "description": "Withdrawn to h@d",
+      "balanceAfter": 970,
+      "createdAt": "2026-04-16T17:32:13.498Z",
+      "method": "upi_withdrawal",
+      "ref": "WDRMO1RBE48Z5V0",
+      "upiId": "h@d"
+    },
+    {
+      "id": "d62a3aa7-99fa-4f90-92d8-d6c49de6b0c6",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 500,
+      "description": "Added via Sia assistant using Razorpay Test Mode",
+      "balanceAfter": 1417,
+      "createdAt": "2026-04-16T17:20:10.685Z",
+      "method": "gateway_topup",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "paymentSessionId": "82374cf9-21b1-4bef-9c22-58aa5297965f",
+      "providerOrderId": "order_mo1qvwe3g3oqvp",
+      "providerPaymentId": "pay_mo1qvwe4atndox",
+      "ref": "RZP-E3G3OQVP",
+      "upiId": "demo@upi",
+      "bank": null,
+      "cardLast4": null
+    },
+    {
+      "id": "78fe4ef5-fb9b-4d89-b065-fbffb0a75ce7",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 500,
+      "description": "Added via Sia assistant using Razorpay Test Mode",
+      "balanceAfter": 917,
+      "createdAt": "2026-04-16T16:44:01.171Z",
+      "method": "gateway_topup",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "paymentSessionId": "3b994128-a739-46ed-bae6-9abca8498c67",
+      "providerOrderId": "order_mo1pledth9nbp3",
+      "providerPaymentId": "pay_mo1pleduw4pitl",
+      "ref": "RZP-DTH9NBP3"
+    },
+    {
+      "id": "218398a4-65c1-41e3-a8ab-078f3014b4cc",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 250,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 417,
+      "createdAt": "2026-04-16T16:32:21.592Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1P6EL4"
+    },
+    {
+      "id": "72db719b-5ab1-4fd2-8f1c-c2ca2b661d78",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 100,
+      "description": "Added via Razorpay Test Mode · Card ••••2212",
+      "balanceAfter": 167,
+      "createdAt": "2026-04-16T16:32:09.563Z",
+      "method": "gateway_topup",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "paymentSessionId": "8e9a0d38-c0b5-4c83-83d9-0dd285e52de4",
+      "providerOrderId": "order_mo1p64s63u4nxs",
+      "providerPaymentId": "pay_mo1p65avgqk7cz",
+      "ref": "RZP-S63U4NXS",
+      "cardLast4": "2212",
+      "upiId": null,
+      "bank": null
+    },
+    {
+      "id": "125c6853-bf42-4c5e-b58e-48735bdcec11",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "debit",
+      "amount": 33,
+      "description": "Premium for Basic Shield",
+      "balanceAfter": 67,
+      "createdAt": "2026-04-16T16:15:58.276Z",
+      "method": "wallet",
+      "planId": "basic",
+      "ref": "POLMO1OLBUS"
+    },
+    {
+      "id": "8cd0c6df-89ad-4b32-a3ee-b02ba454d153",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 100,
+      "description": "Added via UPI (d@f)",
+      "balanceAfter": 100,
+      "createdAt": "2026-04-16T16:15:51.856Z",
+      "method": "upi",
+      "ref": "PAYMO1OL6WGGSJ6",
+      "cardLast4": null,
+      "upiId": "d@f"
+    },
+    {
+      "id": "c7b7134c-feb5-4368-adf0-f9e19de2b388",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "debit",
+      "amount": 100,
+      "description": "Withdrawn to s@a",
+      "balanceAfter": 0,
+      "createdAt": "2026-04-16T16:15:15.894Z",
+      "method": "upi_withdrawal",
+      "ref": "WDRMO1OKF5I7HVF",
+      "upiId": "s@a"
+    },
+    {
+      "id": "b8598eff-2087-40b9-a4a6-e023a3505b95",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 10,
+      "description": "Added via Card ••••4242",
+      "balanceAfter": 430,
+      "createdAt": "2026-04-16T16:14:51.333Z",
+      "method": "card",
+      "ref": "PAYMO1OJW7831L0",
+      "cardLast4": "4242",
+      "upiId": null
+    },
+    {
+      "id": "a49a5fc6-a559-45ee-9131-a610ecdaeea9",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 10,
+      "description": "Added via Card ••••4242",
+      "balanceAfter": 420,
+      "createdAt": "2026-04-16T16:13:34.349Z",
+      "method": "card",
+      "ref": "PAYMO1OI8SQW1IM",
+      "cardLast4": "4242",
+      "upiId": null
+    },
+    {
+      "id": "1fa29117-1bfc-4cdd-8e29-95742e23e17b",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "credit",
+      "amount": 100,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 100,
+      "createdAt": "2026-04-16T16:09:00.009Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1OCD49"
+    },
+    {
+      "id": "7a89824b-f9b4-4030-a142-20c04e9d187c",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 10,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 410,
+      "createdAt": "2026-04-16T16:06:39.137Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1O9CF5"
+    },
+    {
+      "id": "88b56780-fd70-42db-8e74-128e7294b530",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "credit",
+      "amount": 500,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 989,
+      "createdAt": "2026-04-16T15:57:04.531Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1NX11U"
+    },
+    {
+      "id": "2a2ed68d-4c9a-4630-98c5-4f40b75a3fe1",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 200,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 400,
+      "createdAt": "2026-04-16T15:51:02.704Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1NP9V4"
+    },
+    {
+      "id": "6ca20823-4129-459f-901e-01970da10b34",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 200,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 200,
+      "createdAt": "2026-04-16T15:49:15.276Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1NMYZ0"
+    },
+    {
+      "id": "81402203-49c5-4965-be82-68f27c49fee5",
+      "workerId": "w1",
+      "type": "debit",
+      "amount": 95,
+      "description": "Premium for Max Shield",
+      "balanceAfter": 0,
+      "createdAt": "2026-04-16T15:45:52.941Z",
+      "method": "chatbot",
+      "planId": "max",
+      "ref": "POLMO1NIMUK"
+    },
+    {
+      "id": "d5d713a7-f458-4833-8932-c8dc0a5f00b0",
+      "workerId": "w1",
+      "type": "credit",
+      "amount": 95,
+      "description": "Added via Sia assistant",
+      "balanceAfter": 95,
+      "createdAt": "2026-04-16T15:45:52.920Z",
+      "method": "assistant_topup",
+      "ref": "BOTMO1NIMTZ"
+    },
+    {
+      "id": "c8f996de-ee6c-452e-ae89-77fd03151174",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "debit",
+      "amount": 55,
+      "description": "Premium for Pro Shield",
+      "balanceAfter": 489,
+      "createdAt": "2026-04-16T15:11:12.561Z",
+      "method": "chatbot",
+      "planId": "pro",
+      "ref": "POLMO1MA1M8"
+    },
+    {
+      "id": "c61c4747-9ee9-4ca8-a5dd-062cf1331f95",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "credit",
+      "amount": 500,
+      "description": "Added via multilingual assistant",
+      "balanceAfter": 544,
+      "createdAt": "2026-04-16T15:10:54.031Z",
+      "method": "chatbot_topup",
+      "ref": "BOTMO1M9NBJ"
+    },
     {
       "id": "0a3e6157-ce76-452c-91c2-24f33528f2e7",
       "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
@@ -122,11 +2862,363 @@
   ],
   "workerNotifications": [
     {
+      "id": "e35e1d05-0b82-4cbc-9150-4900286f581b",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "Basic Shield weekly protection activated. 18 protected hours are now available this week.",
+      "read": true,
+      "createdAt": "2026-04-17T10:40:52.763Z"
+    },
+    {
+      "id": "2d16c44b-d7c2-432d-a963-6274e91f9076",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "warning",
+      "message": "Your active policy has been cancelled.",
+      "read": true,
+      "createdAt": "2026-04-17T10:36:48.156Z"
+    },
+    {
+      "id": "4ac098fa-8125-49ce-bc7b-bf9c5623bb16",
+      "workerId": "w1",
+      "type": "success",
+      "message": "Automatic payout sent instantly: ₹200 for rain via Razorpay Test Mode.",
+      "read": false,
+      "createdAt": "2026-04-17T09:12:08.970Z"
+    },
+    {
+      "id": "455e29f5-5fee-4abe-91ed-d899a24e68be",
+      "workerId": "w1",
+      "type": "info",
+      "message": "A rain disruption matched your policy. Your claim is being processed.",
+      "read": false,
+      "createdAt": "2026-04-17T09:12:05.373Z"
+    },
+    {
+      "id": "5037c582-7dc4-4cbe-b25d-4bda68758d15",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "Automatic payout sent instantly: ₹205 for rain via Razorpay Test Mode.",
+      "read": true,
+      "createdAt": "2026-04-17T09:12:05.366Z"
+    },
+    {
+      "id": "d3c3db43-e6bf-41a8-abc0-91584f9ce7b5",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "info",
+      "message": "A rain disruption matched your policy. Your claim is being processed.",
+      "read": true,
+      "createdAt": "2026-04-17T09:12:05.353Z"
+    },
+    {
+      "id": "37f0036f-aa22-4b29-821e-1ceaa0ebc648",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "Automatic payout sent instantly: ₹82 for rain via Razorpay Test Mode.",
+      "read": false,
+      "createdAt": "2026-04-17T09:12:01.781Z"
+    },
+    {
+      "id": "d273602c-8a57-4e17-a88c-3cd3c9d3ec90",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "info",
+      "message": "A rain disruption matched your policy. Your claim is being processed.",
+      "read": false,
+      "createdAt": "2026-04-17T09:11:57.942Z"
+    },
+    {
+      "id": "780ac1bb-fcd9-40ca-b335-111ea7d606df",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "info",
+      "message": "₹1190 withdrawn to 91@k.",
+      "read": true,
+      "createdAt": "2026-04-17T08:32:27.610Z"
+    },
+    {
+      "id": "d751e096-097a-4af2-a2cf-ab2c0d911b8b",
+      "workerId": "w1",
+      "type": "success",
+      "message": "Automatic payout sent instantly: ₹240 for curfew via Stripe Sandbox.",
+      "read": false,
+      "createdAt": "2026-04-17T05:47:58.752Z"
+    },
+    {
+      "id": "a3a6f8f2-1cb5-4359-9a0c-c78ef8cf63d9",
+      "workerId": "w1",
+      "type": "info",
+      "message": "A curfew disruption matched your policy. Your claim is being processed.",
+      "read": false,
+      "createdAt": "2026-04-17T05:47:54.864Z"
+    },
+    {
+      "id": "f9ce4adb-7f0b-4900-a013-dc9b48464c54",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "Automatic payout sent instantly: ₹246 for curfew via Stripe Sandbox.",
+      "read": true,
+      "createdAt": "2026-04-17T05:47:54.860Z"
+    },
+    {
+      "id": "372d55a0-ae8e-4403-a243-1080519b2b58",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "info",
+      "message": "A curfew disruption matched your policy. Your claim is being processed.",
+      "read": true,
+      "createdAt": "2026-04-17T05:47:54.854Z"
+    },
+    {
+      "id": "5ea11133-195f-4992-a366-86e12f66fcf3",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "Pro Shield weekly protection activated. 36 protected hours are now available this week.",
+      "read": true,
+      "createdAt": "2026-04-17T05:47:51.120Z"
+    },
+    {
+      "id": "741bee33-d050-4f95-a3a6-415e29384788",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "₹2000 added via Razorpay Test Mode.",
+      "read": true,
+      "createdAt": "2026-04-17T05:47:42.987Z"
+    },
+    {
+      "id": "81bc991d-3267-4dc5-a045-e04881a94d09",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "warning",
+      "message": "Your active policy has been cancelled.",
+      "read": true,
+      "createdAt": "2026-04-17T05:47:09.262Z"
+    },
+    {
+      "id": "2f00477a-9392-420c-b359-567a6309c5bd",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "info",
+      "message": "₹937 withdrawn to demo@upi.",
+      "read": true,
+      "createdAt": "2026-04-17T04:35:11.782Z"
+    },
+    {
+      "id": "07c13d19-ffa7-4334-be27-f3af3e2cc04e",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "Basic Shield weekly protection activated. 18 protected hours are now available this week.",
+      "read": true,
+      "createdAt": "2026-04-17T04:34:49.725Z"
+    },
+    {
+      "id": "0cf57f48-a402-4bef-a421-95d2b819a7ad",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "info",
+      "message": "₹19 withdrawn to h@d.",
+      "read": true,
+      "createdAt": "2026-04-16T17:32:13.504Z"
+    },
+    {
+      "id": "3e4c870e-f5fc-4ea6-9159-798ef3117d33",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "₹500 added to your wallet from chat via Razorpay Test Mode.",
+      "read": false,
+      "createdAt": "2026-04-16T17:20:10.686Z"
+    },
+    {
+      "id": "29eec001-2cf9-43af-b313-164fd6fba905",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "alert",
+      "message": "Your Basic Shield is about to expire! Renew now to stay protected.",
+      "read": false,
+      "createdAt": "2026-04-16T17:19:24.465Z"
+    },
+    {
+      "id": "9d3293ad-7aa1-4bf8-bd09-49eefee804ab",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "info",
+      "message": "Your contact email was updated successfully.",
+      "read": false,
+      "createdAt": "2026-04-16T17:19:17.454Z"
+    },
+    {
+      "id": "0afca4f9-7536-4ed9-9163-5e5f6c646cec",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "₹500 added to your wallet from chat via Razorpay Test Mode.",
+      "read": true,
+      "createdAt": "2026-04-16T16:44:01.171Z"
+    },
+    {
+      "id": "ac3f51f1-1a9a-4b2c-ab22-5ff8681a23a1",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "₹250 added to your wallet from chat.",
+      "read": true,
+      "createdAt": "2026-04-16T16:32:21.601Z"
+    },
+    {
+      "id": "8932991b-10b2-4aa0-8a6e-a774cb0ed7cd",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "₹100 added via Razorpay Test Mode.",
+      "read": true,
+      "createdAt": "2026-04-16T16:32:09.565Z"
+    },
+    {
+      "id": "6f82cd37-d40d-460e-847f-b5dc28ab4750",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "Basic Shield activated. 18 active hours are now protected.",
+      "read": true,
+      "createdAt": "2026-04-16T16:15:58.278Z"
+    },
+    {
+      "id": "285b67b7-9ede-4398-a68e-7e09236304aa",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "₹100 added to your wallet.",
+      "read": true,
+      "createdAt": "2026-04-16T16:15:51.859Z"
+    },
+    {
+      "id": "0003a138-5ce0-4164-adb2-b9e0fa6d0974",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "info",
+      "message": "₹100 withdrawn to s@a.",
+      "read": true,
+      "createdAt": "2026-04-16T16:15:15.897Z"
+    },
+    {
+      "id": "0485a252-b8d5-4f0a-a61b-8870561f85a6",
+      "workerId": "w1",
+      "type": "success",
+      "message": "₹10 added to your wallet.",
+      "read": false,
+      "createdAt": "2026-04-16T16:14:51.334Z"
+    },
+    {
+      "id": "6b8080ea-0268-4ca8-bacd-4a44b8c70185",
+      "workerId": "w1",
+      "type": "success",
+      "message": "₹10 added to your wallet.",
+      "read": false,
+      "createdAt": "2026-04-16T16:13:34.350Z"
+    },
+    {
+      "id": "22dcec2e-934e-4057-b5ec-f4e443ad241c",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "₹100 added to your wallet from chat.",
+      "read": true,
+      "createdAt": "2026-04-16T16:09:00.036Z"
+    },
+    {
+      "id": "ad324ec8-c236-46f3-9ad0-1e474274b0ab",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "type": "success",
+      "message": "Welcome to GigShield. Your account is ready.",
+      "read": true,
+      "createdAt": "2026-04-16T16:08:08.951Z"
+    },
+    {
+      "id": "700e3915-6359-480f-8ea2-06ffa3f9b4f0",
+      "workerId": "w1",
+      "type": "success",
+      "message": "₹10 added to your wallet from chat.",
+      "read": false,
+      "createdAt": "2026-04-16T16:06:39.152Z"
+    },
+    {
+      "id": "3091fbdd-7a33-4209-814d-0e8d8e8ebba1",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "₹500 added to your wallet from chat.",
+      "read": true,
+      "createdAt": "2026-04-16T15:57:04.535Z"
+    },
+    {
+      "id": "f1fda91f-b376-416a-bae1-f451e057777c",
+      "workerId": "w1",
+      "type": "success",
+      "message": "₹200 added to your wallet from chat.",
+      "read": false,
+      "createdAt": "2026-04-16T15:51:02.719Z"
+    },
+    {
+      "id": "10ba8287-4644-4dd7-b962-6dfe754a0151",
+      "workerId": "w1",
+      "type": "success",
+      "message": "₹200 added to your wallet from chat.",
+      "read": false,
+      "createdAt": "2026-04-16T15:49:15.293Z"
+    },
+    {
+      "id": "1dde5528-3b3a-4d9a-b51b-3c0204b9cddf",
+      "workerId": "w1",
+      "type": "info",
+      "message": "Manual claim submitted for 3 protected hours.",
+      "read": false,
+      "createdAt": "2026-04-16T15:48:59.679Z"
+    },
+    {
+      "id": "332bebb7-46fa-49e2-a618-03fda29f4f40",
+      "workerId": "w1",
+      "type": "info",
+      "message": "Manual claim submitted for 3 protected hours.",
+      "read": false,
+      "createdAt": "2026-04-16T15:48:04.607Z"
+    },
+    {
+      "id": "af8fafcd-afb2-412c-93ec-641bad386c2f",
+      "workerId": "w1",
+      "type": "info",
+      "message": "Manual claim submitted for 3 protected hours.",
+      "read": false,
+      "createdAt": "2026-04-16T15:47:31.814Z"
+    },
+    {
+      "id": "75654600-69d9-46df-9c90-daf105581f27",
+      "workerId": "w1",
+      "type": "info",
+      "message": "Coverage zone updated to Bandra.",
+      "read": false,
+      "createdAt": "2026-04-16T15:46:30.641Z"
+    },
+    {
+      "id": "0f0d4e46-5e0f-4cf2-81e0-cb7f99da8d78",
+      "workerId": "w1",
+      "type": "success",
+      "message": "Max Shield activated from chat for ₹95.",
+      "read": false,
+      "createdAt": "2026-04-16T15:45:52.941Z"
+    },
+    {
+      "id": "39d77c4d-dfbb-4ada-9b6e-b0eb32356d6f",
+      "workerId": "w1",
+      "type": "success",
+      "message": "₹95 added to your wallet from chat.",
+      "read": false,
+      "createdAt": "2026-04-16T15:45:52.921Z"
+    },
+    {
+      "id": "f989da69-9990-4656-91e1-9506018e347c",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "Pro Shield activated from chat for ₹55.",
+      "read": true,
+      "createdAt": "2026-04-16T15:11:12.562Z"
+    },
+    {
+      "id": "4106e609-9345-477b-b762-f0c7b07c13fa",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "type": "success",
+      "message": "₹500 added to your wallet from chat.",
+      "read": true,
+      "createdAt": "2026-04-16T15:10:54.033Z"
+    },
+    {
       "id": "63cf903e-52cf-4638-b3aa-808e41bb4f40",
       "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
       "type": "error",
       "message": "Auto-renewal failed for Pro Shield due to insufficient wallet balance.",
-      "read": false,
+      "read": true,
       "createdAt": "2026-04-04T09:54:00.507Z"
     },
     {
@@ -136,6 +3228,1329 @@
       "message": "Your Pro Shield is about to expire! Renew now to stay protected.",
       "read": true,
       "createdAt": "2026-04-04T09:52:56.140Z"
+    }
+  ],
+  "emailEvents": [
+    {
+      "id": "4fb09ba4-4671-4d09-823a-814ae8aa1569",
+      "createdAt": "2026-04-17T10:40:52.766Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your GigShield policy is now active",
+      "type": "success",
+      "meta": {
+        "action": "policy_purchase",
+        "policyId": "0d56f9e7-141c-4523-9d51-bbac812ad1f2",
+        "planId": "basic",
+        "activationMode": "manual"
+      },
+      "title": "Coverage activated",
+      "intro": "Basic Shield is now live on your account.",
+      "emailLines": [
+        "Bundle premium: ₹33",
+        "Protected active hours: 18h",
+        "Wallet balance after purchase: ₹1172"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage activated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Basic Shield is now live on your account.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Bundle premium: ₹33</li><li style=\"margin:0 0 8px;\">Protected active hours: 18h</li><li style=\"margin:0 0 8px;\">Wallet balance after purchase: ₹1172</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Basic Shield is now live on your account.\nBundle premium: ₹33\nProtected active hours: 18h\nWallet balance after purchase: ₹1172"
+    },
+    {
+      "id": "e56e56d6-9e8f-4dae-adc9-e6617fb6cdd1",
+      "createdAt": "2026-04-17T10:36:48.160Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your policy was cancelled",
+      "type": "warning",
+      "meta": {
+        "action": "policy_cancel"
+      },
+      "title": "Coverage cancelled",
+      "intro": "Your active protection has been cancelled.",
+      "emailLines": [],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage cancelled</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Your active protection has been cancelled.</p>\n        \n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Your active protection has been cancelled."
+    },
+    {
+      "id": "469ccac7-8101-499f-be3c-af8e36828d18",
+      "createdAt": "2026-04-17T09:12:08.972Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-17T09:12:08.974Z",
+      "deliveredAt": "2026-04-17T09:12:12.794Z",
+      "reason": null,
+      "messageId": "<7c7bc7aa-d5b1-a26f-1142-924a78a6e050@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Automatic payout credited",
+      "type": "success",
+      "meta": {
+        "action": "auto_payout",
+        "claimId": "0d35fb2e-699e-494e-a474-9dec5e46737c",
+        "ref": "RZP-PAYOUT-3YKPVB",
+        "gatewayId": "razorpay_test"
+      },
+      "title": "Payout credited",
+      "intro": "A trigger event matched your policy and we paid you automatically.",
+      "emailLines": [
+        "Trigger: rain",
+        "Amount: ₹200",
+        "Gateway: Razorpay Test Mode",
+        "Reference: RZP-PAYOUT-3YKPVB"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Payout credited</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A trigger event matched your policy and we paid you automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: rain</li><li style=\"margin:0 0 8px;\">Amount: ₹200</li><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Reference: RZP-PAYOUT-3YKPVB</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A trigger event matched your policy and we paid you automatically.\nTrigger: rain\nAmount: ₹200\nGateway: Razorpay Test Mode\nReference: RZP-PAYOUT-3YKPVB"
+    },
+    {
+      "id": "b6edc1eb-62a1-42bf-bfa9-a94c21149b4d",
+      "createdAt": "2026-04-17T09:12:05.374Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-17T09:12:05.375Z",
+      "deliveredAt": "2026-04-17T09:12:08.934Z",
+      "reason": null,
+      "messageId": "<f794c740-6739-aa92-12c7-e70b4276d9ac@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Automatic claim created",
+      "type": "info",
+      "meta": {
+        "action": "auto_claim_created",
+        "claimId": "0d35fb2e-699e-494e-a474-9dec5e46737c",
+        "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+        "triggerType": "rain"
+      },
+      "title": "Automatic claim created",
+      "intro": "A disruption matched your policy and your claim has been created automatically.",
+      "emailLines": [
+        "Trigger: Heavy Rain",
+        "Estimated payout: ₹200",
+        "Protected hours reserved: 2.5h",
+        "Current claim status: processing"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Automatic claim created</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A disruption matched your policy and your claim has been created automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: Heavy Rain</li><li style=\"margin:0 0 8px;\">Estimated payout: ₹200</li><li style=\"margin:0 0 8px;\">Protected hours reserved: 2.5h</li><li style=\"margin:0 0 8px;\">Current claim status: processing</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A disruption matched your policy and your claim has been created automatically.\nTrigger: Heavy Rain\nEstimated payout: ₹200\nProtected hours reserved: 2.5h\nCurrent claim status: processing"
+    },
+    {
+      "id": "35f45f38-b6a0-45ff-9696-3f58796a76e9",
+      "createdAt": "2026-04-17T09:12:05.367Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Automatic payout credited",
+      "type": "success",
+      "meta": {
+        "action": "auto_payout",
+        "claimId": "71ecbc18-a2eb-48c9-a122-c25cd6270aa2",
+        "ref": "RZP-PAYOUT-PP6Y3Q",
+        "gatewayId": "razorpay_test"
+      },
+      "title": "Payout credited",
+      "intro": "A trigger event matched your policy and we paid you automatically.",
+      "emailLines": [
+        "Trigger: rain",
+        "Amount: ₹205",
+        "Gateway: Razorpay Test Mode",
+        "Reference: RZP-PAYOUT-PP6Y3Q"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Payout credited</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A trigger event matched your policy and we paid you automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: rain</li><li style=\"margin:0 0 8px;\">Amount: ₹205</li><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Reference: RZP-PAYOUT-PP6Y3Q</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A trigger event matched your policy and we paid you automatically.\nTrigger: rain\nAmount: ₹205\nGateway: Razorpay Test Mode\nReference: RZP-PAYOUT-PP6Y3Q"
+    },
+    {
+      "id": "1a69e9ee-6659-4fa3-9184-fb696d05d9ef",
+      "createdAt": "2026-04-17T09:12:05.360Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Automatic claim created",
+      "type": "info",
+      "meta": {
+        "action": "auto_claim_created",
+        "claimId": "71ecbc18-a2eb-48c9-a122-c25cd6270aa2",
+        "policyId": "bf42bf8b-e365-43d3-816a-e199fe66060a",
+        "triggerType": "rain"
+      },
+      "title": "Automatic claim created",
+      "intro": "A disruption matched your policy and your claim has been created automatically.",
+      "emailLines": [
+        "Trigger: Heavy Rain",
+        "Estimated payout: ₹205",
+        "Protected hours reserved: 2.5h",
+        "Current claim status: processing"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Automatic claim created</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A disruption matched your policy and your claim has been created automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: Heavy Rain</li><li style=\"margin:0 0 8px;\">Estimated payout: ₹205</li><li style=\"margin:0 0 8px;\">Protected hours reserved: 2.5h</li><li style=\"margin:0 0 8px;\">Current claim status: processing</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A disruption matched your policy and your claim has been created automatically.\nTrigger: Heavy Rain\nEstimated payout: ₹205\nProtected hours reserved: 2.5h\nCurrent claim status: processing"
+    },
+    {
+      "id": "6f5932ab-ce1c-4825-941a-540de3f136c4",
+      "createdAt": "2026-04-17T09:12:01.784Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-17T09:12:01.786Z",
+      "deliveredAt": "2026-04-17T09:12:05.337Z",
+      "reason": null,
+      "messageId": "<50d9eb19-baa6-0790-f447-15c74ac31b20@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Automatic payout credited",
+      "type": "success",
+      "meta": {
+        "action": "auto_payout",
+        "claimId": "d05910bb-5670-4ce9-ad49-0246a3646466",
+        "ref": "RZP-PAYOUT-EC8PRG",
+        "gatewayId": "razorpay_test"
+      },
+      "title": "Payout credited",
+      "intro": "A trigger event matched your policy and we paid you automatically.",
+      "emailLines": [
+        "Trigger: rain",
+        "Amount: ₹82",
+        "Gateway: Razorpay Test Mode",
+        "Reference: RZP-PAYOUT-EC8PRG"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Payout credited</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A trigger event matched your policy and we paid you automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: rain</li><li style=\"margin:0 0 8px;\">Amount: ₹82</li><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Reference: RZP-PAYOUT-EC8PRG</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A trigger event matched your policy and we paid you automatically.\nTrigger: rain\nAmount: ₹82\nGateway: Razorpay Test Mode\nReference: RZP-PAYOUT-EC8PRG"
+    },
+    {
+      "id": "2f71bfb5-cc4c-4582-9b34-11de3156e33f",
+      "createdAt": "2026-04-17T09:11:57.943Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-17T09:11:57.944Z",
+      "deliveredAt": "2026-04-17T09:12:01.760Z",
+      "reason": null,
+      "messageId": "<32e486d1-57ff-a969-472b-a12f36b1b3bd@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Automatic claim created",
+      "type": "info",
+      "meta": {
+        "action": "auto_claim_created",
+        "claimId": "d05910bb-5670-4ce9-ad49-0246a3646466",
+        "policyId": "56b942e6-a685-48e0-aeee-587749a7911a",
+        "triggerType": "rain"
+      },
+      "title": "Automatic claim created",
+      "intro": "A disruption matched your policy and your claim has been created automatically.",
+      "emailLines": [
+        "Trigger: Heavy Rain",
+        "Estimated payout: ₹82",
+        "Protected hours reserved: 1h",
+        "Current claim status: processing"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Automatic claim created</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A disruption matched your policy and your claim has been created automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: Heavy Rain</li><li style=\"margin:0 0 8px;\">Estimated payout: ₹82</li><li style=\"margin:0 0 8px;\">Protected hours reserved: 1h</li><li style=\"margin:0 0 8px;\">Current claim status: processing</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A disruption matched your policy and your claim has been created automatically.\nTrigger: Heavy Rain\nEstimated payout: ₹82\nProtected hours reserved: 1h\nCurrent claim status: processing"
+    },
+    {
+      "id": "140bebbb-450a-42a9-8e71-f06a5ca937b9",
+      "createdAt": "2026-04-17T08:32:27.614Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Wallet withdrawal completed",
+      "type": "info",
+      "meta": {
+        "action": "wallet_withdraw",
+        "amount": 1190,
+        "ref": "WDRMO2NH3O7A7MB",
+        "upiId": "91@k"
+      },
+      "title": "Withdrawal processed",
+      "intro": "₹1190 was withdrawn from your wallet.",
+      "emailLines": [
+        "Destination: 91@k",
+        "Reference: WDRMO2NH3O7A7MB",
+        "Available balance: ₹1000"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Withdrawal processed</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹1190 was withdrawn from your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Destination: 91@k</li><li style=\"margin:0 0 8px;\">Reference: WDRMO2NH3O7A7MB</li><li style=\"margin:0 0 8px;\">Available balance: ₹1000</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹1190 was withdrawn from your wallet.\nDestination: 91@k\nReference: WDRMO2NH3O7A7MB\nAvailable balance: ₹1000"
+    },
+    {
+      "id": "0709c853-4f72-4936-b7cf-4a2a07e8bd5f",
+      "createdAt": "2026-04-17T05:47:58.761Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-17T05:47:58.764Z",
+      "deliveredAt": "2026-04-17T05:48:02.045Z",
+      "reason": null,
+      "messageId": "<5d75ae02-b6c0-3c84-cfca-218561717837@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Automatic payout credited",
+      "type": "success",
+      "meta": {
+        "action": "auto_payout",
+        "claimId": "02b6f0f4-ddc3-44ca-a75f-88f394747e48",
+        "ref": "STRIPE-AO9GVJ",
+        "gatewayId": "stripe_sandbox"
+      },
+      "title": "Payout credited",
+      "intro": "A trigger event matched your policy and we paid you automatically.",
+      "emailLines": [
+        "Trigger: curfew",
+        "Amount: ₹240",
+        "Gateway: Stripe Sandbox",
+        "Reference: STRIPE-AO9GVJ"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Payout credited</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A trigger event matched your policy and we paid you automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: curfew</li><li style=\"margin:0 0 8px;\">Amount: ₹240</li><li style=\"margin:0 0 8px;\">Gateway: Stripe Sandbox</li><li style=\"margin:0 0 8px;\">Reference: STRIPE-AO9GVJ</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A trigger event matched your policy and we paid you automatically.\nTrigger: curfew\nAmount: ₹240\nGateway: Stripe Sandbox\nReference: STRIPE-AO9GVJ"
+    },
+    {
+      "id": "d4976a56-058c-4b19-8c8d-4221f31e3481",
+      "createdAt": "2026-04-17T05:47:54.864Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-17T05:47:54.865Z",
+      "deliveredAt": "2026-04-17T05:47:58.738Z",
+      "reason": null,
+      "messageId": "<b925a24a-62bd-949c-eee9-dcf7c6820484@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Automatic claim created",
+      "type": "info",
+      "meta": {
+        "action": "auto_claim_created",
+        "claimId": "02b6f0f4-ddc3-44ca-a75f-88f394747e48",
+        "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+        "triggerType": "curfew"
+      },
+      "title": "Automatic claim created",
+      "intro": "A disruption matched your policy and your claim has been created automatically.",
+      "emailLines": [
+        "Trigger: Curfew/Strike",
+        "Estimated payout: ₹240",
+        "Protected hours reserved: 3h",
+        "Current claim status: processing"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Automatic claim created</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A disruption matched your policy and your claim has been created automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: Curfew/Strike</li><li style=\"margin:0 0 8px;\">Estimated payout: ₹240</li><li style=\"margin:0 0 8px;\">Protected hours reserved: 3h</li><li style=\"margin:0 0 8px;\">Current claim status: processing</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A disruption matched your policy and your claim has been created automatically.\nTrigger: Curfew/Strike\nEstimated payout: ₹240\nProtected hours reserved: 3h\nCurrent claim status: processing"
+    },
+    {
+      "id": "6a5ee8a1-8e8e-438b-9f8d-1e7d13eeabc0",
+      "createdAt": "2026-04-17T05:47:54.861Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Automatic payout credited",
+      "type": "success",
+      "meta": {
+        "action": "auto_payout",
+        "claimId": "0ed94f4f-b8ac-4ce5-b1db-bbc53a91e7cf",
+        "ref": "STRIPE-YTMG1E",
+        "gatewayId": "stripe_sandbox"
+      },
+      "title": "Payout credited",
+      "intro": "A trigger event matched your policy and we paid you automatically.",
+      "emailLines": [
+        "Trigger: curfew",
+        "Amount: ₹246",
+        "Gateway: Stripe Sandbox",
+        "Reference: STRIPE-YTMG1E"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Payout credited</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A trigger event matched your policy and we paid you automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: curfew</li><li style=\"margin:0 0 8px;\">Amount: ₹246</li><li style=\"margin:0 0 8px;\">Gateway: Stripe Sandbox</li><li style=\"margin:0 0 8px;\">Reference: STRIPE-YTMG1E</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A trigger event matched your policy and we paid you automatically.\nTrigger: curfew\nAmount: ₹246\nGateway: Stripe Sandbox\nReference: STRIPE-YTMG1E"
+    },
+    {
+      "id": "879d9970-5f48-4854-88f1-45301a0619aa",
+      "createdAt": "2026-04-17T05:47:54.855Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Automatic claim created",
+      "type": "info",
+      "meta": {
+        "action": "auto_claim_created",
+        "claimId": "0ed94f4f-b8ac-4ce5-b1db-bbc53a91e7cf",
+        "policyId": "bf42bf8b-e365-43d3-816a-e199fe66060a",
+        "triggerType": "curfew"
+      },
+      "title": "Automatic claim created",
+      "intro": "A disruption matched your policy and your claim has been created automatically.",
+      "emailLines": [
+        "Trigger: Curfew/Strike",
+        "Estimated payout: ₹246",
+        "Protected hours reserved: 3h",
+        "Current claim status: processing"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Automatic claim created</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">A disruption matched your policy and your claim has been created automatically.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Trigger: Curfew/Strike</li><li style=\"margin:0 0 8px;\">Estimated payout: ₹246</li><li style=\"margin:0 0 8px;\">Protected hours reserved: 3h</li><li style=\"margin:0 0 8px;\">Current claim status: processing</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "A disruption matched your policy and your claim has been created automatically.\nTrigger: Curfew/Strike\nEstimated payout: ₹246\nProtected hours reserved: 3h\nCurrent claim status: processing"
+    },
+    {
+      "id": "1ce5f48d-db6e-4559-9d4a-6b44ed77ee4e",
+      "createdAt": "2026-04-17T05:47:51.122Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your GigShield policy is now active",
+      "type": "success",
+      "meta": {
+        "action": "policy_purchase",
+        "policyId": "bf42bf8b-e365-43d3-816a-e199fe66060a",
+        "planId": "pro",
+        "activationMode": "manual"
+      },
+      "title": "Coverage activated",
+      "intro": "Pro Shield is now live on your account.",
+      "emailLines": [
+        "Bundle premium: ₹56",
+        "Protected active hours: 36h",
+        "Wallet balance after purchase: ₹1944"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage activated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Pro Shield is now live on your account.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Bundle premium: ₹56</li><li style=\"margin:0 0 8px;\">Protected active hours: 36h</li><li style=\"margin:0 0 8px;\">Wallet balance after purchase: ₹1944</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Pro Shield is now live on your account.\nBundle premium: ₹56\nProtected active hours: 36h\nWallet balance after purchase: ₹1944"
+    },
+    {
+      "id": "f8da4b22-ee5b-4fe6-8010-16c9694bd8fe",
+      "createdAt": "2026-04-17T05:47:42.990Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 2000,
+        "ref": "RZP-4UI4KNVK",
+        "gatewayId": "razorpay_test"
+      },
+      "title": "Wallet balance updated",
+      "intro": "₹2000 was successfully added to your wallet.",
+      "emailLines": [
+        "Gateway: Razorpay Test Mode",
+        "Reference: RZP-4UI4KNVK",
+        "Available balance: ₹2000"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet balance updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹2000 was successfully added to your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Reference: RZP-4UI4KNVK</li><li style=\"margin:0 0 8px;\">Available balance: ₹2000</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹2000 was successfully added to your wallet.\nGateway: Razorpay Test Mode\nReference: RZP-4UI4KNVK\nAvailable balance: ₹2000"
+    },
+    {
+      "id": "34796ffe-e9db-4663-8699-940621430689",
+      "createdAt": "2026-04-17T05:47:09.264Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your policy was cancelled",
+      "type": "warning",
+      "meta": {
+        "action": "policy_cancel"
+      },
+      "title": "Coverage cancelled",
+      "intro": "Your active protection has been cancelled.",
+      "emailLines": [],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage cancelled</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Your active protection has been cancelled.</p>\n        \n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Your active protection has been cancelled."
+    },
+    {
+      "id": "c5c32d8f-c5e8-4ce3-bad4-737d3875eb49",
+      "createdAt": "2026-04-17T04:35:11.782Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Wallet withdrawal completed",
+      "type": "info",
+      "meta": {
+        "action": "wallet_withdraw",
+        "amount": 937,
+        "ref": "WDRMO2EZZ8L",
+        "upiId": "demo@upi"
+      },
+      "title": "Withdrawal processed",
+      "intro": "₹937 was withdrawn from your wallet.",
+      "emailLines": [
+        "Destination: demo@upi",
+        "Reference: WDRMO2EZZ8L",
+        "Available balance: ₹0"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Withdrawal processed</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹937 was withdrawn from your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Destination: demo@upi</li><li style=\"margin:0 0 8px;\">Reference: WDRMO2EZZ8L</li><li style=\"margin:0 0 8px;\">Available balance: ₹0</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹937 was withdrawn from your wallet.\nDestination: demo@upi\nReference: WDRMO2EZZ8L\nAvailable balance: ₹0"
+    },
+    {
+      "id": "18fc0a5e-ee3e-42d7-ab18-f1e96bff6284",
+      "createdAt": "2026-04-17T04:34:49.726Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your GigShield policy is now active",
+      "type": "success",
+      "meta": {
+        "action": "policy_purchase",
+        "policyId": "3183f315-b0c6-4ffa-a293-6c1ae628888d",
+        "planId": "basic",
+        "activationMode": "manual"
+      },
+      "title": "Coverage activated",
+      "intro": "Basic Shield is now live on your account.",
+      "emailLines": [
+        "Bundle premium: ₹33",
+        "Protected active hours: 18h",
+        "Wallet balance after purchase: ₹937"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage activated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Basic Shield is now live on your account.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Bundle premium: ₹33</li><li style=\"margin:0 0 8px;\">Protected active hours: 18h</li><li style=\"margin:0 0 8px;\">Wallet balance after purchase: ₹937</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Basic Shield is now live on your account.\nBundle premium: ₹33\nProtected active hours: 18h\nWallet balance after purchase: ₹937"
+    },
+    {
+      "id": "a6c4e4b4-80c8-400d-a8dc-e7581639277d",
+      "createdAt": "2026-04-16T17:32:13.505Z",
+      "status": "skipped",
+      "attempts": 0,
+      "lastAttemptAt": null,
+      "deliveredAt": null,
+      "reason": "Worker has no email address",
+      "messageId": null,
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Wallet withdrawal completed",
+      "type": "info",
+      "meta": {
+        "action": "wallet_withdraw",
+        "amount": 19,
+        "ref": "WDRMO1RBE48Z5V0",
+        "upiId": "h@d"
+      },
+      "title": "Withdrawal processed",
+      "intro": "₹19 was withdrawn from your wallet.",
+      "emailLines": [
+        "Destination: h@d",
+        "Reference: WDRMO1RBE48Z5V0",
+        "Available balance: ₹970"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Withdrawal processed</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹19 was withdrawn from your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Destination: h@d</li><li style=\"margin:0 0 8px;\">Reference: WDRMO1RBE48Z5V0</li><li style=\"margin:0 0 8px;\">Available balance: ₹970</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹19 was withdrawn from your wallet.\nDestination: h@d\nReference: WDRMO1RBE48Z5V0\nAvailable balance: ₹970"
+    },
+    {
+      "id": "204e45ab-3b68-436a-8296-9c76ad2bf895",
+      "createdAt": "2026-04-16T17:20:10.687Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T17:20:10.687Z",
+      "deliveredAt": "2026-04-16T17:20:14.319Z",
+      "reason": null,
+      "messageId": "<f49bcb18-693b-a21d-4217-c17ed816a2cf@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 500,
+        "gatewayId": "razorpay_test",
+        "ref": "RZP-E3G3OQVP"
+      },
+      "title": "Wallet updated",
+      "intro": "₹500 has been added to your GigShield wallet.",
+      "emailLines": [
+        "Gateway: Razorpay Test Mode",
+        "Method: demo UPI checkout",
+        "Details: demo@upi",
+        "Reference: RZP-E3G3OQVP",
+        "Available balance: ₹1,417"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹500 has been added to your GigShield wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Method: demo UPI checkout</li><li style=\"margin:0 0 8px;\">Details: demo@upi</li><li style=\"margin:0 0 8px;\">Reference: RZP-E3G3OQVP</li><li style=\"margin:0 0 8px;\">Available balance: ₹1,417</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹500 has been added to your GigShield wallet.\nGateway: Razorpay Test Mode\nMethod: demo UPI checkout\nDetails: demo@upi\nReference: RZP-E3G3OQVP\nAvailable balance: ₹1,417"
+    },
+    {
+      "id": "ffd50e30-8c5b-44b5-ab4c-35de1915e598",
+      "createdAt": "2026-04-16T17:19:24.465Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T17:19:24.466Z",
+      "deliveredAt": "2026-04-16T17:19:28.209Z",
+      "reason": null,
+      "messageId": "<11fe079d-167e-0699-086c-1cb4a6d2c407@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Expiry reminder triggered",
+      "type": "alert",
+      "meta": {
+        "action": "simulate_expire",
+        "policyId": "56b942e6-a685-48e0-aeee-587749a7911a"
+      },
+      "title": "Policy nearing expiry",
+      "intro": "Your active policy has been pushed into near-expiry demo mode.",
+      "emailLines": [
+        "Plan: Basic Shield",
+        "New expiry time: 16/4/2026, 10:50:24 pm"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Policy nearing expiry</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Your active policy has been pushed into near-expiry demo mode.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Plan: Basic Shield</li><li style=\"margin:0 0 8px;\">New expiry time: 16/4/2026, 10:50:24 pm</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Your active policy has been pushed into near-expiry demo mode.\nPlan: Basic Shield\nNew expiry time: 16/4/2026, 10:50:24 pm"
+    },
+    {
+      "id": "880f23ae-471f-475c-8332-e22d2d574cef",
+      "createdAt": "2026-04-16T17:19:17.454Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T17:19:17.455Z",
+      "deliveredAt": "2026-04-16T17:19:21.793Z",
+      "reason": null,
+      "messageId": "<40203203-8b20-5ed2-cc1d-c2d49fec428b@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Email address updated",
+      "type": "info",
+      "meta": {
+        "action": "profile_update",
+        "zoneId": null,
+        "email": "sarawagishubam@gmail.com"
+      },
+      "title": "Email updated",
+      "intro": "Your GigShield contact email has been updated successfully.",
+      "emailLines": [
+        "Contact email: sarawagishubam@gmail.com"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Email updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Your GigShield contact email has been updated successfully.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Contact email: sarawagishubam@gmail.com</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Your GigShield contact email has been updated successfully.\nContact email: sarawagishubam@gmail.com"
+    },
+    {
+      "id": "70ac8047-8edd-4251-935f-86816f5aae86",
+      "createdAt": "2026-04-16T16:44:01.172Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:44:01.172Z",
+      "deliveredAt": "2026-04-16T16:44:05.163Z",
+      "reason": null,
+      "messageId": "<32b214ac-0f6f-8f75-9768-4fa2491eb14e@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 500,
+        "gatewayId": "razorpay_test",
+        "ref": "RZP-DTH9NBP3"
+      },
+      "title": "Wallet updated",
+      "intro": "₹500 has been added to your GigShield wallet.",
+      "emailLines": [
+        "Gateway: Razorpay Test Mode",
+        "Method: demo UPI checkout",
+        "Reference: RZP-DTH9NBP3",
+        "Available balance: ₹917"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹500 has been added to your GigShield wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Method: demo UPI checkout</li><li style=\"margin:0 0 8px;\">Reference: RZP-DTH9NBP3</li><li style=\"margin:0 0 8px;\">Available balance: ₹917</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹500 has been added to your GigShield wallet.\nGateway: Razorpay Test Mode\nMethod: demo UPI checkout\nReference: RZP-DTH9NBP3\nAvailable balance: ₹917"
+    },
+    {
+      "id": "38f68815-6944-4bec-98ed-1c5a2847a732",
+      "createdAt": "2026-04-16T16:32:21.602Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:32:21.603Z",
+      "deliveredAt": "2026-04-16T16:32:24.941Z",
+      "reason": null,
+      "messageId": "<5175df18-19f5-42a6-44cd-04aed08b7716@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 250
+      },
+      "title": "Wallet updated",
+      "intro": "₹250 has been added to your GigShield wallet.",
+      "emailLines": [
+        "Available balance: ₹417"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹250 has been added to your GigShield wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Available balance: ₹417</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹250 has been added to your GigShield wallet.\nAvailable balance: ₹417"
+    },
+    {
+      "id": "ab2967a7-1b2e-4559-ba4f-769a2a64b171",
+      "createdAt": "2026-04-16T16:32:09.565Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:32:09.566Z",
+      "deliveredAt": "2026-04-16T16:32:13.427Z",
+      "reason": null,
+      "messageId": "<62cb9de2-fa32-91a5-2691-78db0d8b4a56@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 100,
+        "ref": "RZP-S63U4NXS",
+        "gatewayId": "razorpay_test"
+      },
+      "title": "Wallet balance updated",
+      "intro": "₹100 was successfully added to your wallet.",
+      "emailLines": [
+        "Gateway: Razorpay Test Mode",
+        "Reference: RZP-S63U4NXS",
+        "Available balance: ₹167"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet balance updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹100 was successfully added to your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Gateway: Razorpay Test Mode</li><li style=\"margin:0 0 8px;\">Reference: RZP-S63U4NXS</li><li style=\"margin:0 0 8px;\">Available balance: ₹167</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹100 was successfully added to your wallet.\nGateway: Razorpay Test Mode\nReference: RZP-S63U4NXS\nAvailable balance: ₹167"
+    },
+    {
+      "id": "98e5b098-9a47-4309-8a7e-299b579fdfd9",
+      "createdAt": "2026-04-16T16:15:58.278Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:15:58.279Z",
+      "deliveredAt": "2026-04-16T16:16:01.854Z",
+      "reason": null,
+      "messageId": "<c68c9bad-bbff-83f1-aa89-44053729358c@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Your GigShield policy is now active",
+      "type": "success",
+      "meta": {
+        "action": "policy_purchase",
+        "policyId": "56b942e6-a685-48e0-aeee-587749a7911a",
+        "planId": "basic"
+      },
+      "title": "Coverage activated",
+      "intro": "Basic Shield is now live on your account.",
+      "emailLines": [
+        "Bundle premium: ₹33",
+        "Protected active hours: 18h",
+        "Wallet balance after purchase: ₹67"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Coverage activated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Basic Shield is now live on your account.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Bundle premium: ₹33</li><li style=\"margin:0 0 8px;\">Protected active hours: 18h</li><li style=\"margin:0 0 8px;\">Wallet balance after purchase: ₹67</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Basic Shield is now live on your account.\nBundle premium: ₹33\nProtected active hours: 18h\nWallet balance after purchase: ₹67"
+    },
+    {
+      "id": "abb089e4-e9e4-4aa4-8878-766164ce2ad3",
+      "createdAt": "2026-04-16T16:15:51.860Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:15:51.861Z",
+      "deliveredAt": "2026-04-16T16:15:55.349Z",
+      "reason": null,
+      "messageId": "<b536996f-692e-63df-4801-6b21cceb1515@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 100,
+        "ref": "PAYMO1OL6WGGSJ6"
+      },
+      "title": "Wallet balance updated",
+      "intro": "₹100 was successfully added to your wallet.",
+      "emailLines": [
+        "Reference: PAYMO1OL6WGGSJ6",
+        "Available balance: ₹100"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet balance updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹100 was successfully added to your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Reference: PAYMO1OL6WGGSJ6</li><li style=\"margin:0 0 8px;\">Available balance: ₹100</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹100 was successfully added to your wallet.\nReference: PAYMO1OL6WGGSJ6\nAvailable balance: ₹100"
+    },
+    {
+      "id": "956578a4-101f-4970-8545-5cef471b60ab",
+      "createdAt": "2026-04-16T16:15:15.898Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:15:15.899Z",
+      "deliveredAt": "2026-04-16T16:15:19.202Z",
+      "reason": null,
+      "messageId": "<f5fce1ac-5689-c581-a750-370d34113b07@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet withdrawal completed",
+      "type": "info",
+      "meta": {
+        "action": "wallet_withdraw",
+        "amount": 100,
+        "ref": "WDRMO1OKF5I7HVF",
+        "upiId": "s@a"
+      },
+      "title": "Withdrawal processed",
+      "intro": "₹100 was withdrawn from your wallet.",
+      "emailLines": [
+        "Destination: s@a",
+        "Reference: WDRMO1OKF5I7HVF",
+        "Available balance: ₹0"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Withdrawal processed</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹100 was withdrawn from your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Destination: s@a</li><li style=\"margin:0 0 8px;\">Reference: WDRMO1OKF5I7HVF</li><li style=\"margin:0 0 8px;\">Available balance: ₹0</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹100 was withdrawn from your wallet.\nDestination: s@a\nReference: WDRMO1OKF5I7HVF\nAvailable balance: ₹0"
+    },
+    {
+      "id": "be6abeb3-cf88-4fcd-aed8-95e1c4b4b1c3",
+      "createdAt": "2026-04-16T16:14:51.334Z",
+      "status": "sent",
+      "attempts": 1,
+      "lastAttemptAt": "2026-04-16T16:14:51.335Z",
+      "deliveredAt": "2026-04-16T16:14:55.094Z",
+      "reason": null,
+      "messageId": "<42050080-50ce-9543-8eb2-e10fe4239428@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 10,
+        "ref": "PAYMO1OJW7831L0"
+      },
+      "title": "Wallet balance updated",
+      "intro": "₹10 was successfully added to your wallet.",
+      "emailLines": [
+        "Reference: PAYMO1OJW7831L0",
+        "Available balance: ₹430"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet balance updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹10 was successfully added to your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Reference: PAYMO1OJW7831L0</li><li style=\"margin:0 0 8px;\">Available balance: ₹430</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹10 was successfully added to your wallet.\nReference: PAYMO1OJW7831L0\nAvailable balance: ₹430"
+    },
+    {
+      "id": "2ed5df99-b858-4b4d-a288-b74f6e6292a5",
+      "createdAt": "2026-04-16T16:13:34.351Z",
+      "status": "sent",
+      "attempts": 3,
+      "lastAttemptAt": "2026-04-16T16:14:30.937Z",
+      "deliveredAt": "2026-04-16T16:14:34.139Z",
+      "reason": null,
+      "messageId": "<2bfcaa99-7550-0601-e169-d7efd445c3e9@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 10,
+        "ref": "PAYMO1OI8SQW1IM"
+      },
+      "title": "Wallet balance updated",
+      "intro": "₹10 was successfully added to your wallet.",
+      "emailLines": [
+        "Reference: PAYMO1OI8SQW1IM",
+        "Available balance: ₹420"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet balance updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹10 was successfully added to your wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Reference: PAYMO1OI8SQW1IM</li><li style=\"margin:0 0 8px;\">Available balance: ₹420</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹10 was successfully added to your wallet.\nReference: PAYMO1OI8SQW1IM\nAvailable balance: ₹420"
+    },
+    {
+      "id": "246b26a2-f604-43b0-be6f-85eab1d50e9d",
+      "createdAt": "2026-04-16T16:09:00.037Z",
+      "status": "sent",
+      "attempts": 3,
+      "lastAttemptAt": "2026-04-16T16:14:27.700Z",
+      "deliveredAt": "2026-04-16T16:14:30.935Z",
+      "reason": null,
+      "messageId": "<1c5a176d-410e-b79d-3963-79706f4b164e@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 100
+      },
+      "title": "Wallet updated",
+      "intro": "₹100 has been added to your GigShield wallet.",
+      "emailLines": [
+        "Available balance: ₹100"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹100 has been added to your GigShield wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Available balance: ₹100</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹100 has been added to your GigShield wallet.\nAvailable balance: ₹100"
+    },
+    {
+      "id": "d2311f92-ab93-413f-b437-faed12a5dea3",
+      "createdAt": "2026-04-16T16:08:08.952Z",
+      "status": "sent",
+      "attempts": 3,
+      "lastAttemptAt": "2026-04-16T16:14:23.994Z",
+      "deliveredAt": "2026-04-16T16:14:27.699Z",
+      "reason": null,
+      "messageId": "<18400bdd-c36b-654b-256f-cc7d560fa6ab@gmail.com>",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "to": "sarawagishubam@gmail.com",
+      "subject": "Welcome to GigShield",
+      "type": "success",
+      "meta": {
+        "action": "register"
+      },
+      "title": "Your account is live",
+      "intro": "Welcome Kashvi, your account has been created successfully.",
+      "emailLines": [
+        "Platform: swiggy",
+        "Zone: Andheri West"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Your account is live</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">Welcome Kashvi, your account has been created successfully.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Platform: swiggy</li><li style=\"margin:0 0 8px;\">Zone: Andheri West</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "Welcome Kashvi, your account has been created successfully.\nPlatform: swiggy\nZone: Andheri West"
+    },
+    {
+      "id": "dfbcd2f0-940f-41e5-a454-ef76c423be04",
+      "createdAt": "2026-04-16T16:06:39.152Z",
+      "status": "sent",
+      "attempts": 4,
+      "lastAttemptAt": "2026-04-16T16:15:00.432Z",
+      "deliveredAt": "2026-04-16T16:15:04.448Z",
+      "reason": null,
+      "messageId": "<a2f6eb5d-792b-3623-d799-b9121636d5d8@gmail.com>",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 10
+      },
+      "title": "Wallet updated",
+      "intro": "₹10 has been added to your GigShield wallet.",
+      "emailLines": [
+        "Available balance: ₹410"
+      ],
+      "html": "\n    <div style=\"font-family:Arial,sans-serif;background:#f5f7fb;padding:24px;color:#1f2937;\">\n      <div style=\"max-width:640px;margin:0 auto;background:#ffffff;border-radius:18px;padding:28px;border:1px solid #e5e7eb;\">\n        <div style=\"font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:10px;\">GigShield Updates</div>\n        <h1 style=\"margin:0 0 12px;font-size:26px;line-height:1.2;color:#111827;\">Wallet updated</h1>\n        <p style=\"margin:0 0 18px;font-size:15px;line-height:1.6;color:#374151;\">₹10 has been added to your GigShield wallet.</p>\n        <ul style=\"padding-left:18px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#4b5563;\"><li style=\"margin:0 0 8px;\">Available balance: ₹410</li></ul>\n        <p style=\"margin:0;font-size:13px;line-height:1.6;color:#6b7280;\">You are receiving this because action alerts are enabled for your GigShield account.</p>\n      </div>\n    </div>\n  ",
+      "text": "₹10 has been added to your GigShield wallet.\nAvailable balance: ₹410"
+    },
+    {
+      "id": "a9fe17d6-e770-40d6-ba4e-7d67dc121981",
+      "createdAt": "2026-04-16T15:57:04.536Z",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 500
+      },
+      "reason": "Worker has no email address"
+    },
+    {
+      "id": "b1b68291-3175-463d-98fd-3e1b4634be93",
+      "createdAt": "2026-04-16T15:51:02.720Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 200
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "b6f866af-4d5b-4548-97d2-0ade98cfd7e7",
+      "createdAt": "2026-04-16T15:49:15.293Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 200
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "da2da55a-193d-4273-abf3-a08487738bbd",
+      "createdAt": "2026-04-16T15:48:59.679Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Manual claim submitted",
+      "type": "info",
+      "status": "skipped",
+      "meta": {
+        "action": "manual_claim",
+        "claimId": "e1b15900-f3db-4063-83a5-10faf3bef85f",
+        "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583"
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "92f5ec1e-0c0c-4dce-97ea-ce75dd16fe4d",
+      "createdAt": "2026-04-16T15:48:04.607Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Manual claim submitted",
+      "type": "info",
+      "status": "skipped",
+      "meta": {
+        "action": "manual_claim",
+        "claimId": "316bf22b-d389-4c42-af28-60edaac29de9",
+        "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583"
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "66f5587f-6620-4457-b5dd-9bfac7cb339a",
+      "createdAt": "2026-04-16T15:47:31.814Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Manual claim submitted",
+      "type": "info",
+      "status": "skipped",
+      "meta": {
+        "action": "manual_claim",
+        "claimId": "13b2017b-c9e2-4d2b-a8a4-8f68aadaa3fd",
+        "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583"
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "3a5be940-5f39-4a97-9b70-e4c34b9ba2ff",
+      "createdAt": "2026-04-16T15:46:30.642Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Coverage zone updated",
+      "type": "info",
+      "status": "skipped",
+      "meta": {
+        "action": "zone_update",
+        "zoneId": "z3"
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "b562b82b-43ca-4743-abe0-9de9833c7da5",
+      "createdAt": "2026-04-16T15:45:52.941Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Your new policy is active",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "buy_policy",
+        "policyId": "4815d87a-fc57-4e84-a16c-4f8a26b68583",
+        "planId": "max"
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "0c9ea1e8-52e9-4b06-8f8b-44e151f76023",
+      "createdAt": "2026-04-16T15:45:52.921Z",
+      "workerId": "w1",
+      "to": "ravi@example.com",
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 95
+      },
+      "reason": "SMTP is not configured",
+      "messageId": null
+    },
+    {
+      "id": "8efb0ee3-b694-4a49-89f7-4b9d0fea9639",
+      "createdAt": "2026-04-16T15:11:12.562Z",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Your new policy is active",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "buy_policy",
+        "policyId": "df57a930-8f10-43e8-8cf5-0e2f35cfb150",
+        "planId": "pro"
+      },
+      "reason": "Worker has no email address"
+    },
+    {
+      "id": "330710a0-a1c0-4ec1-85a0-f7ba3c2a4320",
+      "createdAt": "2026-04-16T15:10:54.033Z",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "to": null,
+      "subject": "Wallet top-up completed",
+      "type": "success",
+      "status": "skipped",
+      "meta": {
+        "action": "wallet_add",
+        "amount": 500
+      },
+      "reason": "Worker has no email address"
+    }
+  ],
+  "paymentSessions": [
+    {
+      "id": "08cf96ce-d532-402b-b4f7-ad3a561e7200",
+      "status": "captured",
+      "createdAt": "2026-04-17T05:47:42.318Z",
+      "updatedAt": "2026-04-17T05:47:42.979Z",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "flow": "topup",
+      "purpose": "Add to ArthRaksh Wallet",
+      "amount": 2000,
+      "currency": "INR",
+      "method": "upi",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "providerOrderId": "order_mo2hl84ui4knvk",
+      "providerSessionId": "pay_mo2hl84uo1sbgn",
+      "displayRef": "RZP-4UI4KNVK",
+      "checkoutHint": "Mock Razorpay order for INR 2000",
+      "capturedAt": "2026-04-17T05:47:42.979Z",
+      "providerPaymentId": "pay_mo2hl8n7fbfjp6",
+      "paymentMethodDetails": {
+        "method": "upi",
+        "cardLast4": null,
+        "upiId": "user@phonepe",
+        "bank": null
+      }
+    },
+    {
+      "id": "82374cf9-21b1-4bef-9c22-58aa5297965f",
+      "status": "captured",
+      "createdAt": "2026-04-16T17:20:10.683Z",
+      "updatedAt": "2026-04-16T17:20:10.684Z",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "flow": "topup",
+      "purpose": "Sia assistant wallet top-up",
+      "amount": 500,
+      "currency": "INR",
+      "method": "upi",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "providerOrderId": "order_mo1qvwe3g3oqvp",
+      "providerSessionId": "pay_mo1qvwe3lknqoo",
+      "displayRef": "RZP-E3G3OQVP",
+      "checkoutHint": "Mock Razorpay order for INR 500",
+      "capturedAt": "2026-04-16T17:20:10.684Z",
+      "providerPaymentId": "pay_mo1qvwe4atndox",
+      "paymentMethodDetails": {
+        "method": "upi",
+        "source": "chatbot",
+        "upiId": "demo@upi",
+        "bank": null,
+        "cardLast4": null,
+        "expiry": null,
+        "cardHolder": null
+      }
+    },
+    {
+      "id": "3b994128-a739-46ed-bae6-9abca8498c67",
+      "status": "captured",
+      "createdAt": "2026-04-16T16:44:01.169Z",
+      "updatedAt": "2026-04-16T16:44:01.170Z",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "flow": "topup",
+      "purpose": "Sia assistant wallet top-up",
+      "amount": 500,
+      "currency": "INR",
+      "method": "upi",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "providerOrderId": "order_mo1pledth9nbp3",
+      "providerSessionId": "pay_mo1pledtq96qxq",
+      "displayRef": "RZP-DTH9NBP3",
+      "checkoutHint": "Mock Razorpay order for INR 500",
+      "capturedAt": "2026-04-16T16:44:01.170Z",
+      "providerPaymentId": "pay_mo1pleduw4pitl",
+      "paymentMethodDetails": {
+        "method": "upi",
+        "source": "chatbot"
+      }
+    },
+    {
+      "id": "8e9a0d38-c0b5-4c83-83d9-0dd285e52de4",
+      "status": "captured",
+      "createdAt": "2026-04-16T16:32:08.886Z",
+      "updatedAt": "2026-04-16T16:32:09.559Z",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "flow": "topup",
+      "purpose": "Add to ArthRaksh Wallet",
+      "amount": 100,
+      "currency": "INR",
+      "method": "card",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "providerOrderId": "order_mo1p64s63u4nxs",
+      "providerSessionId": "pay_mo1p64s6jjn3lf",
+      "displayRef": "RZP-S63U4NXS",
+      "checkoutHint": "Mock Razorpay order for INR 100",
+      "capturedAt": "2026-04-16T16:32:09.559Z",
+      "providerPaymentId": "pay_mo1p65avgqk7cz",
+      "paymentMethodDetails": {
+        "method": "card",
+        "cardLast4": "2212",
+        "upiId": null,
+        "bank": null
+      }
+    }
+  ],
+  "gatewayPayouts": [
+    {
+      "id": "2f7cd0eb-281f-45c7-9ecb-f568564256c5",
+      "status": "paid",
+      "createdAt": "2026-04-17T09:12:08.948Z",
+      "updatedAt": "2026-04-17T09:12:08.948Z",
+      "workerId": "w1",
+      "claimId": "0d35fb2e-699e-494e-a474-9dec5e46737c",
+      "amount": 200,
+      "currency": "INR",
+      "destination": "worker_wallet",
+      "destinationDisplay": "GigShield Wallet",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "settledAt": "2026-04-17T09:12:08.948Z",
+      "providerPayoutId": "pout_mo2ow54k3ykpvb",
+      "providerTransferId": "trf_mo2ow54kap00i4",
+      "reference": "RZP-PAYOUT-3YKPVB",
+      "rail": "Razorpay Route Test",
+      "statusText": "Instantly moved 200 to worker wallet via Razorpay test payout rail"
+    },
+    {
+      "id": "7977c3e0-f08f-4dfa-9329-0291b9224671",
+      "status": "paid",
+      "createdAt": "2026-04-17T09:12:05.364Z",
+      "updatedAt": "2026-04-17T09:12:05.364Z",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "claimId": "71ecbc18-a2eb-48c9-a122-c25cd6270aa2",
+      "amount": 205,
+      "currency": "INR",
+      "destination": "worker_wallet",
+      "destinationDisplay": "GigShield Wallet",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "settledAt": "2026-04-17T09:12:05.364Z",
+      "providerPayoutId": "pout_mo2ow2d0pp6y3q",
+      "providerTransferId": "trf_mo2ow2d0n0nchl",
+      "reference": "RZP-PAYOUT-PP6Y3Q",
+      "rail": "Razorpay Route Test",
+      "statusText": "Instantly moved 205 to worker wallet via Razorpay test payout rail"
+    },
+    {
+      "id": "d704b85b-40a0-4801-bb0a-ec72a061e619",
+      "status": "paid",
+      "createdAt": "2026-04-17T09:12:01.765Z",
+      "updatedAt": "2026-04-17T09:12:01.765Z",
+      "workerId": "36e2af53-eeec-480f-8b0e-0991c5779405",
+      "claimId": "d05910bb-5670-4ce9-ad49-0246a3646466",
+      "amount": 82,
+      "currency": "INR",
+      "destination": "worker_wallet",
+      "destinationDisplay": "GigShield Wallet",
+      "gatewayId": "razorpay_test",
+      "gatewayLabel": "Razorpay Test Mode",
+      "gatewayProvider": "Razorpay",
+      "mode": "test",
+      "settledAt": "2026-04-17T09:12:01.765Z",
+      "providerPayoutId": "pout_mo2ovzl1ec8prg",
+      "providerTransferId": "trf_mo2ovzl1bl6nhd",
+      "reference": "RZP-PAYOUT-EC8PRG",
+      "rail": "Razorpay Route Test",
+      "statusText": "Instantly moved 82 to worker wallet via Razorpay test payout rail"
+    },
+    {
+      "id": "9b893c61-0ba8-4749-b4cf-1b650a04003e",
+      "status": "paid",
+      "createdAt": "2026-04-17T05:47:58.743Z",
+      "updatedAt": "2026-04-17T05:47:58.743Z",
+      "workerId": "w1",
+      "claimId": "02b6f0f4-ddc3-44ca-a75f-88f394747e48",
+      "amount": 240,
+      "currency": "INR",
+      "destination": "worker_wallet",
+      "destinationDisplay": "GigShield Wallet",
+      "gatewayId": "stripe_sandbox",
+      "gatewayLabel": "Stripe Sandbox",
+      "gatewayProvider": "Stripe",
+      "mode": "sandbox",
+      "settledAt": "2026-04-17T05:47:58.743Z",
+      "providerPayoutId": "tr_mo2hlkt3ao9gvj",
+      "providerTransferId": "po_mo2hlkt3uvw5wb",
+      "reference": "STRIPE-AO9GVJ",
+      "rail": "Stripe Connect Sandbox",
+      "statusText": "Instantly moved 240 to worker wallet via Stripe sandbox transfer"
+    },
+    {
+      "id": "4aff5554-d030-4cc7-8aca-d2cf1abeee7b",
+      "status": "paid",
+      "createdAt": "2026-04-17T05:47:54.859Z",
+      "updatedAt": "2026-04-17T05:47:54.859Z",
+      "workerId": "e8edc4e5-687c-45e8-98b1-7abbda895063",
+      "claimId": "0ed94f4f-b8ac-4ce5-b1db-bbc53a91e7cf",
+      "amount": 246,
+      "currency": "INR",
+      "destination": "worker_wallet",
+      "destinationDisplay": "GigShield Wallet",
+      "gatewayId": "stripe_sandbox",
+      "gatewayLabel": "Stripe Sandbox",
+      "gatewayProvider": "Stripe",
+      "mode": "sandbox",
+      "settledAt": "2026-04-17T05:47:54.859Z",
+      "providerPayoutId": "tr_mo2hlht7ytmg1e",
+      "providerTransferId": "po_mo2hlht76lnmt6",
+      "reference": "STRIPE-YTMG1E",
+      "rail": "Stripe Connect Sandbox",
+      "statusText": "Instantly moved 246 to worker wallet via Stripe sandbox transfer"
     }
   ]
 }

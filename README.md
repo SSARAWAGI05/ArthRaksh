@@ -73,6 +73,36 @@ An interactive React-based Command Center featuring:
 ### Prerequisites
 - **Node.js**: v16 or higher
 - **Python**: v3.8 or higher with `pip3`
+- **Docker Desktop**: required only for the Docker workflow
+
+### Docker Launch
+With Docker Desktop running, the full stack can be built and started with:
+
+```bash
+cp .env.docker.example .env   # optional, only if you want to override defaults
+docker compose up --build
+```
+
+Services exposed on the host:
+
+| Service | URL |
+| :--- | :--- |
+| Frontend | [http://localhost:3000](http://localhost:3000) |
+| Backend API | [http://localhost:4000/api/status](http://localhost:4000/api/status) |
+| ML Service | [http://localhost:5001/docs](http://localhost:5001/docs) |
+
+Compose runs three containers:
+- `frontend`: builds the React app and serves it through nginx, including `/api` proxying to the backend container.
+- `backend`: runs the Express API with `./backend/data` mounted into the container so `db.json` persists across rebuilds.
+- `ml-service`: runs the FastAPI prediction service on container port `5000`, exposed locally as `5001`.
+
+Useful Docker commands:
+
+```bash
+docker compose ps
+docker compose logs -f backend
+docker compose down
+```
 
 ### The "One-Tap" Launch
 GigShield is designed for easy deployment. Simply run:
@@ -83,7 +113,7 @@ chmod +x start.sh
 ```
 
 This automated script will:
-1.  **Port Cleanup**: Terminate any dangling processes on ports 3000, 4000, and 5000.
+1.  **Port Cleanup**: Terminate any dangling processes on ports 3000, 4000, and 5001.
 2.  **ML Setup**: Install Python dependencies and initialize the FastAPI service.
 3.  **Backend Setup**: Install NPM packages and spin up the Express API.
 4.  **Frontend Setup**: Initialize the React development server.
@@ -125,7 +155,7 @@ The ML service follows a standard high-performance data pipeline:
 Developed as part of the **Guidewire Hackathon**. GigShield aims to redefine urban risk management through the power of data and AI.
 
 > [!TIP]
-> Use the **Swagger UI** for real-time ML API testing: [http://localhost:5000/docs](http://localhost:5000/docs)
+> Use the **Swagger UI** for real-time ML API testing: [http://localhost:5001/docs](http://localhost:5001/docs)
 
 ---
 
