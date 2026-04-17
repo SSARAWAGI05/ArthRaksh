@@ -1,456 +1,375 @@
-# GigShield
+# ArthRaksh
 
-GigShield is a full-stack demo platform for risk protection in gig work. It lets a delivery worker buy weekly coverage, track wallet balance and claims, and lets an admin review claims, fraud signals, zones, triggers, and insurance plans.
+ArthRaksh is a full-stack platform for gig worker risk protection. Workers can buy weekly protection plans, track wallet activity, view claims, and download proof packs. Admin users can monitor claims across the network, review fraud signals, simulate disruption events, and manage insurance plans.
 
-The project was built for a hackathon setting, so it keeps the data layer simple and easy to run locally. The backend stores demo data in a JSON file, while the ML service runs separately behind a small FastAPI API.
+The application is split into three services:
 
-## What It Does
+1. React frontend
+2. Node.js/Express backend
+3. Python/FastAPI ML service
 
-- Worker login and admin login with seeded demo users
-- Weekly protection plans with dynamic premium calculation
-- Claim creation, claim history, proof-pack download, and payout status
-- Wallet top-up, withdrawal, and transaction history
-- Admin dashboard for claims, fraud review, zone analytics, and plan management
-- Simulated disruption triggers such as rain, AQI, heat, flood, cyclone, curfew, and fog
-- ML microservice for premium pricing, fraud score, payout calculation, and weekly risk forecasts
-- Optional integrations for OpenWeather, Groq chatbot, SMTP email, and demo payment rails
+The backend uses a JSON data store for local development and hackathon review, so the project can be started without setting up a separate database.
 
-## Tech Stack
+## 1. Features
 
-| Layer | Stack |
+1. Worker authentication and worker dashboard
+2. Admin portal for network-level monitoring
+3. Weekly protection plan purchase flow
+4. Dynamic premium calculation
+5. Claims history, proof-pack download, and payout status
+6. Wallet top-up, withdrawal, and transaction tracking
+7. Fraud review queue for admin users
+8. Disruption simulation for rain, AQI, heat, flood, cyclone, curfew, and fog
+9. ML service for premium, fraud, payout, and forecast endpoints
+
+## 2. Tech Stack
+
+| Part | Technology |
 | --- | --- |
 | Frontend | React 18, Axios, Chart.js, Recharts |
-| Backend | Node.js, Express, JWT auth |
+| Backend | Node.js, Express, JWT |
 | ML service | Python, FastAPI, Uvicorn, scikit-learn, pandas |
-| Data store | JSON file at `backend/data/db.json` |
-| Docker | Docker Compose with frontend, backend, and ML containers |
+| Local data store | `backend/data/db.json` |
+| Container setup | Docker Compose |
 
-## Project Structure
-
-```text
-gigshield-v2/
-  backend/          Express API, auth, policies, claims, wallet, admin routes
-  frontend/         React app served locally or through nginx in Docker
-  ml-service/       FastAPI ML service and trained model files
-  docker-compose.yml
-  start.sh          macOS/Linux/WSL local startup helper
-```
-
-## Demo Accounts
-
-Use these after the app starts:
-
-| Role | Login |
-| --- | --- |
-| Worker | `9876543210` / `password123` |
-| Admin | `admin@gigshield.in` / `admin123` |
-
-## Ports
-
-| Service | Local URL |
-| --- | --- |
-| Frontend | `http://localhost:3000` |
-| Backend health/status | `http://localhost:4000/api/status` |
-| ML Swagger docs | `http://localhost:5001/docs` |
-
-Keep these ports free before starting the app.
-
-## Run With Docker
-
-This is the easiest way to run the whole project on a new machine.
-
-### Requirements
-
-- Docker Desktop
-- Git
-
-### macOS / Linux
+## 3. Repository
 
 ```bash
-git clone <repository-url>
-cd gigshield-v2
-docker compose up --build
+git clone https://github.com/SSARAWAGI05/ArthRaksh
+cd ArthRaksh
 ```
 
-Open:
+Project layout:
 
 ```text
-http://localhost:3000
+ArthRaksh/
+  backend/          Express API
+  frontend/         React frontend
+  ml-service/       FastAPI ML service
+  docker-compose.yml
+  start.sh          macOS/Linux/WSL startup script
 ```
 
-### Windows
+## 4. Ports Used
 
-Open PowerShell in the folder where you want the project:
+| Service | URL |
+| --- | --- |
+| Frontend | `http://localhost:3000` |
+| Backend | `http://localhost:4000` |
+| Backend status | `http://localhost:4000/api/status` |
+| ML service | `http://localhost:5001` |
+| ML docs | `http://localhost:5001/docs` |
+
+Make sure ports `3000`, `4000`, and `5001` are free before starting the project.
+
+## 5. Environment File
+
+For a normal local run without Docker, create `backend/.env` from the example file:
+
+### 5.1 macOS / Linux / WSL
+
+```bash
+cd backend
+cp .env.example .env
+cd ..
+```
+
+### 5.2 Windows PowerShell
 
 ```powershell
-git clone <repository-url>
-cd gigshield-v2
-docker compose up --build
+cd backend
+Copy-Item .env.example .env -Force
+cd ..
 ```
 
-Open:
+Keep these values in `backend/.env`:
 
-```text
-http://localhost:3000
+```env
+PORT=4000
+JWT_SECRET=arthraksh-secret-change-in-production
+ML_SERVICE_URL=http://localhost:5001
+FRONTEND_URL=http://localhost:3000
 ```
 
-### Optional Docker Environment
+If you have API keys or SMTP details, add them in the same `backend/.env` file:
 
-The app runs without external API keys. If you want live integrations, copy the Docker env example:
+```env
+OPENWEATHER_API_KEY=
+GROQ_API_KEY=
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM="ArthRaksh Alerts <alerts@example.com>"
+SMTP_SECURE=false
+SMTP_REQUIRE_TLS=false
+```
+
+For Docker, put these values in a root `.env` file if you need them:
+
+### 5.3 Docker env file
+
+macOS / Linux / WSL:
 
 ```bash
 cp .env.docker.example .env
 ```
 
-On Windows PowerShell:
+Windows PowerShell:
 
 ```powershell
 Copy-Item .env.docker.example .env -Force
 ```
 
-Then edit `.env` and add any keys you want:
+The Docker setup will also run without creating this root `.env` file.
 
-```text
-OPENWEATHER_API_KEY=
-GROQ_API_KEY=
-SMTP_HOST=
-SMTP_USER=
-SMTP_PASS=
-```
+## 6. Run With Docker
 
-If these are blank, the app uses demo or fallback behavior.
+This is the recommended way to run the full project on any machine with Docker Desktop.
 
-### Useful Docker Commands
+### 6.1 macOS
 
-Show running services:
+1. Install and open Docker Desktop.
+2. Clone the repository:
 
 ```bash
-docker compose ps
+git clone https://github.com/SSARAWAGI05/ArthRaksh
+cd ArthRaksh
 ```
 
-Follow logs:
+3. Start the project:
 
 ```bash
-docker compose logs -f
-```
-
-Follow only the backend logs:
-
-```bash
-docker compose logs -f backend
-```
-
-Stop the app:
-
-```bash
-docker compose down
-```
-
-Rebuild from scratch:
-
-```bash
-docker compose down
 docker compose up --build
 ```
 
-## Run Without Docker
-
-Use this if you want to run each service directly on your machine.
-
-### Requirements
-
-- Node.js 18 or newer
-- npm
-- Python 3.10 or newer
-- pip
-
-Node 20 and Python 3.11 are good choices for this project.
-
-## macOS / Linux Without Docker
-
-### Option 1: Start Everything With The Script
-
-From the project root:
-
-```bash
-chmod +x start.sh
-./start.sh
-```
-
-The script starts:
-
-- ML service on `5001`
-- Backend on `4000`
-- Frontend on `3000`
-
-It also clears old processes on those ports before starting.
-
-### Option 2: Start Services Manually
-
-Use three terminal windows.
-
-Terminal 1, ML service:
-
-```bash
-cd ml-service
-pip3 install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port 5001
-```
-
-Terminal 2, backend:
-
-```bash
-cd backend
-cp .env.example .env
-npm install
-npm run dev
-```
-
-Terminal 3, frontend:
-
-```bash
-cd frontend
-npm install
-BROWSER=none npm start
-```
-
-Open:
+4. Open the frontend:
 
 ```text
 http://localhost:3000
 ```
 
-## Windows Without Docker
+### 6.2 Windows
 
-`start.sh` is a Bash script, so it does not run directly in normal Command Prompt or PowerShell.
+1. Install and open Docker Desktop.
+2. Open PowerShell.
+3. Clone the repository:
 
-You have two good options:
+```powershell
+git clone https://github.com/SSARAWAGI05/ArthRaksh
+cd ArthRaksh
+```
 
-1. Use WSL and run the macOS/Linux steps.
-2. Use three PowerShell terminals and start the services manually.
+4. Start the project:
 
-### Windows Option 1: WSL
+```powershell
+docker compose up --build
+```
 
-Open Ubuntu/WSL:
+5. Open the frontend:
+
+```text
+http://localhost:3000
+```
+
+## 7. Run Without Docker
+
+Use this method if you want to run the services directly on your machine.
+
+### 7.1 Requirements
+
+Install:
+
+1. Node.js 18 or newer
+2. npm
+3. Python 3.10 or newer
+4. pip
+
+Node 20 and Python 3.11 are recommended.
+
+### 7.2 macOS / Linux
+
+1. Clone the repository:
 
 ```bash
-cd /mnt/c/path/to/gigshield-v2
+git clone https://github.com/SSARAWAGI05/ArthRaksh
+cd ArthRaksh
+```
+
+2. Create the backend `.env` file:
+
+```bash
+cd backend
+cp .env.example .env
+cd ..
+```
+
+3. Start all services:
+
+```bash
 chmod +x start.sh
 ./start.sh
 ```
 
-Example if the project is on your Desktop:
+4. Open:
+
+```text
+http://localhost:3000
+```
+
+### 7.3 Windows Without Docker
+
+On Windows, `start.sh` should be run through WSL. If you are not using WSL, start the three services manually.
+
+#### 7.3.1 Windows With WSL
+
+1. Open Ubuntu/WSL.
+2. Clone the repository:
 
 ```bash
-cd /mnt/c/Users/YOUR_NAME/Desktop/gigshield-v2
+git clone https://github.com/SSARAWAGI05/ArthRaksh
+cd ArthRaksh
+```
+
+3. Create the backend `.env` file:
+
+```bash
+cd backend
+cp .env.example .env
+cd ..
+```
+
+4. Start the project:
+
+```bash
+chmod +x start.sh
 ./start.sh
 ```
 
-### Windows Option 2: PowerShell Manual Startup
+5. Open in your browser:
 
-Use three PowerShell windows.
+```text
+http://localhost:3000
+```
 
-PowerShell 1, ML service:
+#### 7.3.2 Windows PowerShell Manual Startup
+
+1. Clone the repository:
 
 ```powershell
-cd path\to\gigshield-v2\ml-service
+git clone https://github.com/SSARAWAGI05/ArthRaksh
+cd ArthRaksh
+```
+
+2. Create the backend `.env` file:
+
+```powershell
+cd backend
+Copy-Item .env.example .env -Force
+cd ..
+```
+
+3. Open three PowerShell windows.
+
+In PowerShell window 1, start the ML service:
+
+```powershell
+cd path\to\ArthRaksh\ml-service
 pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 5001
 ```
 
-PowerShell 2, backend:
+In PowerShell window 2, start the backend:
 
 ```powershell
-cd path\to\gigshield-v2\backend
-Copy-Item .env.example .env -Force
+cd path\to\ArthRaksh\backend
 npm install
 npm run dev
 ```
 
-PowerShell 3, frontend:
+In PowerShell window 3, start the frontend:
 
 ```powershell
-cd path\to\gigshield-v2\frontend
+cd path\to\ArthRaksh\frontend
 npm install
 npm start
 ```
 
-Open:
+4. Open:
 
 ```text
 http://localhost:3000
 ```
 
-## Environment Variables
+## 8. Login Details
 
-For local non-Docker backend startup, use:
+### 8.1 Worker Login
 
-```bash
-cd backend
-cp .env.example .env
+Use the seeded worker account:
+
+```text
+Phone: 9876543210
+Password: password123
 ```
 
-On Windows PowerShell:
+### 8.2 Admin Portal Login
 
-```powershell
-cd backend
-Copy-Item .env.example .env -Force
+Open the admin/insurer portal from the login page and sign in with:
+
+```text
+Email: admin@gigshield.in
+Password: admin123
 ```
 
-Important backend values:
+## 9. Using The Project
 
-| Variable | Purpose | Default behavior |
-| --- | --- | --- |
-| `PORT` | Backend port | `4000` |
-| `JWT_SECRET` | Token signing secret | Demo secret if missing |
-| `ML_SERVICE_URL` | ML API URL | `http://localhost:5001` |
-| `FRONTEND_URL` | Allowed frontend origin | `http://localhost:3000` |
-| `OPENWEATHER_API_KEY` | Live weather data | Mock weather if missing |
-| `GROQ_API_KEY` | Chatbot responses | Falls back when missing |
-| `SMTP_*` | Email delivery | Queues/mock status if missing |
-
-## Using The App
-
-### Worker Flow
+### 9.1 Worker Side
 
 1. Open `http://localhost:3000`.
-2. Sign in with `9876543210` and `password123`.
-3. View active coverage, zone risk, wallet balance, and recent activity.
-4. Buy or update a plan from the plans section.
-5. Use claims to view payouts and download proof packs.
-6. Use the wallet section for demo top-up and withdrawal flows.
+2. Log in with the worker credentials.
+3. View protection status, wallet balance, zone risk, and recent activity.
+4. Buy or manage a weekly protection plan.
+5. Open Claims to view claim status and download proof packs.
+6. Open Wallet to view top-ups, withdrawals, and transactions.
 
-### Admin Flow
+### 9.2 Admin Side
 
-1. On the login page, open the insurer/admin dashboard.
-2. Sign in with `admin@gigshield.in` and `admin123`.
-3. Review network KPIs and zone movement.
-4. Open Claims to inspect recent claims and proof packs.
-5. Open Fraud Review to approve or reject suspicious claims.
-6. Use the simulation controls to create disruption events and watch the dashboard update.
-7. Use Plans to review or add weekly coverage products.
+1. Open the admin/insurer portal from the login page.
+2. Log in with the admin credentials.
+3. Review network metrics and zone activity.
+4. Open Claims to inspect claim records.
+5. Open Fraud Review to approve or reject flagged claims.
+6. Use the disruption simulator to create network events.
+7. Open Plans to review or add protection plans.
 
-## ML Service
+## 10. ML Service
 
-The ML service exposes:
+The ML service runs on port `5001`.
 
-| Method | Endpoint | Description |
+Main endpoints:
+
+| Method | Endpoint | Purpose |
 | --- | --- | --- |
-| `GET` | `/health` | Service and model health |
-| `POST` | `/premium/calculate` | Dynamic premium calculation |
-| `POST` | `/fraud/score` | Fraud score for a claim |
-| `POST` | `/payout/calculate` | Suggested payout amount |
-| `POST` | `/forecast/weekly` | Weekly zone risk forecast |
+| `GET` | `/health` | Service health |
+| `POST` | `/premium/calculate` | Premium calculation |
+| `POST` | `/fraud/score` | Fraud scoring |
+| `POST` | `/payout/calculate` | Payout calculation |
+| `POST` | `/forecast/weekly` | Weekly risk forecast |
 
-Swagger docs:
+Swagger UI:
 
 ```text
 http://localhost:5001/docs
 ```
 
-The backend has deterministic fallback formulas, so the core app can still run if the ML service is unavailable.
+## 11. Data Storage
 
-## Data Persistence
-
-Demo data lives in:
+Application data is stored in:
 
 ```text
 backend/data/db.json
 ```
 
-When using Docker, this folder is mounted into the backend container:
+This file contains seeded users, policies, claims, wallet transactions, admin data, and generated events.
 
-```text
-./backend/data:/app/data
-```
-
-That means demo users, policies, claims, wallet transactions, and admin changes can survive container rebuilds on the same machine.
-
-To reset demo data, stop the app and replace or delete `backend/data/db.json`. The backend will seed fresh demo data on the next start.
-
-## Troubleshooting
-
-### Port Already In Use
-
-macOS/Linux:
-
-```bash
-lsof -ti:3000,4000,5001 | xargs kill -9
-```
-
-Windows PowerShell:
-
-```powershell
-netstat -ano | findstr ":3000 :4000 :5001"
-taskkill /PID <PID> /F
-```
-
-### Docker Desktop Is Open But Compose Cannot Connect
-
-Make sure Docker Desktop says the engine is running, then try:
-
-```bash
-docker info
-docker compose ps
-```
-
-If `docker info` cannot connect, restart Docker Desktop and run the command again from a fresh terminal.
-
-### Frontend Starts But API Calls Fail
-
-Check that the backend is running:
-
-```text
-http://localhost:4000/api/status
-```
-
-For local startup, also check `backend/.env`:
-
-```text
-ML_SERVICE_URL=http://localhost:5001
-FRONTEND_URL=http://localhost:3000
-```
-
-### ML Service Is Offline
-
-Check:
-
-```text
-http://localhost:5001/health
-```
-
-If it is down, restart the ML service:
-
-```bash
-cd ml-service
-uvicorn main:app --host 0.0.0.0 --port 5001
-```
-
-The backend will use fallback formulas until the ML service is available.
-
-### npm Install Fails
-
-Delete `node_modules` in the service that failed, then install again:
-
-```bash
-rm -rf node_modules
-npm install
-```
-
-On Windows PowerShell:
-
-```powershell
-Remove-Item -Recurse -Force node_modules
-npm install
-```
-
-## Notes For Reviewers
-
-- This is a demo/hackathon project, not a production insurance backend.
-- The JSON data store is intentionally simple.
-- Payment, email, and weather integrations have demo/fallback behavior.
-- Secrets should not be committed. Use `.env` locally.
-
-## License
-
-No license has been specified yet.
+When running with Docker, `backend/data` is mounted into the backend container so data remains available after rebuilding containers.
