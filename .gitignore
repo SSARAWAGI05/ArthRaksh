@@ -1,6 +1,12 @@
-backend/.env
+# Real environment files can contain API keys and must not be committed.
 .env
 .env.local
+backend/.env
+backend/.env.local
+
+# Keep committed templates for setup.
+!.env.docker.example
+!backend/.env.example
 
 node_modules/
 **/node_modules/

@@ -91,11 +91,17 @@ ML_SERVICE_URL=http://localhost:5001
 FRONTEND_URL=http://localhost:3000
 ```
 
-If you have API keys or SMTP details, add them in the same `backend/.env` file:
+Add the integration keys in the same `backend/.env` file when you want those features enabled:
 
 ```env
+# Required for the AI assistant/chatbot
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama-3.3-70b-versatile
+
+# Required only for live weather data
 OPENWEATHER_API_KEY=
-GROQ_API_KEY=
+
+# Required only for real email delivery
 SMTP_HOST=
 SMTP_PORT=587
 SMTP_USER=
@@ -105,7 +111,7 @@ SMTP_SECURE=false
 SMTP_REQUIRE_TLS=false
 ```
 
-For Docker, put these values in a root `.env` file if you need them:
+For Docker, put the same values in a root `.env` file:
 
 ### 5.3 Docker env file
 
@@ -121,7 +127,7 @@ Windows PowerShell:
 Copy-Item .env.docker.example .env -Force
 ```
 
-The Docker setup will also run without creating this root `.env` file.
+Real `.env` files are intentionally ignored by Git because they contain private API keys. Commit the example files, but do not commit your personal `.env` values to GitHub.
 
 ## 6. Run With Docker
 
