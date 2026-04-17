@@ -1,162 +1,456 @@
-# 🛡️ GigShield v2.0: Unified Risk Orchestration for the Gig Economy
+# GigShield
 
-> **Empowering the Backbone of Urban Logistics with AI-Driven Protection.**
+GigShield is a full-stack demo platform for risk protection in gig work. It lets a delivery worker buy weekly coverage, track wallet balance and claims, and lets an admin review claims, fraud signals, zones, triggers, and insurance plans.
 
-GigShield is a premium, full-stack risk management ecosystem designed specifically for the gig economy. It bridges the gap between traditional insurance and the dynamic nature of on-demand work by providing real-time disruption monitoring, hyper-local risk pricing, and automated, fraud-resistant claims processing.
+The project was built for a hackathon setting, so it keeps the data layer simple and easy to run locally. The backend stores demo data in a JSON file, while the ML service runs separately behind a small FastAPI API.
 
----
+## What It Does
 
-## 🏗️ System Architecture
+- Worker login and admin login with seeded demo users
+- Weekly protection plans with dynamic premium calculation
+- Claim creation, claim history, proof-pack download, and payout status
+- Wallet top-up, withdrawal, and transaction history
+- Admin dashboard for claims, fraud review, zone analytics, and plan management
+- Simulated disruption triggers such as rain, AQI, heat, flood, cyclone, curfew, and fog
+- ML microservice for premium pricing, fraud score, payout calculation, and weekly risk forecasts
+- Optional integrations for OpenWeather, Groq chatbot, SMTP email, and demo payment rails
 
-GigShield is built on a high-concurrency, microservices-inspired architecture that ensures low latency and high reliability.
+## Tech Stack
 
-```mermaid
-graph TD
-    User((Gig Worker)) -->|React Web App| FE[Frontend Dashboard]
-    Admin((Platform Admin)) -->|React Web App| FE
-    FE <-->|REST API| BE[Node.js Backend]
-    BE <-->|JSON Store| DB[(Persistent Data)]
-    BE <-->|FastAPI Engine| ML[ML Microservice]
-    ML <-->|Weather/AQI| EXT[External Data APIs]
-    ML <-->|Scikit-Learn| MODELS[Trained ML Models]
-    
-    subgraph "The Shield Engine"
-        BE
-        ML
-    end
+| Layer | Stack |
+| --- | --- |
+| Frontend | React 18, Axios, Chart.js, Recharts |
+| Backend | Node.js, Express, JWT auth |
+| ML service | Python, FastAPI, Uvicorn, scikit-learn, pandas |
+| Data store | JSON file at `backend/data/db.json` |
+| Docker | Docker Compose with frontend, backend, and ML containers |
+
+## Project Structure
+
+```text
+gigshield-v2/
+  backend/          Express API, auth, policies, claims, wallet, admin routes
+  frontend/         React app served locally or through nginx in Docker
+  ml-service/       FastAPI ML service and trained model files
+  docker-compose.yml
+  start.sh          macOS/Linux/WSL local startup helper
 ```
 
----
+## Demo Accounts
 
-## ✨ Key Platform Features
+Use these after the app starts:
 
-### 🧠 1. Predictive Risk Intelligence
-Our specialized **ML Microservice** (FastAPI) provides high-fidelity predictions using three core engines:
-- **Dynamic Premium Pricing**: Calculates worker premiums based on zone risk, historical claims, and real-time monsoon/weather factors.
-- **Fraud Sentry**: A sophisticated scoring system that cross-references GPS telemetry, platform activity, and payout deviations to flag suspicious claims.
-- **Payout Optimization**: Automatically calculates fair compensation based on disruption intensity and worker plan tiers.
-- **Weekly Risk Forecast**: 7-day outlook for rain, heat, and AQI risks to help workers plan their shifts safely.
+| Role | Login |
+| --- | --- |
+| Worker | `9876543210` / `password123` |
+| Admin | `admin@gigshield.in` / `admin123` |
 
-### 🛡️ 2. Tiered Insurance Ecosystem
-- **Basic Shield**: Essential protection for high-frequency disruptions (Rain, Heat).
-- **Pro Shield**: Enhanced coverage including AQI and long-tail weather events.
-- **Max Shield**: Full-spectrum coverage with priority claims processing and higher payout caps.
+## Ports
 
-### 🔄 3. High-Fidelity Simulations
-Designed for platform stress-testing, the **Trigger Engine** allows admins to simulate various urban disruptions:
-- `rain`, `aqi`, `heat`, `curfew`, `flood`, `cyclone`, `fog`.
-Simulations trigger real-time updates across the dashboard, allowing for instant validation of policy responses.
+| Service | Local URL |
+| --- | --- |
+| Frontend | `http://localhost:3000` |
+| Backend health/status | `http://localhost:4000/api/status` |
+| ML Swagger docs | `http://localhost:5001/docs` |
 
-### 📊 4. Premium Analytics Dashboard
-An interactive React-based Command Center featuring:
-- Live Claim Activity Ticker
-- Policy Performance Visualizations (Recharts/Chart.js)
-- Real-time Disruption Monitors
-- Worker Payout Distributions
+Keep these ports free before starting the app.
 
----
+## Run With Docker
 
-## 🛠️ Technology Stack
+This is the easiest way to run the whole project on a new machine.
 
-| Layer | Technologies |
-| :--- | :--- |
-| **Frontend** | React 18, Chart.js, Recharts, Axios, Framer Motion (Animations) |
-| **Backend** | Node.js, Express.js, JWT Authentication |
-| **ML Engine** | Python 3.10, FastAPI, Uvicorn, Scikit-Learn, Pandas |
-| **Data Layer** | Persistent JSON Store (Optimized for speed/hackathon) |
-| **Infrastructure**| Unified Bash Orchestration (`start.sh`) |
+### Requirements
 
----
+- Docker Desktop
+- Git
 
-## 🚀 Getting Started
-
-### Prerequisites
-- **Node.js**: v16 or higher
-- **Python**: v3.8 or higher with `pip3`
-- **Docker Desktop**: required only for the Docker workflow
-
-### Docker Launch
-With Docker Desktop running, the full stack can be built and started with:
+### macOS / Linux
 
 ```bash
-cp .env.docker.example .env   # optional, only if you want to override defaults
+git clone <repository-url>
+cd gigshield-v2
 docker compose up --build
 ```
 
-Services exposed on the host:
+Open:
 
-| Service | URL |
-| :--- | :--- |
-| Frontend | [http://localhost:3000](http://localhost:3000) |
-| Backend API | [http://localhost:4000/api/status](http://localhost:4000/api/status) |
-| ML Service | [http://localhost:5001/docs](http://localhost:5001/docs) |
+```text
+http://localhost:3000
+```
 
-Compose runs three containers:
-- `frontend`: builds the React app and serves it through nginx, including `/api` proxying to the backend container.
-- `backend`: runs the Express API with `./backend/data` mounted into the container so `db.json` persists across rebuilds.
-- `ml-service`: runs the FastAPI prediction service on container port `5000`, exposed locally as `5001`.
+### Windows
 
-Useful Docker commands:
+Open PowerShell in the folder where you want the project:
+
+```powershell
+git clone <repository-url>
+cd gigshield-v2
+docker compose up --build
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+### Optional Docker Environment
+
+The app runs without external API keys. If you want live integrations, copy the Docker env example:
+
+```bash
+cp .env.docker.example .env
+```
+
+On Windows PowerShell:
+
+```powershell
+Copy-Item .env.docker.example .env -Force
+```
+
+Then edit `.env` and add any keys you want:
+
+```text
+OPENWEATHER_API_KEY=
+GROQ_API_KEY=
+SMTP_HOST=
+SMTP_USER=
+SMTP_PASS=
+```
+
+If these are blank, the app uses demo or fallback behavior.
+
+### Useful Docker Commands
+
+Show running services:
 
 ```bash
 docker compose ps
+```
+
+Follow logs:
+
+```bash
+docker compose logs -f
+```
+
+Follow only the backend logs:
+
+```bash
 docker compose logs -f backend
+```
+
+Stop the app:
+
+```bash
 docker compose down
 ```
 
-### The "One-Tap" Launch
-GigShield is designed for easy deployment. Simply run:
+Rebuild from scratch:
+
+```bash
+docker compose down
+docker compose up --build
+```
+
+## Run Without Docker
+
+Use this if you want to run each service directly on your machine.
+
+### Requirements
+
+- Node.js 18 or newer
+- npm
+- Python 3.10 or newer
+- pip
+
+Node 20 and Python 3.11 are good choices for this project.
+
+## macOS / Linux Without Docker
+
+### Option 1: Start Everything With The Script
+
+From the project root:
 
 ```bash
 chmod +x start.sh
 ./start.sh
 ```
 
-This automated script will:
-1.  **Port Cleanup**: Terminate any dangling processes on ports 3000, 4000, and 5001.
-2.  **ML Setup**: Install Python dependencies and initialize the FastAPI service.
-3.  **Backend Setup**: Install NPM packages and spin up the Express API.
-4.  **Frontend Setup**: Initialize the React development server.
+The script starts:
 
----
+- ML service on `5001`
+- Backend on `4000`
+- Frontend on `3000`
 
-## 🧠 ML Pipeline & Training
+It also clears old processes on those ports before starting.
 
-The ML service follows a standard high-performance data pipeline:
+### Option 2: Start Services Manually
 
-1.  **Data Ingestion** (`fetch_real_data.py`): Fetches historical ERA5 weather and CPCB AQI data.
-2.  **Feature Engineering** (`build_features.py`): Engineers monsoon flags, rolling risk averages, and zone-specific metrics.
-3.  **Model Training** (`train_models.py`): Trains Random Forest classifiers/regressors for premium pricing and fraud detection.
-4.  **Inference Service** (`main.py`): Exposes the trained models via high-speed FastAPI endpoints.
+Use three terminal windows.
 
----
+Terminal 1, ML service:
 
-## 📍 API Reference (Service Endpoints)
+```bash
+cd ml-service
+pip3 install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 5001
+```
 
-| Method | Endpoint | Description | Service |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/premium/calculate` | Compute dynamic worker premiums | ML Service |
-| `POST` | `/fraud/score` | Analyze claim legitimacy | ML Service |
-| `POST` | `/api/triggers/simulate` | Trigger a disruption event | Backend |
-| `GET` | `/api/dashboard/stats` | Retrieve platform-wide metrics | Backend |
+Terminal 2, backend:
 
----
+```bash
+cd backend
+cp .env.example .env
+npm install
+npm run dev
+```
 
-## 🚧 Roadmap & Future Work
+Terminal 3, frontend:
 
-- [ ] **Blockchain Integration**: Move claims and payouts to a transparent Smart Contract (Solidity/EVM).
-- [ ] **Real-time GPS Telemetry**: Direct integration with delivery partner apps for zero-trust GPS validation.
-- [ ] **Multi-Zone Scaling**: Support for nationwide city-specific risk modeling.
+```bash
+cd frontend
+npm install
+BROWSER=none npm start
+```
 
----
+Open:
 
-## 🤝 Project Credits
+```text
+http://localhost:3000
+```
 
-Developed as part of the **Guidewire Hackathon**. GigShield aims to redefine urban risk management through the power of data and AI.
+## Windows Without Docker
 
-> [!TIP]
-> Use the **Swagger UI** for real-time ML API testing: [http://localhost:5001/docs](http://localhost:5001/docs)
+`start.sh` is a Bash script, so it does not run directly in normal Command Prompt or PowerShell.
 
----
+You have two good options:
 
-*Engineered with precision for the future of work.*
+1. Use WSL and run the macOS/Linux steps.
+2. Use three PowerShell terminals and start the services manually.
+
+### Windows Option 1: WSL
+
+Open Ubuntu/WSL:
+
+```bash
+cd /mnt/c/path/to/gigshield-v2
+chmod +x start.sh
+./start.sh
+```
+
+Example if the project is on your Desktop:
+
+```bash
+cd /mnt/c/Users/YOUR_NAME/Desktop/gigshield-v2
+./start.sh
+```
+
+### Windows Option 2: PowerShell Manual Startup
+
+Use three PowerShell windows.
+
+PowerShell 1, ML service:
+
+```powershell
+cd path\to\gigshield-v2\ml-service
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 5001
+```
+
+PowerShell 2, backend:
+
+```powershell
+cd path\to\gigshield-v2\backend
+Copy-Item .env.example .env -Force
+npm install
+npm run dev
+```
+
+PowerShell 3, frontend:
+
+```powershell
+cd path\to\gigshield-v2\frontend
+npm install
+npm start
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## Environment Variables
+
+For local non-Docker backend startup, use:
+
+```bash
+cd backend
+cp .env.example .env
+```
+
+On Windows PowerShell:
+
+```powershell
+cd backend
+Copy-Item .env.example .env -Force
+```
+
+Important backend values:
+
+| Variable | Purpose | Default behavior |
+| --- | --- | --- |
+| `PORT` | Backend port | `4000` |
+| `JWT_SECRET` | Token signing secret | Demo secret if missing |
+| `ML_SERVICE_URL` | ML API URL | `http://localhost:5001` |
+| `FRONTEND_URL` | Allowed frontend origin | `http://localhost:3000` |
+| `OPENWEATHER_API_KEY` | Live weather data | Mock weather if missing |
+| `GROQ_API_KEY` | Chatbot responses | Falls back when missing |
+| `SMTP_*` | Email delivery | Queues/mock status if missing |
+
+## Using The App
+
+### Worker Flow
+
+1. Open `http://localhost:3000`.
+2. Sign in with `9876543210` and `password123`.
+3. View active coverage, zone risk, wallet balance, and recent activity.
+4. Buy or update a plan from the plans section.
+5. Use claims to view payouts and download proof packs.
+6. Use the wallet section for demo top-up and withdrawal flows.
+
+### Admin Flow
+
+1. On the login page, open the insurer/admin dashboard.
+2. Sign in with `admin@gigshield.in` and `admin123`.
+3. Review network KPIs and zone movement.
+4. Open Claims to inspect recent claims and proof packs.
+5. Open Fraud Review to approve or reject suspicious claims.
+6. Use the simulation controls to create disruption events and watch the dashboard update.
+7. Use Plans to review or add weekly coverage products.
+
+## ML Service
+
+The ML service exposes:
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `GET` | `/health` | Service and model health |
+| `POST` | `/premium/calculate` | Dynamic premium calculation |
+| `POST` | `/fraud/score` | Fraud score for a claim |
+| `POST` | `/payout/calculate` | Suggested payout amount |
+| `POST` | `/forecast/weekly` | Weekly zone risk forecast |
+
+Swagger docs:
+
+```text
+http://localhost:5001/docs
+```
+
+The backend has deterministic fallback formulas, so the core app can still run if the ML service is unavailable.
+
+## Data Persistence
+
+Demo data lives in:
+
+```text
+backend/data/db.json
+```
+
+When using Docker, this folder is mounted into the backend container:
+
+```text
+./backend/data:/app/data
+```
+
+That means demo users, policies, claims, wallet transactions, and admin changes can survive container rebuilds on the same machine.
+
+To reset demo data, stop the app and replace or delete `backend/data/db.json`. The backend will seed fresh demo data on the next start.
+
+## Troubleshooting
+
+### Port Already In Use
+
+macOS/Linux:
+
+```bash
+lsof -ti:3000,4000,5001 | xargs kill -9
+```
+
+Windows PowerShell:
+
+```powershell
+netstat -ano | findstr ":3000 :4000 :5001"
+taskkill /PID <PID> /F
+```
+
+### Docker Desktop Is Open But Compose Cannot Connect
+
+Make sure Docker Desktop says the engine is running, then try:
+
+```bash
+docker info
+docker compose ps
+```
+
+If `docker info` cannot connect, restart Docker Desktop and run the command again from a fresh terminal.
+
+### Frontend Starts But API Calls Fail
+
+Check that the backend is running:
+
+```text
+http://localhost:4000/api/status
+```
+
+For local startup, also check `backend/.env`:
+
+```text
+ML_SERVICE_URL=http://localhost:5001
+FRONTEND_URL=http://localhost:3000
+```
+
+### ML Service Is Offline
+
+Check:
+
+```text
+http://localhost:5001/health
+```
+
+If it is down, restart the ML service:
+
+```bash
+cd ml-service
+uvicorn main:app --host 0.0.0.0 --port 5001
+```
+
+The backend will use fallback formulas until the ML service is available.
+
+### npm Install Fails
+
+Delete `node_modules` in the service that failed, then install again:
+
+```bash
+rm -rf node_modules
+npm install
+```
+
+On Windows PowerShell:
+
+```powershell
+Remove-Item -Recurse -Force node_modules
+npm install
+```
+
+## Notes For Reviewers
+
+- This is a demo/hackathon project, not a production insurance backend.
+- The JSON data store is intentionally simple.
+- Payment, email, and weather integrations have demo/fallback behavior.
+- Secrets should not be committed. Use `.env` locally.
+
+## License
+
+No license has been specified yet.

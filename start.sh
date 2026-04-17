@@ -27,7 +27,7 @@ kill_port 5001 # ML Service
 # 1. Start Machine Learning Service (Port 5001)
 echo "→ 🔋 Starting ML Service (Python/FastAPI)..."
 cd ml-service
-if [ ! -d "__pycache__" ] && [ ! -d "models" ]; then
+if ! python3 -c "import fastapi, uvicorn" >/dev/null 2>&1; then
   echo "   (Installing ML dependencies first...)"
   pip3 install -r requirements.txt
 fi

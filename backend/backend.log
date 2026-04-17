@@ -186,3 +186,30 @@
 [0mGET /api/dashboard/admin [32m200[0m 0.698 ms - 37799[0m
 [0mGET /api/dashboard/admin [32m200[0m 1.837 ms - 37799[0m
 [0mGET /api/dashboard/admin [32m200[0m 1.237 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.865 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.690 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 0.609 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.219 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.190 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.076 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.571 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.559 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 2.117 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 0.775 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 3.029 ms - 37799[0m
+[0mGET /api/dashboard/admin [32m200[0m 1.793 ms - 37799[0m
+[0mGET /api/workers/zones [36m304[0m 0.207 ms - -[0m
+[0mGET /api/workers/zones [36m304[0m 0.302 ms - -[0m
+[0mPOST /api/auth/login [32m200[0m 88.727 ms - 496[0m
+[0mGET /api/wallet/balance [36m304[0m 0.212 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 5.204 ms - 16813[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.607 ms - 16813[0m
+[0mGET /api/wallet/balance [36m304[0m 0.190 ms - -[0m
+[0mGET /api/dashboard/worker [32m200[0m 5.567 ms - 16813[0m
+[0mGET /api/dashboard/worker [32m200[0m 4.011 ms - 16813[0m
+[0mGET /api/dashboard/worker [32m200[0m 3.772 ms - 16813[0m
+[0mGET /api/dashboard/worker [32m200[0m 3.423 ms - 16813[0m
+[0mGET /api/dashboard/worker [32m200[0m 2.888 ms - 16813[0m
+[0mGET /api/dashboard/worker [32m200[0m 1.581 ms - 16813[0m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node server.js`[39m
